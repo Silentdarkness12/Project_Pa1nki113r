@@ -1,0 +1,31 @@
+actor MegaMap : CustomInventory 12765
+{
+  +COUNTITEM
+  +INVENTORY.FANCYPICKUPSOUND
+  +INVENTORY.ALWAYSPICKUP
+  Inventory.MaxAmount 0
+  Inventory.PickupSound "misc/p_pkup"
+  Inventory.PickupMessage "You've located the Mega Map!"
+  states
+  {
+  Spawn:
+    MMAP ABCDCB 6 Bright
+    Loop
+  Pickup:
+    TNT1 A 1 A_GiveInventory ("Allmap")
+    TNT1 A 0 A_GiveInventory ("DoomScanner")
+    stop
+  }
+}
+
+actor DoomScanner : PowerupGiver
+{
+  powerup.type "Scanner"
+  +INVENTORY.AUTOACTIVATE
+  states
+  {
+  Spawn:
+    TNT1 A 1
+    stop
+  }
+}

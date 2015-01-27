@@ -1,0 +1,572 @@
+
+//Dynamic Lights
+
+Pointlight ArchonComet1
+{
+Color 0.0 0.6 0.1
+Size 64
+}
+
+Pointlight ArchonComet2
+{
+Color 0.0 0.8 0.2
+Size 128
+}
+
+Pointlight ArchonComet3
+{
+Color 0.0 0.75 0.15
+Size 112
+}
+
+Pointlight ArchonComet4
+{
+Color 0.0 0.5 0.05
+Size 104
+}
+
+Pointlight ArchonComet5
+{
+Color 0.0 0.5 0.05
+Size 96
+}
+
+Pointlight ArchonComet6
+{
+Color 0.0 0.5 0.05
+Size 64
+}
+
+Object ArchonComet
+{
+Frame ARCBA { Light ArchonComet1 }
+Frame ARCBB { Light ArchonComet1 }
+Frame ARCBC { Light ArchonComet1 }
+Frame ARCBJ { Light ArchonComet2 }
+Frame ARCBK { Light ArchonComet3 }
+Frame ARCBL { Light ArchonComet4 }
+Frame ARCBM { Light ArchonComet5 }
+Frame ARCBN { Light ArchonComet6 }
+}
+
+Pointlight ArchonSoul1
+{
+Color 0.0 1.0 0.3
+Size 64
+}
+
+Pointlight ArchonSoul2
+{
+Color 0.0 1.0 0.3
+Size 56
+}
+
+Pointlight ArchonSoul3
+{
+Color 0.0 1.0 0.3
+Size 48
+}
+
+Pointlight ArchonSoul4
+{
+Color 0.0 1.0 0.3
+Size 40
+}
+
+Object ArchonSoul
+{
+Frame BFX1A { Light ArchonSoul1 }
+Frame BFX1B { Light ArchonSoul2 }
+Frame BFX1C { Light ArchonSoul3 }
+Frame BFX1D { Light ArchonSoul4 }
+}
+
+//Brightmaps
+
+
+BrightMap Sprite BOS4A1C1
+{
+Map BMBOS4A1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4A2C8
+{
+Map BMBOS4A2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4A3C7
+{
+Map BMBOS4A3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4A4C6
+{
+Map BMBOS4A4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4A5C5
+{
+Map BMBOS4A5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4A6C4
+{
+Map BMBOS4A6
+DisableFullBright
+}
+
+BrightMap Sprite BOS4A7C3
+{
+Map BMBOS4A7
+DisableFullBright
+}
+
+BrightMap Sprite BOS4A8C2
+{
+Map BMBOS4A8
+DisableFullBright
+}
+
+BrightMap Sprite BOS4B1D1
+{
+Map BMBOS4B1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4B2D8
+{
+Map BMBOS4B2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4B3D7
+{
+Map BMBOS4B3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4B4D6
+{
+Map BMBOS4B4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4B5D5
+{
+Map BMBOS4B5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4B6D4
+{
+Map BMBOS4B6
+DisableFullBright
+}
+
+BrightMap Sprite BOS4B7D3
+{
+Map BMBOS4B7
+DisableFullBright
+}
+
+BrightMap Sprite BOS4B8D2
+{
+Map BMBOS4B8
+DisableFullBright
+}
+
+BrightMap Sprite BOS4E1I1
+{
+Map BMBOS4E1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4E2I8
+{
+Map BMBOS4E2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4E3I7
+{
+Map BMBOS4E3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4E4I6
+{
+Map BMBOS4E4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4E5I5
+{
+Map BMBOS4E5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4E6I4
+{
+Map BMBOS4E6
+DisableFullBright
+}
+
+BrightMap Sprite BOS4E7I3
+{
+Map BMBOS4E7
+DisableFullBright
+}
+
+BrightMap Sprite BOS4E8I2
+{
+Map BMBOS4E8
+DisableFullBright
+}
+
+BrightMap Sprite BOS4F1J1
+{
+Map BMBOS4F1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4F2J8
+{
+Map BMBOS4F2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4F3J7
+{
+Map BMBOS4F3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4F4J6
+{
+Map BMBOS4F4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4F5J5
+{
+Map BMBOS4F5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4F6J4
+{
+Map BMBOS4F6
+DisableFullBright
+}
+
+BrightMap Sprite BOS4F7J3
+{
+Map BMBOS4F7
+DisableFullBright
+}
+
+BrightMap Sprite BOS4F8J2
+{
+Map BMBOS4F8
+DisableFullBright
+}
+
+BrightMap Sprite BOS4G1K1
+{
+Map BMBOS4G1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4G2K8
+{
+Map BMBOS4G2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4G3K7
+{
+Map BMBOS4G3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4G4K6
+{
+Map BMBOS4G4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4G5K5
+{
+Map BMBOS4G5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4G6K4
+{
+Map BMBOS4G6
+DisableFullBright
+}
+
+BrightMap Sprite BOS4G7K3
+{
+Map BMBOS4G7
+DisableFullBright
+}
+
+BrightMap Sprite BOS4G8K2
+{
+Map BMBOS4G8
+DisableFullBright
+}
+
+BrightMap Sprite BOS4H1L1
+{
+Map BMBOS4H1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4H2L8
+{
+Map BMBOS4H2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4H3L7
+{
+Map BMBOS4H3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4H4L6
+{
+Map BMBOS4H4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4H5L5
+{
+Map BMBOS4H5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4H6L4
+{
+Map BMBOS4H6
+DisableFullBright
+}
+
+BrightMap Sprite BOS4H7L3
+{
+Map BMBOS4H7
+DisableFullBright
+}
+
+BrightMap Sprite BOS4H8L2
+{
+Map BMBOS4H8
+DisableFullBright
+}
+
+BrightMap Sprite BOS4M1
+{
+Map BMBOS4M1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4M2M8
+{
+Map BMBOS4M2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4M3M7
+{
+Map BMBOS4M3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4M4M6
+{
+Map BMBOS4M4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4M5
+{
+Map BMBOS4M5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4N1
+{
+Map BMBOS4N1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4N2N8
+{
+Map BMBOS4N2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4N3N7
+{
+Map BMBOS4N3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4N4N6
+{
+Map BMBOS4N4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4N5
+{
+Map BMBOS4N5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4O1
+{
+Map BMBOS4O1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4O2O8
+{
+Map BMBOS4O2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4O3O7
+{
+Map BMBOS4O3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4O4O6
+{
+Map BMBOS4O4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4O5
+{
+Map BMBOS4O5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4P1
+{
+Map BMBOS4P1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4P2P8
+{
+Map BMBOS4P2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4P3P7
+{
+Map BMBOS4P3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4P4P6
+{
+Map BMBOS4P4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4P5
+{
+Map BMBOS4P5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4Q1
+{
+Map BMBOS4Q1
+DisableFullBright
+}
+
+BrightMap Sprite BOS4Q2
+{
+Map BMBOS4Q2
+DisableFullBright
+}
+
+BrightMap Sprite BOS4Q3
+{
+Map BMBOS4Q3
+DisableFullBright
+}
+
+BrightMap Sprite BOS4Q4
+{
+Map BMBOS4Q4
+DisableFullBright
+}
+
+BrightMap Sprite BOS4Q5
+{
+Map BMBOS4Q5
+DisableFullBright
+}
+
+BrightMap Sprite BOS4Q6
+{
+Map BMBOS4Q6
+DisableFullBright
+}
+
+BrightMap Sprite BOS4Q7
+{
+Map BMBOS4Q7
+DisableFullBright
+}
+
+BrightMap Sprite BOS4Q8
+{
+Map BMBOS4Q8
+DisableFullBright
+}
+
+BrightMap Sprite BOS4R0
+{
+Map BMBOS4R0
+DisableFullBright
+}
+
+BrightMap Sprite BOS4S0
+{
+Map BMBOS4S0
+DisableFullBright
+}
+
+BrightMap Sprite BOS4T0
+{
+Map BMBOS4T0
+DisableFullBright
+}
+
+BrightMap Sprite BOS4U0
+{
+Map BMBOS4U0
+DisableFullBright
+}
+
+BrightMap Sprite BOS4V0
+{
+Map BMBOS4V0
+DisableFullBright
+}
+

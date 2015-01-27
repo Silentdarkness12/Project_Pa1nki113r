@@ -1,0 +1,2 @@
+STARTUPTITLE = "Brutal Doom: Project PA1NKI113R"
+STARTUPCOLORS = "bb9d00", "000000"

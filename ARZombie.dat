@@ -1,0 +1,720 @@
+//===========================================================================
+//
+// Assault Rifle Zombie
+//
+//===========================================================================
+ACTOR ARZombieMan: Zombie_Man replaces RapidFireTrooper
+{
+	Game Doom
+	SpawnID 4
+	Health 70
+	GibHealth 70
+	Speed 9
+	FastSpeed 20
+	PainChance 160
+	+FLOORCLIP
+	SeeSound "grunt/sight"
+	AttackSound "weapons/rifle/fire"
+	PainSound "grunt/pain"
+	DeathSound "grunt/death"
+	ActiveSound "grunt/active"
+	Obituary "%o was perforated by an Assault Gunner."
+	DropItem "CarbineDrop"
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_GiveInventory("SKZombieman", 1)
+		TNT1 A 0 A_GiveInventory("TypeZombieMan", 1)
+		TNT1 A 0 A_TakeInventory("ZombiemanAmmo", 20)
+		TNT1 A 0 A_GiveInventory("ZombieManAmmo", random(1,10))
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR B 10 A_Look
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 4, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR A 10 A_Look
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		TNT1 A 0 A_Jump(10, "WalkAround")
+		Loop
+		
+	WalkAround:
+		TNT1 A 0 A_TakeInventory("SKZombieman", 1)
+
+        TNT1 A 0 A_SpawnItemEx("FootStep", 0, 0, 10, 0, 0)
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+
+		RFTR A 2 A_Look
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR A 2 A_Wander
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		TNT1 A 0 A_Recoil(-1)
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR B 2 A_Look
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR B 2 A_Wander
+	    TNT1 A 0 A_PlaySound("humans/step",3)
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR D 2 A_Look
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR D 2 A_Wander
+	    TNT1 A 0 A_PlaySound("humans/step",4)
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR C 2 A_Look
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR C 2 A_Wander
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR D 2 A_Look
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR D 2 A_Wander
+	    TNT1 A 0 A_PlaySound("humans/step",4)
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR B 2 A_Look
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR B 2 A_Wander
+	    TNT1 A 0 A_PlaySound("humans/step",4)
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		TNT1 A 0 A_Jump(10, "Spawn")
+		Loop
+		
+	See:
+		TNT1 A 0 A_TakeInventory("SKZombieman", 1)
+
+        TNT1 A 0 A_SpawnItemEx("FootStep", 0, 0, 10, 0, 0)
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+
+		RFTR AA 2 A_Chase
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		TNT1 A 0 A_Recoil(-1)
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR BB 2 A_Chase
+	    TNT1 A 0 A_PlaySound("humans/step",3)
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR DD 2 A_Chase
+	    TNT1 A 0 A_PlaySound("humans/step",4)
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR CC 2 A_Chase
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR DD 2 A_Chase
+	    TNT1 A 0 A_PlaySound("humans/step",4)
+
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR BB 2 A_Chase
+	    TNT1 A 0 A_PlaySound("humans/step",4)
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		Loop
+	
+		Missile:
+		TNT1 A 0 A_TakeInventory("SKZombieman", 1)
+		TNT1 A 0 A_JumpIfInventory("Enraged", 1, "SpecialAttack")
+        TNT1 A 0 A_Jump(64,"SpecialAttack") //48 out of 255 chance to do a special attack
+		TNT1 A 0 A_Jump(12, "ThrowGrenade") //12 out of 255 chance to do a grenade attack
+
+        TNT1 A 0 A_GiveInventory("ZombieManAmmo", 1)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 4 A_FaceTarget
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 2 A_FaceTarget
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 3 A_FaceTarget
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+        TNT1 A 0 A_PlaySound("Weapons/Rifle/SFire")
+        TNT1 AA 0 A_CustomMissile("OrangeLensFlareAlt", 34, 10, 15, 0)
+        TNT1 A 0 A_CustomMissile("SmokeSpawner", 34, 10, 15, 0)
+		RFTR F 2 BRIGHT A_CustomMissile("ZombieManTracer", 32, 0, random(-8, 8), 0, random(-3, 3))
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 1
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR E 2
+		TNT1 A 0 A_PlaySound("Weapons/Rifle/SFire")
+		TNT1 AA 0 A_CustomMissile("OrangeLensFlareAlt", 34, 10, 15, 0)
+        TNT1 A 0 A_CustomMissile("SmokeSpawner", 34, 10, 15, 0)
+		RFTR F 2 BRIGHT A_CustomMissile("ZombieManTracer", 32, 0, random(-8, 8), 0, random(-3, 3))
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 1
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR E 2
+		TNT1 A 0 A_PlaySound("Weapons/Rifle/SFire")
+		TNT1 AA 0 A_CustomMissile("OrangeLensFlareAlt", 34, 10, 15, 0)
+        TNT1 A 0 A_CustomMissile("SmokeSpawner", 34, 10, 15, 0)
+		RFTR F 2 BRIGHT A_CustomMissile("ZombieManTracer", 32, 0, random(-8, 8), 0, random(-3, 3))
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 1
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR E 2
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 5 A_FaceTarget
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+        TNT1 A 0 A_JumpIfInventory("ZombieManAmmo", 20, "Reload")
+		Goto See
+		
+	SpecialAttack:
+		TNT1 A 0 A_TakeInventory("SKZombieman", 1)
+		TNT1 A 0 A_JumpIfInventory("Enraged", 1, "SpecialAttack")
+        TNT1 A 0 A_Jump(24, "ThrowGrenade") //12 out of 255 chance to do a grenade attack
+
+        TNT1 A 0 A_GiveInventory("ZombieManAmmo", 1)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 3 A_FaceTarget
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 1 A_FaceTarget
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 3 A_FaceTarget
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+        TNT1 A 0 A_PlaySound("Weapons/Rifle/SFire")
+        TNT1 AA 0 A_CustomMissile("OrangeLensFlareAlt", 34, 10, 15, 0)
+        TNT1 A 0 A_CustomMissile("SmokeSpawner", 34, 10, 15, 0)
+		RFTR F 3 BRIGHT A_CustomMissile("ZombieManTracer", 32, 0, random(-8, 8), 0, random(-3, 3))
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 1
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR E 1
+		TNT1 A 0 A_PlaySound("Weapons/Rifle/SFire")
+        TNT1 AA 0 A_CustomMissile("OrangeLensFlareAlt", 34, 10, 15, 0)
+        TNT1 A 0 A_CustomMissile("SmokeSpawner", 34, 10, 15, 0)
+		RFTR F 3 BRIGHT A_CustomMissile("ZombieManTracer", 32, 0, random(-8, 8), 0, random(-3, 3))
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 1
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR E 1
+		TNT1 A 0 A_PlaySound("Weapons/Rifle/SFire")
+        TNT1 AA 0 A_CustomMissile("OrangeLensFlareAlt", 34, 10, 15, 0)
+        TNT1 A 0 A_CustomMissile("SmokeSpawner", 34, 10, 15, 0)
+		RFTR F 3 BRIGHT A_CustomMissile("ZombieManTracer", 32, 0, random(-8, 8), 0, random(-3, 3))
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 2
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR E 2
+		TNT1 A 0 A_PlaySound("Weapons/Rifle/SFire")
+        TNT1 AA 0 A_CustomMissile("OrangeLensFlareAlt", 34, 10, 15, 0)
+        TNT1 A 0 A_CustomMissile("SmokeSpawner", 34, 10, 15, 0)
+		RFTR F 3 BRIGHT A_CustomMissile("ZombieManTracer", 32, 0, random(-8, 8), 0, random(-3, 3))
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 2
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR E 2
+		TNT1 A 0 A_PlaySound("Weapons/Rifle/SFire")
+        TNT1 AA 0 A_CustomMissile("OrangeLensFlareAlt", 34, 10, 15, 0)
+        TNT1 A 0 A_CustomMissile("SmokeSpawner", 34, 10, 15, 0)
+		RFTR F 3 BRIGHT A_CustomMissile("ZombieManTracer", 32, 0, random(-8, 8), 0, random(-3, 3))
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 2
+        TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 5, 40,0)
+		TNT1 A 0 A_SpawnItem ("LegTargetBase", 10)
+		RFTR E 2
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+		RFTR E 3 A_FaceTarget
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget10", 0, 28,0)
+		TNT1 A 0 A_SpawnItem ("LegTarget12", 10)
+        TNT1 A 0 A_JumpIfInventory("ZombieManAmmo", 20, "Reload")
+		Goto Missile+1
+		
+	ThrowGrenade:
+		TNT1 A 0
+		TNT1 A 0 A_PlaySound("MRNAG")
+		TNT1 A 0 A_PlaySound("OPNGRN")
+		RFG1 AAAAA 5 A_FaceTarget
+		TNT1 A 0 A_PlaySound("THRGRN")
+		RFTR E 10 A_CustomMissile("EnemyThrownGrenade",40,0,0,0)
+		TNT1 A 0
+	Goto See
+	
+	Reload:
+		RFTR A 6
+		RFTR A 0 A_PlaySound("RIFLC_OUT")
+		RFTR A 0 A_TakeInventory("ZombieManAmmo", 30)
+		RFTR A 4 A_CustomMissile("EmptyClipSpawn", 38, 0, random(-11, 11), 0)
+		RFTR B 10
+		RFTR A 2
+		RFTR A 0 A_PlaySound("Weapons/Rifle/In")
+		RFTR A 8
+		RFTR B 10
+		Goto See
+		
+	Pain:
+		TNT1 A 0 A_TakeInventory("SKZombieman", 1)
+        TNT1 A 0 A_JumpIfInventory ("IsDown", 1, 6)
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 0, 38,0)
+		TNT1 A 0 A_CustomMissile ("Nashgore_FlyingBlood", 35, 0, random (0, 360), 2, random (0, 160))
+	    RFTR G 3
+		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 0, 38,0)
+		RFTR G 3 A_Pain
+	    Goto See
+        TNT1 AAAA 0
+        TNT1 A 0 A_Pain
+        ID11 FRRRQ 10
+        TNT1 A 0 A_TakeInventory("IsDown", 1)
+        Goto See
+		
+	Pain.Avoid:
+	    TNT1 A 0
+	    TNT1 A 0 A_Jump(72, "AvoidLeft", "AvoidRight")
+        Goto AvoidLeft
+	  
+	AvoidLeft:
+	    RFTR A 1 A_FaceTarget
+	    TNT1 A 0 ThrustThing(angle*256/360+192, 15, 0, 0)
+        RFR1 ABCDEFGH 2 A_FaceTarget
+        Goto Missile
+	AvoidRight:
+	    RFTR A 1 A_FaceTarget
+	    TNT1 A 0 ThrustThing(angle*256/360+64, 15, 0, 0)
+        RFR0 ABCDEFGH 2 A_FaceTarget
+        Goto Missile
+		
+	Pain.Kick:
+	Pain.SuperKick:
+         TNT1 A 0
+         RFT9 A 1 A_Pain
+		 TNT1 A 0 A_ChangeFlag("NOPAIN", 1)
+		 TNT1 A 0 A_JumpIfInventory ("IsDown", 1, "Pain")
+		 TNT1 A 0 A_TakeInventory("SKZombieman", 1)
+         TNT1 A 0 A_GiveInventory("IsDown", 1)
+         TNT1 A 0 ThrustThingZ(0,30,0,1)
+		 RFT9 B 1 A_facetarget
+         RFT9 C 3 ThrustThing(angle*256/360+128, 10, 0, 0)
+         RFT9 DEGGG 5
+		 TNT1 A 0 A_ChangeFlag("NOPAIN", 0)
+		 Goto FallingAfterImpact
+		 
+	Pain.ExtremePunches:
+	Pain.ExplosiveImpact:
+	Pain.Explosive:
+	     TNT1 A 0
+	     TNT1 A 0 A_Pain
+		 TNT1 A 0 A_JumpIfInventory ("IsDown", 1, "Pain")
+		 TNT1 A 0 A_TakeInventory("SKZombieman", 1)
+         TNT1 A 0 A_GiveInventory("IsDown", 1)
+         TNT1 A 0 ThrustThingZ(0,40,0,1)
+         RFT9 DEGGG 5
+		 Goto FallingAfterImpact
+		
+	FallingAfterImpact:
+		RFT9 G 1 A_GiveInventory ("FallingHeight", 1)
+		TNT1 A 0 A_PlaySound("BODYF",6)
+		RFT9 G 1 A_CheckFloor ("GetUp")
+		NULL A 0 A_JumpIf (momz == 0, "GetUp")
+		Loop
+		
+	GetUp:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory ("FallingHeight", 20, "Death.Stomp")
+		TNT1 A 0 A_JumpIfInventory ("FallingHeight", 14, "FallingSuperDeath")
+		TNT1 A 0 A_JumpIfInventory ("FallingHeight", 7, "FallingDeath")
+		TNT1 A 0 A_TakeInventory("FallingHeight", 100)
+		RFT9 HHHHH 5 A_JumpIf(momz < 0, "FallingAfterImpact")
+        TNT1 A 0 A_TakeInventory("IsDown", 1)
+        Goto See
+		 
+		
+	FallingDeath:
+		TNT1 A 0
+		TNT1 A 0 A_Scream
+		TNT1 A 0 A_NoBLocking
+		TNT1 A 0 A_SpawnItem ("Ploft")
+		TNT1 AAAA 0 A_CustomMissile ("XDeath1", 32, 0, random (0, 360), 2, random (50, 130))
+		RFT9 EF 2
+		TNT1 A 0 A_SpawnItem ("Dead_AR_ZombieMan1")
+		Stop
+	
+	FallingSuperDeath:
+		TNT1 A 0
+		TNT1 A 0 A_XScream
+		TNT1 A 0 A_NoBLocking
+		TNT1 AAA 0 A_SpawnItem ("Ploft")
+		Goto Death.ExplosiveImpact+1
+		
+	Death.Fatality:
+	    TNT1 A 0
+		TNT1 A 0 A_Pain
+        TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("GoFatality", 1)
+		TNT1 A 0 A_GiveToTarget("RapidFireTrooperFatality", 1)
+		Stop
+		
+	Death:
+		TNT1 A 0 A_Jump(48, "Death.ARm")
+		TNT1 A 0 A_Jump(100, "Death2")
+		RFTR H 5
+		TNT1 AAA 0 A_CustomMissile ("MuchBlood2", 35, 0, random (0, 360), 2, random (0, 160))
+		RFTR I 5 A_Scream
+		RFTR J 5 A_NoBlocking
+		RFTR K 5
+		TNT1 A 0 A_PlaySound("BODYF",6)
+		RFTR L -1
+		Stop
+		
+	Death2:
+		TNT1 A 0
+	    TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_Pain
+		RFT2 A 1 A_FaceTarget
+		TNT1 A 0 A_Scream
+		TNT1 AAAA 0 A_CustomMissile ("MuchBlood2", 35, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("XDeath1", 35, 0, random (0, 360), 2, random (0, 160))
+        RFT2 ABCDE 3
+		TNT1 A 0 A_PlaySound("BODYF",6)
+		TNT1 A 0 A_SpawnItem ("Dead_AR_ZombieMan1")
+		Stop
+		
+	Death.Arm:
+		TNT1 A 0 A_CustomMissile ("XDeathArm1", 35, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile ("EEXDeath2", 35, 0, random (0, 360), 2, random (0, 160))
+        TNT1 AAA 0 A_CustomMissile ("MuchBlood2", 35, 0, random (0, 360), 2, random (0, 160))
+		RFT6 A 10 A_Scream
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_PlaySound("BODYF",6)
+        TNT1 A 0 A_SpawnItem ("DyingARZombiemanZombiemanNoArm")
+        Stop
+	
+	Death.Shotgun:
+		TNT1 A 0 A_JumpIfCloser(100, "Death.Shotgunontheface")
+		TNT1 A 0
+	    TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_Jump(48, "Death.ARm")
+		TNT1 A 0 A_Jump(92, "Death.Kick")
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_Pain
+		RFT2 A 1 A_FaceTarget
+		TNT1 A 0 A_Recoil(10)
+		TNT1 A 0 ThrustThingZ(0,9,0,1)
+		TNT1 A 0 A_Scream
+		TNT1 AAAA 0 A_CustomMissile ("MuchBlood2", 35, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("XDeath1", 35, 0, random (0, 360), 2, random (0, 160))
+        RFT2 ABCDE 3
+		TNT1 A 0 A_PlaySound("BODYF",6)
+		TNT1 A 0 A_SpawnItem ("Dead_AR_ZombieMan1")
+		Stop
+		
+	Death.MinorHead:
+		TNT1 A 0 A_PlaySound("misc/xdeath4")
+		TNT1 A 0 A_Jump(32, "Death.MinorHeadLong")
+        TNT1 AAAAA 0 A_CustomMissile ("NashGore_FlyingBloodTrail8", 50, 0, random (0, 360), 2, random (0, 360))
+		TNT1 AA 0 A_CustomMissile ("SmallBrainPieceFast", random (45, 55), random (5, -5), random (170, 190), 2, random (-10, 10))
+		TNT1 AAA 0 A_CustomMissile ("SmallBrainPiece", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("XDeath1", 40, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains3", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains5", 50, 0, random (0, 360), 2, random (0, 160))
+		RFT7 A 6 A_Scream
+		RFT7 B 6 A_NoBlocking 
+		RFT7 CDE 6
+		TNT1 A 0 A_SpawnItem ("MediumBloodSpot")
+		TNT1 A 0 A_PlaySound("BODYF",6)
+        TNT1 A 0 A_SpawnItem ("Dead_AR_ZombieMan_NoBrain", 1)
+		Stop
+		
+	Death.MinorHeadLong:
+        TNT1 AAAAA 0 A_CustomMissile ("NashGore_FlyingBloodTrail8", 50, 0, random (0, 360), 2, random (0, 360))
+		TNT1 AA 0 A_CustomMissile ("SmallBrainPieceFast", random (45, 55), random (5, -5), random (170, 190), 2, random (-10, 10))
+		TNT1 AAA 0 A_CustomMissile ("SmallBrainPiece", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("XDeath1", 40, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains3", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains5", 50, 0, random (0, 360), 2, random (0, 160))
+		RFT7 A 6 A_Scream
+		RFT7 B 6 A_NoBlocking
+		RFT7 CBCBCB 18 A_Pain 
+		RFT7 DE 6
+		TNT1 A 0 A_PlaySound("BODYF",6)
+		TNT1 A 0 A_SpawnItem ("MediumBloodSpot")
+        TNT1 A 0 A_SpawnItem ("Dead_AR_ZombieMan_NoBrain", 1)
+		Stop
+		
+	Death.Leg:
+	Death.Crush:
+		TNT1 A 0
+        TNT1 A 0 A_CustomMissile ("MuchBlood2", 15, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("XDeath1", 15, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("XDeathZombieLeg", 35, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_SpawnItem ("MediumBloodSpot")
+		RFT8 AB 6
+		TNT1 A 0 A_NoBlocking
+        TNT1 A 0 A_SpawnItem ("DyingARZombiemanLegBlewedOff")
+        Stop
+		
+	Death.Shotgunontheface:
+	Death.Saw:
+	Death.Cut:
+	Death.Tear:
+	    TNT1 A 0
+	    TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_Pain
+		TNT1 A 0 A_CustomMissile ("XDeath1", 32, 0, random (170, 190), 2, random (0, 37))
+		TNT1 A 0 A_CustomMissile ("XDeath1", 32, 0, random (170, 190), 2, random (0, 37))
+		TNT1 A 0 A_CustomMissile ("Brains2", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains3", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains4", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains5", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("XDeath3", 32, 0, random (170, 190), 2, random (0, 37))
+		TNT1 A 0 A_CustomMissile ("Instestin", 32, 0, random (150, 210), 2, random (0, 37))
+		TNT1 A 0 A_CustomMissile ("XDeathArm1", 32, 0, random (170, 190), 2, random (0, 37))
+		TNT1 AAA 0 A_CustomMissile ("SuperWallRedBlood", 32, 0, random (170, 190), 2, random (0, 37))
+		TNT1 AAAA 0 A_CustomMissile ("SuperWallRedBlood", 46, 0, random (170, 190), 2, random (0, 37))
+		TNT1 AA 0 A_CustomMissile ("Nashgore_FlyingBlood", 32, 0, random (170, 190), 2, random (0, 37))
+		TNT1 AAAA 0 A_CustomMissile ("Nashgore_FlyingBloodFaster", 32, 0, random (170, 190), 2, random (0, 37))
+		TNT1 AAA 0 A_CustomMissile ("Nashgore_FlyingBloodMuchFaster", 32, 0, random (170, 190), 2, random (0, 37))
+		RFT4 A 6 A_FaceTarget
+		TNT1 A 0 A_Recoil(10)
+		TNT1 A 0 ThrustThingZ(0,9,0,1)
+		TNT1 A 0 A_Scream
+		TNT1 AAAA 0 A_CustomMissile ("MuchBlood2", 35, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("XDeath1", 35, 0, random (0, 360), 2, random (0, 160))
+        RFT4 BBBBC 7 A_CustomMissile ("MuchBlood2", 35, 0, random (0, 360), 2, random (0, 160))
+		RFT4 CDE 6
+		TNT1 A 0 A_SpawnItem ("Dead_AR_ZombieMan_Fucked")
+		Stop
+		
+	Death.head:
+	Death.decaptate:
+        TNT1 A 0 A_PlaySound("misc/xdeath4")
+        TNT1 A 0 A_CustomMissile ("MuchBlood2", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile ("Brains1", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains2", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains3", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains4", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains5", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile ("SmallBrainPieceFast", random (45, 55), random (5, -5), random (170, 190), 2, random (-10, 10))
+		TNT1 AAAAA 0 A_CustomMissile ("SmallBrainPiece", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile ("SuperWallRedBlood", 46, 0, random (170, 190), 2, random (0, 37))
+  	    RFT3 B 0 A_XScream
+		RFT3 C 0 A_NoBlocking
+
+		TNT1 A 0 A_Jump(32, "Deathchickenhead")
+
+		RFT3 AABC 6 A_CustomMissile ("MuchBlood", 30, 0, random (0, 360), 2, random (0, 160))
+		RFT3 DE 6
+		TNT1 A 0 A_PlaySound("BODYF",6)
+        TNT1 A 0 A_SpawnItem ("Dead_AR_ZombieMan_NoHeadFront")
+		TNT1 A 0 A_SpawnItem ("BigBloodSpot")
+		Stop
+		
+	DeathChickenHead:
+		TNT1 A 0 A_PlaySound("misc/xdeath2c")
+		RFT3 A 4 A_SpawnItem ("Blood", 0, 56)
+
+		TNT1 A 0 A_PlaySound("misc/xdeath2c")
+		RFT3 A 4 A_SpawnItem ("Blood", 0, 56)
+
+		TNT1 A 0 A_PlaySound("misc/xdeath2c")
+		RFT3 A 4 A_SpawnItem ("Blood", 0, 56)
+
+		TNT1 A 0 A_PlaySound("misc/xdeath2c")
+		RFT3 AABC 6 A_CustomMissile ("MuchBlood", 30, 0, random (0, 360), 2, random (0, 160))
+		RFT3 DE 6
+		TNT1 A 0 A_PlaySound("BODYF",6)
+        TNT1 A 0 A_SpawnItem ("Dead_AR_ZombieMan_NoHeadFront")
+		TNT1 A 0 A_SpawnItem ("BigBloodSpot")
+		Stop
+		
+	Raise:
+		RFTR K 5
+		RFTR JIH 5
+		Goto See
+	}
+}
+
+actor ZombieManAmmo: Inventory
+{
+	Inventory.MaxAmount 30
+}
+
+Actor Dead_AR_ZombieMan_NoHeadFront: DeadZombieMan_NoArm
+{Health 200 States{Spawn:
+	    TNT1 A 0
+        RFT3 E -1
+        Stop
+    Death.Fatality:
+    Death.Melee:
+    Death.Kick:
+	Death.ExplosiveImpact:
+         TNT1 A 0
+		 TNT1 A 0 A_NoBlocking
+         TNT1 A 0
+         TNT1 A 0 ThrustThingZ(0,15,0,1)
+         TNT1 A 0 A_FaceTarget
+         TNT1 A 0 A_Recoil (1)
+         ID11 EF 8
+         TNT1 A 1 A_SpawnItem ("DeadZombieMan_NoHeadFront", 5)
+         Stop}}
+		 
+Actor Dead_AR_ZombieMan1: DeadZombieMan_NoArm
+{Health 200 States{Spawn:
+	    TNT1 A 0
+        RFT2 E -1
+        Stop
+    Death.Fatality:
+    Death.Melee:
+    Death.Kick:
+	Death.ExplosiveImpact:
+         TNT1 A 0
+		 TNT1 A 0 A_NoBlocking
+         TNT1 A 0
+         TNT1 A 0 ThrustThingZ(0,15,0,1)
+         TNT1 A 0 A_FaceTarget
+         TNT1 A 0 A_Recoil (1)
+         ID11 EF 8
+         TNT1 A 1 A_SpawnItem ("DeadZombieMan1", 5)
+         Stop}}
+		 
+Actor Dead_AR_ZombieMan_NoLeg: DeadZombieMan_NoArm
+{Health 200 States{Spawn:
+	    TNT1 A 0
+        RFT8 D -1
+        Stop
+    Death.Fatality:
+    Death.Melee:
+    Death.Kick:
+	Death.ExplosiveImpact:
+         TNT1 A 0
+		 TNT1 A 0 A_NoBlocking
+         TNT1 A 0
+         TNT1 A 0 ThrustThingZ(0,15,0,1)
+         TNT1 A 0 A_FaceTarget
+         TNT1 A 0 A_Recoil (1)
+         ID11 EF 8
+         TNT1 A 1 A_SpawnItem ("Dead_AR_ZombieMan_NoLeg", 5)
+         Stop}}
+		 
+Actor Dead_AR_ZombieMan_Fucked: DeadZombieMan_NoArm
+{Health 200 States{Spawn:
+	    TNT1 A 0
+        RFT4 E -1
+        Stop
+    Death.Fatality:
+    Death.Melee:
+    Death.Kick:
+	Death.ExplosiveImpact:
+         TNT1 A 0
+		 TNT1 A 0 A_NoBlocking
+         TNT1 A 0
+         TNT1 A 0 ThrustThingZ(0,15,0,1)
+         TNT1 A 0 A_FaceTarget
+         TNT1 A 0 A_Recoil (1)
+         ID11 EF 8
+         TNT1 A 1 A_SpawnItem ("DeadZombieMan1", 5)
+         Stop}}
+		 
+Actor Dead_AR_ZombieMan_NoBrain: DeadZombieMan_NoArm
+{Health 200 States{Spawn:
+	    TNT1 A 0
+        RFT7 F -1
+        Stop
+    Death.Fatality:
+    Death.Melee:
+    Death.Kick:
+	Death.ExplosiveImpact:
+         TNT1 A 0
+		 TNT1 A 0 A_NoBlocking
+         TNT1 A 0
+         TNT1 A 0 ThrustThingZ(0,15,0,1)
+         TNT1 A 0 A_FaceTarget
+         TNT1 A 0 A_Recoil (1)
+         ID11 EF 8
+         TNT1 A 1 A_SpawnItem ("DeadZombieMan1", 5)
+         Stop}}
+
+//DeadARZombieman_NoArm
+Actor DeadARZombieman_NoArm: DeadZombieMan_NoArm
+{Health 200 States{Spawn:
+	    TNT1 A 0
+        RFT6 H -1
+        Stop
+    Death.Fatality:
+    Death.Melee:
+    Death.Kick:
+	Death.ExplosiveImpact:
+         TNT1 A 0
+		 TNT1 A 0 A_NoBlocking
+         TNT1 A 0
+         TNT1 A 0 ThrustThingZ(0,15,0,1)
+         TNT1 A 0 A_FaceTarget
+         TNT1 A 0 A_Recoil (1)
+         ID11 EF 8
+         TNT1 A 1 A_SpawnItem ("DeadZombieMan1", 5)
+         Stop}}
+//FatalizedRapidFireTrooper
+Actor FatalizedRapidFireTrooper: DeadZombieMan_NoArm
+{Health 200 States{Spawn:
+	    TNT1 A 0
+        FRFZ P -1
+        Stop
+    Death.Fatality:
+    Death.Melee:
+    Death.Kick:
+	Death.ExplosiveImpact:
+         TNT1 A 0
+		 TNT1 A 0 A_NoBlocking
+         TNT1 A 0
+         TNT1 A 0 ThrustThingZ(0,15,0,1)
+         TNT1 A 0 A_FaceTarget
+         TNT1 A 0 A_Recoil (1)
+         ID11 EF 8
+         TNT1 A 1 A_SpawnItem ("DeadZombieMan1", 5)
+         Stop}}

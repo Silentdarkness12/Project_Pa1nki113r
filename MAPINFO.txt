@@ -1,0 +1,99 @@
+ClearSkills
+
+
+Skill baby
+{
+   AutoUseHealth
+   AmmoFactor = 1.0
+   DamageFactor = 0.5
+   EasyBossBrain
+   SlowMonsters
+   SpawnFilter = Baby
+   Textcolor = Green
+   Name = "I have never played a shooter before."
+   MustConfirm = "50% full damage. The recommended difficulty for the dead. Press Y to Continue or N to Select Other Skill."
+}
+
+Skill easy
+{
+   AmmoFactor = 1
+   DamageFactor = 0.75
+   SpawnFilter = Normal
+   Textcolor = Green
+   Name = "Can I Play Daddy?"
+   MustConfirm = "75% full damage. The recommended difficulty for kids. Press Y to Continue or N to Select Other Skill."
+}
+
+Skill normal
+{
+   AmmoFactor = 1
+   DamageFactor = 0.90
+   SpawnFilter = Hard
+   Textcolor = Yellow
+   Name = "Harsh"
+   MustConfirm = "90% full damage. The recommended difficulty for newcomers to Brutal Doom. Press Y to Continue or N to Select Other Skill."
+}
+
+Skill Hard
+{
+   AmmoFactor = 1
+   DamageFactor = 1.0
+   Aggressiveness = .25
+   SpawnFilter = Nightmare
+   Textcolor = Orange
+   Name = "Brutal"
+   MustConfirm = "Full damage. More Aggressive enemies. The true Brutal Doom experiece. Press Y to Continue or N to Select Other Skill."
+}
+
+Skill Superbad
+{
+   AmmoFactor = 1
+   DamageFactor = 1.25
+   SpawnFilter = Nightmare
+   Aggressiveness = 0.50
+   Textcolor = Red
+   Name = "I'm a Man and a Half"
+   MustConfirm = "Enemies are more aggressive and inflict more damage. Press Y to Continue or N to Select Other Skill."
+}
+
+Skill Brutal
+{
+   AmmoFactor = 1
+   DamageFactor = 1.0
+   FastMonsters
+   Aggressiveness = 0.25
+   SpawnFilter = Nightmare
+   Textcolor = Red
+   Name = "12 on 10 Point Scale of Bad"
+   MustConfirm = "Much more faster and aggressive enemies. Press Y to Continue or N to Select Other Skill."
+}
+
+Skill BlackMetal
+{
+   AmmoFactor = 1
+   DamageFactor = 1.25
+   FastMonsters
+   SpawnFilter = Nightmare
+   Aggressiveness = 0.85
+   Name = "I AM THE PAINKILLER!!!"
+   Textcolor = Black
+   MustConfirm = "Much faster, very aggressive enemies that inflict more damage.  Press Y if you can take it!"
+}
+
+Skill HELL
+{
+   AmmoFactor = 1
+   DamageFactor = 2.0
+   FastMonsters
+   Aggressiveness = 1.0
+   SpawnFilter = Nightmare
+   Textcolor = Black
+   name = "Not Even Remotely Fair..."
+   mustconfirm = "Hope you like saving and loading."
+}
+
+GameInfo
+{
+DimColor = "Black"
+DimAmount = 0.70
+}

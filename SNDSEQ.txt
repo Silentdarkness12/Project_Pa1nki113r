@@ -1,0 +1,14 @@
+:Floor
+	PlayRepeat	plats/pt1_mid
+	StopSound	plats/pt1_stop
+End
+
+:Platform
+	PlayUntilDone plats/liftstart
+	PlayRepeat	plats/liftmove
+	StopSound	plats/liftStop
+End
+
+:CeilingNormal
+	PlayRepeat	plats/pt1_mid
+End

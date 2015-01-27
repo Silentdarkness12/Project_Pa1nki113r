@@ -1,0 +1,977 @@
+//Head hitboxes.
+
+ACTOR MinorHeadDamage
+{
+	Radius 1
+	Height 1
+	DamageType Head
+//	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+NOEXTREMEDEATH
+	+FORCERADIUSDMG
+	Projectile
+//	+MISSILE
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Explode(100,12)
+		Stop
+	}
+}
+
+ACTOR HeadshotTargetBase
+{
+	+NOTARGET	+NEVERTARGET
+	DamageFactor "Cut", 5.0
+	DamageFactor "SSG", 9.0
+	DamageFactor "Melee", 0.3
+	DamageFactor "Cutless", 1.0
+	DamageFactor "Plasma", 5.9
+	DamageFactor "Plasma2", 0.0
+	DamageFactor "Blast", 3.0
+	DamageFactor "Taunt", 0.0
+	DamageFactor "Blood", 0.0
+	DamageFactor "BlueBlood", 0.0
+	DamageFactor "Head", 0.0
+	DamageFactor "MinorHead", 0.0
+	DamageFactor "KillMe", 0.0
+	DamageFactor "Explosive", 2.0
+	DamageFactor "Kick", 2.0
+	DamageFactor "Fire", 5.0
+	DamageFactor "Burn", 5.0
+	DamageFactor "Flames", 5.0
+	DamageFactor "Control", 0.0
+	DamageFactor "Shotgun", 0.7
+	Monster
+	-COUNTKILL
+	Health 35
+	Radius 7
+	Height 18
+	DamageType head
+	BloodType "NashGore_Blood"
+	DamageFactor "Reloading", 0.0
+	PainChance 255
+	+NOGRAVITY
+	+SYNCHRONIZED
+//	+SHOOTABLE
+	+NOTELEPORT
+	-SOLID
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+GHOST
+	+NOBLOODDECALS
+	+SERVERSIDEONLY
+//	-COUNTKILL
+	DamageFactor "Trample", 0
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 5
+		XXXX A 1
+		Stop
+	Pain:
+		TNT1 A 4
+		TNT1 A 0// A_PlaySound("fleshimpact", 2)
+		TNT1 A 0 A_SpawnItemEx ("HeadshotMinorHit")
+		TNT1 A 1
+		Stop
+	Pain.Explosive:
+	Pain.ExplosiveImpact:
+		TNT1 A 4
+		TNT1 A 0 A_SpawnItemEx ("HeadshotMinorHit")
+		TNT1 A 1
+		Stop
+	Pain.CutLess:
+		TNT1 A 4
+		TNT1 A 1 A_SpawnItemEx ("HeadshotMinorHitChaingun", 0, 0)
+		TNT1 A 1
+		Stop
+
+	Pain.AK:
+		TNT1 A 4
+		TNT1 A 0 A_PlaySound("fleshimpact", 2)
+		TNT1 A 0 A_Jump(128,"PainAK2")
+		TNT1 A 1 A_SpawnItem ("HeadshotMinorHit", 0, 0)
+		TNT1 A 1
+		Stop
+	PainAK2:
+		TNT1 A 0 A_PlaySound("fleshimpact", 2)
+		TNT1 A 1 A_SpawnItem ("HeadshotHit", 0, 0)
+		TNT1 A 1
+		Stop
+
+	Death:
+		TNT1 A 0// A_PlaySound("HEDSHOT", 1)
+		TNT1 A 1 A_SpawnItem ("HeadshotHit", 0, 0)
+		TNT1 A 1
+		Stop
+	Death.Plasma:
+	Death.Plasma2:
+	Death.BigPlasma:
+		TNT1 A 1 A_SpawnItem ("HeadshotHitPlasma", 0, 0)
+		TNT1 A 1
+		Stop
+
+	Death.Flames:
+	Death.Fire:
+	Death.Burn:
+		TNT1 A 1 A_SpawnItem ("HeadshotHitFire", 0, 0)
+		TNT1 A 1
+		Stop
+
+	Death.Cut:
+		TNT1 A 1 A_SpawnItem ("HeadshotHitSaw", 0, 0)
+		TNT1 A 1
+		Stop
+	Death.Explosive:
+	XDeath:
+		TNT1 A 0// A_PlaySound("HEDEXPL", 1)
+		TNT1 A 1 A_SpawnItem ("HeadshotX", 0, 0)
+		TNT1 A 1
+		Stop
+	Pain.SSG:
+	Death.SSG:
+		TNT1 A 0// A_PlaySound("HEDEXPL", 1)
+		TNT1 A 1 A_SpawnItem ("HeadshotSSG", 0, 0)
+		TNT1 A 1
+		Stop
+	Death.Taunt:
+		TNT1 A 1 A_SpawnItem ("HeadshotHitTaunt", 0, 0)
+		TNT1 A 1
+		Stop
+
+	Disappear:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget4: HeadshotTargetBase
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 6
+		XXXX A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget777: HeadshotTargetBase
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 7
+		XXXX A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget3: HeadshotTargetBase
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 3
+		XXXX A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget2: HeadshotTargetBase
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 5
+		XXXX A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget8: HeadshotTargetBase
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 11
+		XXXX A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget09: HeadshotTargetBase
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 10
+		XXXX A 1
+		Stop
+	}
+}
+
+//Hell Knight and Baron of Hell Heads
+//They have higher armor, and have bonus resistence against Minigun damage.
+ACTOR HeadshotTarget4b: HeadshotTarget4
+{
+	Radius 17
+	Height 22
+	Health 50
+	DamageFactor "Cutless", 0.6
+	States
+	{
+	Pain.CutLess:
+		TNT1 A 4
+		TNT1 A 1 A_SpawnItem ("HeadshotMinorHit", 0, 0)
+		TNT1 A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget8b: HeadshotTarget8
+{
+	Radius 17
+	Height 22
+	Health 50
+	DamageFactor "Cutless", 0.6
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 11
+		XXXX A 1
+		Stop
+	Pain.CutLess:
+		TNT1 A 4
+		TNT1 A 1 A_SpawnItem ("HeadshotMinorHit", 0, 0)
+		TNT1 A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget8c: HeadshotTarget8
+{
+	Radius 17
+	Height 22
+	Health 50
+	DamageFactor "Cutless", 0.6
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 1
+		XXXX A 0
+		Stop
+	Pain.CutLess:
+		TNT1 A 4
+		TNT1 A 1 A_SpawnItem ("HeadshotMinorHit", 0, 0)
+		TNT1 A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget8d: HeadshotTarget8
+{
+	Radius 17
+	Height 22
+	Health 50
+	DamageFactor "Cutless", 0.6
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 2
+		XXXX A 2
+		Stop
+	Pain.CutLess:
+		TNT1 A 4
+		TNT1 A 1 A_SpawnItem ("HeadshotMinorHit", 0, 0)
+		TNT1 A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget10: HeadshotTargetBase
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 9
+		XXXX A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget15: HeadshotTargetBase
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 8
+		XXXX A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget20: HeadshotTargetBase
+{
+	Height 15
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 22
+		XXXX A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget23: HeadshotTargetBase
+{
+	Height 15
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 25
+		XXXX A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget105: HeadshotTargetBase
+{
+	Height 15
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 15
+		XXXX A 1
+		Stop
+	}
+}
+
+ACTOR HeadshotTarget30: HeadshotTargetBase
+{
+	Height 15
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CheckSight("Disappear")
+		XXXX A 33
+		XXXX A 1
+		Stop
+	}
+}
+
+// This ACTOR is spawned after you headshoot somebody. It deals the damage, then vanishes.
+
+ACTOR HeadshotHitPlasma
+{
+	+NOTARGET
+	+NEVERTARGET
+	Radius 1//0
+	Height 1//0
+	DamageType Plasma2
+//	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+NOEXTREMEDEATH
+	PROJECTILE
+	+FORCERADIUSDMG
+	+ACTIVATEMCROSS
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		XDT3 A 0 A_Explode(70,12)
+		TNT1 AAA 1
+		Stop
+	}
+}
+
+ACTOR HeadshotHitFire
+{
+	+NOTARGET	+NEVERTARGET
+	Radius 1//0
+	Height 1//0
+	DamageType Fire
+//	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+NOEXTREMEDEATH
+	PROJECTILE
+	+FORCERADIUSDMG
+	+ACTIVATEMCROSS
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		XDT3 A 0 A_Explode(60,12)
+		TNT1 AAA 1
+		Stop
+	}
+}
+
+ACTOR HeadshotHitSaw
+{
+	+NOTARGET	+NEVERTARGET
+	Radius 1//0
+	Height 1//0
+	DamageType Decaptate
+//	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+NOEXTREMEDEATH
+	PROJECTILE
+	+FORCERADIUSDMG
+	+ACTIVATEMCROSS
+	States
+	{
+	Spawn:
+		XDT3 A 0 A_Explode(150,12)
+		XDT3 A 0 A_Explode(150,12)
+		TNT1 AAA 1
+	Stop
+	}
+}
+
+ACTOR HeadshotHitTaunt
+{
+	+NOTARGET	+NEVERTARGET
+	Radius 1//0
+	Height 1//0
+	DamageType Decaptate
+//	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+NOEXTREMEDEATH
+	+FORCERADIUSDMG
+	PROJECTILE
+	+ACTIVATEMCROSS
+	States
+	{
+	Spawn:
+		XDT3 A 0 A_Explode(1,12)
+		XDT3 A 0 A_Explode(1,12)
+		TNT1 AAA 1
+		Stop
+	}
+}
+
+ACTOR HeadshotHit
+{
+	+NOTARGET	+NEVERTARGET
+	+FORCERADIUSDMG
+	Radius 1//0
+	Height 1//0
+	DamageType head
+//	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+NOEXTREMEDEATH
+	+FORCERADIUSDMG
+//
+	+ACTIVATEMCROSS
+	PROJECTILE
+	States
+	{
+	Spawn:
+		XDT3 A 0 A_Explode(150,12)
+		XDT3 A 0 A_Explode(150,12)
+		TNT1 AAA 1
+		Stop
+	}
+}
+
+ACTOR HeadshotHitKick
+{
+	+NOTARGET	+NEVERTARGET
+	+FORCERADIUSDMG
+	Radius 1//0
+	Height 1//0
+	DamageType Kick
+	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+NOEXTREMEDEATH
+	+FORCERADIUSDMG
+//
+	+ACTIVATEMCROSS
+	PROJECTILE
+	States
+	{
+	Spawn:
+		XDT3 A 0 A_Explode(10,12)
+		XDT3 A 0 A_Explode(10,12)
+		TNT1 AAA 1
+		Stop
+	}
+} 
+
+ACTOR HeadshotX
+{
+	+NOTARGET	+NEVERTARGET
+	+FORCERADIUSDMG
+	Radius 1//0
+	Height 1//0
+	DamageType head
+//	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+FORCERADIUSDMG
+//
+	+ACTIVATEMCROSS
+	PROJECTILE
+	+EXTREMEDEATH
+	States
+	{
+	Spawn:
+		XDT3 A 0 A_Explode(250,12)
+		XDT3 A 0 A_Explode(250,12)
+		TNT1 AAA 1
+		Stop
+	}
+}
+
+ACTOR HeadshotXX: HeadshotX
+{
+	States
+	{
+	Spawn:
+		XDT3 A 0 A_Explode(300,12)
+		XDT3 A 0 A_Explode(300,12)
+		TNT1 AAA 1
+		Stop
+	}
+}
+
+ACTOR HeadshotXCyber: HeadshotX
+{
+	States
+	{
+	Spawn:
+		XDT3 A 0 A_Explode(150,12)
+		XDT3 A 0 A_Explode(150,12)
+		TNT1 AAA 1
+		Stop
+	}
+}
+
+ACTOR HeadshotSSG
+{
+	+NOTARGET	+NEVERTARGET
+	Radius 1//0
+	Height 1//0
+	DamageType head
+//	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+FORCERADIUSDMG
+	+NOEXTREMEDEATH
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_Explode(500,12)
+		TNT1 A 0 A_Explode(500,12)
+		TNT1 AAA 1
+		Stop
+	}
+}
+
+ACTOR HeadshotMinorHit
+{
+	+NOTARGET	+NEVERTARGET
+	Radius 1//0
+	Height 1//0
+	DamageType minorhead
+//	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	PROJECTILE
+	+FORCERADIUSDMG
+//
+	+ACTIVATEMCROSS
+	+NOEXTREMEDEATH
+	States
+	{
+	Spawn:
+		XDT3 A 0 A_Explode(70,12)
+		XDT3 A 0 A_Explode(70,12)
+		TNT1 AAA 1//TNT1 AAA 3
+		Stop
+	}
+}
+
+ACTOR HeadshotMinorHitChaingun
+{
+	+NOTARGET	+NEVERTARGET
+	Radius 1//0
+	Height 1//0
+	DamageType head
+//	+NOGRAVITY
+	+NOTELEPORT
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	PROJECTILE
+	+FORCERADIUSDMG
+//
+	+ACTIVATEMCROSS
+	+NOEXTREMEDEATH
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Jump(128, "Minorhit")
+		XDT3 A 0 A_Explode(45, 25)//(70,12)
+		XDT3 A 0 A_Explode(45, 25)//(70,12)
+		TNT1 AAA 1//TNT1 AAA 3
+		Stop
+
+	Minorhit:
+		TNT1 A 0
+		TNT1 A 0 A_SpawnItem ("HeadshotMinorHit", 0, 0)
+		TNT1 A 0
+		Stop
+	}
+}
+
+
+ACTOR HeadshotTinyHitChaingun: HeadshotMinorHitChaingun
+{
+	States
+	{
+	Spawn:
+		XDT3 A 0 A_Explode(35,12)
+		XDT3 A 0 A_Explode(35,12)
+		TNT1 AAA 1
+		Stop
+	}
+}
+
+ACTOR Behead
+{
+	+NOTARGET	+NEVERTARGET
+	Radius 1//0
+	Height 1//0
+	DamageType headcut
+//	+NOGRAVITY
+	+NOTELEPORT
+	+FORCERADIUSDMG
+//
+	+ACTIVATEMCROSS
+	+NODAMAGETHRUST
+	+THRUGHOST
+	+NORADIUSDMG
+	+NOEXTREMEDEATH
+	PROJECTILE
+	States
+	{
+	Spawn:
+		XDT3 A 0 A_Explode(300,12)
+		XDT3 A 0 A_Explode(300,12)
+		TNT1 AAA 1//TNT1 AAA 3
+		Stop
+	}
+}
+
+ACTOR XDeathBullHead
+{
+	Radius 10
+	Height 15
+	Speed 4
+	Mass 12
+	Health 30
+	BounceFACTOR 0.6
+	BounceType "Doom"
+	-NOBLOCKMAP
+	+NOTELEPORT
+	+MOVEWITHSECTOR
+	+SHOOTABLE
+	+NOBLOODDECALS
+	+WINDTHRUST
+	-SOLID
+	+NORADIUSDMG
+	DamageFactor "Trample", 100.0
+	DeathSound "misc/xdeath1"
+//	Decal BloodSuper
+	States
+	{
+	Spawn:
+		HED8 B -1//8
+		Stop//Loop
+	Death:
+		TNT1 AAAAA 0 A_CustomMissile ("NashGore_FlyingBloodTrail5", 0, 0, random (0, 360), 2, random (0, 360))
+		TNT1 A 0 A_PlaySound("misc/xdeath4")
+		TNT1 AAA 0 A_CustomMissile ("Brains1", 11, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains2", 11, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains3", 11, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains4", 11, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("Brains5", 11, 0, random (0, 360), 2, random (0, 160))
+		Stop
+	Death.Trample:
+	Crush:
+		TNT1 AAAAAAAA 0 A_CustomMissile ("NashGore_FlyingBloodTrail5", 0, 0, random (0, 360), 2, random (0, 360))
+		TNT1 A 0 A_PlaySound("misc/xdeath4")
+		CRS1 A 5
+		CRS1 A -1
+		Stop
+	}
+}
+
+ACTOR XDeathKnightHead
+{
+	Radius 1//0
+	Height 15
+	Speed 6
+	Mass 12
+	Health 30
+//	bloodtype "GreenBlood"
+//	bloodcolor darkgreen
+	BounceFACTOR 0.6
+	BounceType "Doom"
+	-NOBLOCKMAP
+	+NOTELEPORT
+	+MOVEWITHSECTOR
+	+SHOOTABLE
+	+WINDTHRUST
+	+SOLID
+	+NOBLOODDECALS
+	+NORADIUSDMG
+	DamageFactor "Trample", 100.0
+	DeathSound "misc/xdeath1"
+//	Decal BloodSuper
+	States
+	{
+	Spawn:
+		GORA C -1//8
+		Stop//Loop
+	Death:
+		TNT1 A 0 A_PlaySound("misc/xdeath4")
+		Stop
+	Death.Trample:
+	Crush:
+		TNT1 A 0 A_PlaySound("misc/xdeath4")
+		CRS1 A 5
+		CRS1 A -1
+		Stop
+	}
+}
+
+ACTOR XDeathBaronHead
+{
+	Radius 1//0
+	Height 15
+	Speed 6
+	Mass 12
+	Health 30
+//	bloodtype "GreenBlood"
+//	bloodcolor darkgreen
+	gravity 0.5
+//	Decal BloodSuper
+	BounceFACTOR 0.4
+	BounceType "Doom"
+	+NOTELEPORT
+	+MOVEWITHSECTOR
+	+SHOOTABLE
+	+NOBLOODDECALS
+	+WINDTHRUST
+	+SOLID
+	+NORADIUSDMG
+	DamageFactor "Trample", 100.0
+	DeathSound "misc/xdeath1"
+//	Decal BloodSuper
+	States
+	{
+	Spawn:
+		GORB B -1//8
+		Stop//Loop
+	Death:
+		TNT1 AAAAAAAA 0 A_CustomMissile ("NashGore_FlyingBloodTrail5", 0, 0, random (0, 360), 2, random (0, 360))
+		TNT1 A 0 A_JumpIf(waterlevel > 1, "Death")
+		TNT1 A 0 A_PlaySound("misc/xdeath4")
+		Stop
+	Death.Trample:
+	Crush:
+		TNT1 AAAAAAAA 0 A_CustomMissile ("NashGore_FlyingBloodTrail5", 0, 0, random (0, 360), 2, random (0, 360))
+		TNT1 A 0 A_PlaySound("misc/xdeath4")
+		CRS1 B 5
+		CRS1 B -1
+		Stop
+	}
+}
+
+ACTOR Nashgore_BloodForHeads: Nashgore_Blood
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash")
+		TNT1 AAA 0 A_CustomMissile ("NashGore_FlyingBloodTrail", 15, 0, random (0, 360), 2, random (0, 180))
+		TNT1 AAAAAAAAAAAAA 0 A_CustomMissile ("NashGore_FlyingBloodTrail", 0, 0, random (0, 180), 2, random (0, 180))
+		TNT1 A 0 A_CustomMissile ("CeilBloodLauncher", 0, 0, random (0, 360), 2, random (50, 130))
+  		TNT1 AA 0 A_CustomMissile ("Nashgore_FlyingBlood", 0, 0, random (0, 360), 2, random (0, 160))
+
+		BLOD BCD 0
+		stop
+	}
+}
+
+ACTOR MeatShield: HeadshotTargetBase
+{
+	Speed 9
+	+NOTARGET	+NEVERTARGET
+	DamageFactor "Cut", 1.0
+	DamageFactor "SSG", 1.0
+	DamageFactor "Melee", 1.0
+	DamageFactor "Cutless", 1.0
+	DamageFactor "Plasma", 1.0
+	DamageFactor "Blast", 1.0
+	DamageFactor "Taunt", 0.0
+	DamageFactor "Blood", 0.0
+	DamageFactor "BlueBlood", 0.0
+	DamageFactor "Head", 0.0
+	DamageFactor "KillMe", 0.0
+	DamageFactor "MinorHead", 0.0
+	DamageFactor "KillMe", 0.0
+	DamageFactor "Explosive", 1.0
+	DamageFactor "DestroyShield", 0.0
+	DamageFactor "Trample", 0.0
+	DamageFactor "Trample2", 0.0
+	DamageFactor "BlueBloodSplasher", 0.0
+	DamageFactor "BlueSuperBloodSplasher", 0.0
+	DamageFactor "bloodsplasher", 0.0	DamageFactor "tinybloodsplasher", 0.0	DamageFactor "superbloodsplasher", 0.0	DamageFactor "smallbloodsplasher", 0.0
+	Health 0x7FFFFFFF
+	Radius 15//24
+	Height 56//42
+	BloodType "NashGore_Blood"
+	PainChance 255
+	+NOGRAVITY
+	+SHOOTABLE
+	+NOTELEPORT
+	-SOLID
+	+NOBLOODDECALS
+	+NODAMAGETHRUST
+	-THRUGHOST
+	+NORADIUSDMG
+	-GHOST
+	States
+	{
+	Spawn:
+		XXXX A 2
+		Stop
+
+	Pain:
+	Pain.Cutless:
+		TNT1 A 0 A_PlaySound ("grunt/pain")
+		TNT1 AA 0 A_GiveInventory("MeatAmmo", 1)
+		Goto Spawn
+
+	Pain.Bullet:
+		TNT1 A 0 A_PlaySound ("grunt/pain")
+		TNT1 AA 0 A_GiveInventory("MeatAmmo", 1)
+		Goto Spawn
+
+	Pain.SSG:
+	Pain.Cut:
+	Pain.Flames:
+	Pain.Fire:
+	Pain.Burn:
+	Pain.Plasma:
+	Pain.Eat:
+	Pain.Blast:
+	Pain.Rip:
+	Pain.ImpFatalityMarine:
+	Pain.HKF:
+	Pain.Melee:
+		TNT1 A 0 A_PlaySound ("grunt/pain")
+		TNT1 AAAAAAAAAAAAAAA 0 A_GiveInventory("MeatAmmo", 1)
+		Goto Spawn
+	}
+}
+
+ACTOR MeatShield2: MeatShield
+{
+	States
+	{
+	Pain:
+	Pain.Cutless:
+		TNT1 A 0 A_PlaySound ("imp/pain")
+		TNT1 AA 0 A_GiveInventory("MeatAmmo", 1)
+		Goto Spawn
+
+	Pain.Bullet:
+		TNT1 A 0 A_PlaySound ("imp/pain")
+		TNT1 AA 0 A_GiveInventory("MeatAmmo", 1)
+		Goto Spawn
+
+	Pain.SSG:
+	Pain.Cut:
+	Pain.Flames:
+	Pain.Fire:
+	Pain.Burn:
+	Pain.Plasma:
+	Pain.Eat:
+	Pain.Blast:
+	Pain.Rip:
+	Pain.ImpFatalityMarine:
+	Pain.HKF:
+	Pain.Melee:
+		TNT1 A 0 A_PlaySound ("imp/pain")
+		TNT1 AAAAAAAAAAAAAAA 0 A_GiveInventory("MeatAmmo", 1)
+		Goto Spawn
+	}
+}

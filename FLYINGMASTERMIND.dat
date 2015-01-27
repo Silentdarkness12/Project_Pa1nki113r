@@ -1,0 +1,285 @@
+actor Arachnophyte
+{
+    
+    Health 600
+    Radius 64
+    Height 100
+    Speed 6
+    PainChance 15
+    Mass 5000
+    MONSTER 
+    +NOGRAVITY
+    +FLOATBOB
+    +FLOAT
+    +NORADIUSDMG
+    +FIRERESIST
+    SeeSound "arachnophyte/sight"
+    PainSound "arachnophyte/pain"
+    DeathSound "arachnophyte/death"
+    AttackSound "spider/attack"
+    Obituary "%o was perforated by an Arachnophyte."
+	//-TELESTOMP
+	-NOTELEFRAG
+	+NOTELESTOMP
+	+TELESTOMP
+	DamageFactor "Crush", 10.0
+	DamageFactor "Avoid", 0.0
+	DamageFactor "Saw", 0.6
+    BloodType "NashGore_Blood", "BloodSPlatterReplacer", "NashGore_Blood"
+	MaxStepHeight 24
+	DropItem "Berserker" 5
+	MaxDropOffHeight 24
+	PainChance "Kick", 255
+	DamageFactor "Blood", 0.0 DamageFactor "BlueBlood", 0.0 DamageFactor "GreenBlood", 0.0
+	DamageFactor "bloodsplasher", 0.0    DamageFactor "tinybloodsplasher", 0.0    DamageFactor "superbloodsplasher", 0.0    DamageFactor "smallbloodsplasher", 0.0
+	DamageFactor "BlueBloodSplasher", 0.0
+    DamageFactor "BlueSuperBloodSplasher", 0.0
+    Damage 25
+	Scale 0.74
+    Explosiondamage 128
+    Explosionradius 255
+	DropItem "DemonStrengthRune" 8
+	DropItem "RageSphere" 7
+	DropItem "DoubleSphere" 6
+	DropItem "ShieldSphere" 1
+    States
+    {
+    Spawn:
+        APYT A 0 A_PlaySound("arachnophyte/engine",8)
+        APYT ABABAB 4 A_Look
+        Loop
+    See:
+        APYT A 0 A_PlaySound("arachnophyte/engine",8)
+        APYT AABBAABBAABB 2 A_Chase
+        Loop
+    Missile:
+        APYT A 0 A_PlaySound("arachnophyte/engine",8)
+        APYT BABAB 4 A_FaceTarget
+        APYT A 0 A_PlaySound("arachnophyte/engine",8)
+        APYT CD 4 BRIGHT A_CustomMissile("MonsterNewChainGunTracer", 38, 0, random(-3, 3), 0)
+		TNT1 A 0 A_PlaySound("weapons/minigunfire", 4)
+		TNT1 A 0 BRIGHT A_CustomMissile("MonsterNewChainGunTracer", 38, 0, random(-3, 3), 0)
+        APYT D 1 A_SpidRefire
+        Goto Missile+6
+    Pain:
+        APYT A 1 A_Pain
+        Goto See
+	
+	Death.Fatality:
+		TNT1 A 0 A_GiveToTarget("GoFatality", 1)
+        TNT1 A 0 A_NoBlocking
+        TNT1 A 0 A_GiveToTarget("ArachnophyteFatality", 1)
+        Stop
+		
+	Death.Shotgun:
+	TNT1 A 0
+	TNT1 A 0 A_JumpIfCloser(500, "Death.Brutal")
+	Goto Death
+	
+	Death.cutless:
+		TNT1 A 0 A_Jump(152, "Death.Brutal")
+    Death:
+        APYT A 0 A_Scream
+	    APYT A 4 A_PlaySound("spider/death",8)
+        APYT B 4 
+        APYT E 4 
+        APYT F 4
+        APYT G 4 
+		APYT G 1 A_PlaySound("spider/death",8)
+		TNT1 AAAA 0 A_CustomMissile ("MuchMeatDeath", 0, 0, random (0, 360), 2, random (0, 160))
+        TNT1 AAAAAA 0 A_CustomMissile ("LongExplosionSpawner", 30, 0, random (0, 360), 2, random (0, 180))
+		TNT1 AAAAAAAAA 0 A_CustomMissile ("PEPart2SuperFast", 32, 0, random (0, 360), 2, random (0, 160))
+        TNT1 AAAA 0 A_CustomMissile ("UltraGoreSPawner", 30, 0, random (0, 360), 2, random (0, 180))
+		TNT1 AAA 0 A_CustomMissile ("SpiderPart1", 32, 0, random (0, 360), 2, random (0, 160))
+        TNT1 AA 0 A_CustomMissile ("SpiderPart2", 32, 0, random (0, 360), 2, random (0, 160))
+        TNT1 AAAAA 0 A_CustomMissile ("UltraGoreSpawner", 30, 0, random (0, 360), 2, random (0, 180))
+        APYT H 5 A_Fall
+        APYT I 5
+        APYT J 5
+        Stop
+		
+	Death.Brutal:	
+		TNT1 A 0 A_SetFloorClip
+		TNT1 A 0 A_SetFloorClip
+		TNT1 A 0 A_Scream
+		TNT1 A 0 A_NoBlocking
+		TNT1 AAAAA 0 A_CustomMissile ("Nashgore_FlyingBlood", 47, 0, random (0, 360), 2, random (30, 150))
+		TNT1 A 0 A_CustomMissile ("SpiderPart1", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile ("SpiderPart2", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile ("EEXDEATH2", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile ("MuchBlood", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("PEPart2SuperFast", 50, 0, random (0, 360), 2, random (0, 160))
+		APYT K 10
+		TNT1 A 0 A_SpawnItem("BrutalizedArachnophyte1")
+		Stop
+	
+    }
+}
+
+ACTOR FatalizedArachnophyte
+{
+	
+    Radius 12
+    Height 18
+    +SHOOTABLE
+    -SOLID
+    +NOTELEPORT
+    +MOVEWITHSECTOR
+    -CORPSE
+	-DONTGIB
+	-TELESTOMP
+	DamageFactor "Crusher", 50.0
+    Mass 1000
+    Health 100
+    DamageFactor "Blood", 0.0
+    DamageFactor "Trample", 0.0
+States
+    {
+    Spawn:
+		APYT P 2
+		TNT1 A 0 A_Playsound("arachnophyte/pain")
+		APYT P 12
+		TNT1 A 0 A_Playsound("arachnophyte/pain")
+		APYT P 12
+		TNT1 A 0 A_Playsound("arachnophyte/pain")
+		APYT P 12
+		TNT1 A 0 A_Playsound("arachnophyte/pain")
+        goto Death
+    Death:
+        APYT B 4 A_PlaySound("spider/death",8)
+        APYT E 4 
+        APYT F 4
+        APYT G 4 
+		APYT G 1 A_PlaySound("spider/death",8)
+		TNT1 AAAA 0 A_CustomMissile ("MuchMeatDeath", 0, 0, random (0, 360), 2, random (0, 160))
+        TNT1 AAAAAA 0 A_CustomMissile ("LongExplosionSpawner", 30, 0, random (0, 360), 2, random (0, 180))
+		TNT1 AAAAAAAAA 0 A_CustomMissile ("PEPart2SuperFast", 32, 0, random (0, 360), 2, random (0, 160))
+        TNT1 AAAA 0 A_CustomMissile ("UltraGoreSPawner", 30, 0, random (0, 360), 2, random (0, 180))
+		TNT1 AAA 0 A_CustomMissile ("SpiderPart1", 32, 0, random (0, 360), 2, random (0, 160))
+        TNT1 AA 0 A_CustomMissile ("SpiderPart2", 32, 0, random (0, 360), 2, random (0, 160))
+        TNT1 AAAAA 0 A_CustomMissile ("UltraGoreSpawner", 30, 0, random (0, 360), 2, random (0, 180))
+        APYT H 5 A_Fall
+        APYT I 5
+        APYT J 5
+         Stop}
+}
+
+ACTOR BrutalizedArachnophyte1
+{
+	Game Doom
+	Radius 24
+	Height 48
+	Health 50
+	DamageFactor "Blood", 0.0 DamageFactor "BlueBlood", 0.0 DamageFactor "GreenBlood", 0.0
+    DamageFactor "Avoid", 0.0
+	DamageFactor "Shrapnel", 0.0
+	DamageFactor "KillMe", 0.0
+	DamageFactor "Cutless", 0.6
+	DamageFactor "bloodsplasher", 0.0    DamageFactor "tinybloodsplasher", 0.0    DamageFactor "superbloodsplasher", 0.0    DamageFactor "smallbloodsplasher", 0.0
+	bloodtype "NashGore_Blood", "BloodSPlatterReplacer", "NashGore_Blood"
+	DamageFactor "BlueBloodSplasher", 0.0
+    DamageFactor "BlueSuperBloodSplasher", 0.0
+	Mass 0x7FFFFFFF
+	-SOLID
+	+SHOOTABLE
+	+FLOORCLIP
+	+NOPAIN
+	Scale .91
+	States
+	{
+	Spawn:
+	APYT LLLL 20 A_CustomMissile ("NashGore_FlyingBloodTrail8", 40, 0, random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_Fall
+	
+	TNT1 A 0 A_SpawnItem ("ShoqueAzul",1,32)
+	TNT1 A 0 A_SpawnItem("Spark_UpOnce", 1, 35)
+	APYT P 10 A_CustomMissile ("Nashgore_FlyingBlood", 62, 0, random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_SpawnItem ("ShoqueAzul",1,26)
+	TNT1 A 0 A_SpawnItem("Spark_UpOnce", 1, 35)
+	APYT P 10 A_CustomMissile ("Nashgore_FlyingBlood", 62, 0, random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_SpawnItem ("ShoqueAzul",1,29)
+	TNT1 A 0 A_SpawnItem("Spark_UpOnce", 1, 35)
+	APYT P 10 A_CustomMissile ("Nashgore_FlyingBlood", 62, 0, random (0, 360), 2, random (0, 160))
+	
+	TNT1 A 0 A_SpawnItem ("ShoqueAzul",1,30)
+	TNT1 A 0 A_SpawnItem("Spark_UpOnce", 1, 35)
+	EXPL A 0 Radius_Quake (3, 60, 0, 11, 0)
+	APYT P 8 A_CustomMissile ("Nashgore_FlyingBlood", 62, 0, random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_SpawnItem ("ShoqueAzul",1,19)
+	TNT1 A 0 A_SpawnItem("Spark_UpOnce", 1, 35)
+	APYT P 6 A_CustomMissile ("Nashgore_FlyingBlood", 62, 0, random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_SpawnItem ("ShoqueAzul",1,25)
+	TNT1 A 0 A_SpawnItem("Spark_UpOnce", 1, 35)
+	APYT P 4 A_CustomMissile ("Nashgore_FlyingBlood", 62, 0, random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_SpawnItem ("ShoqueAzul",1,18)
+	TNT1 A 0 A_SpawnItem("Spark_UpOnce", 1, 35)
+	TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+	TNT1 A 0 A_ChangeFlag("SOLID", 0)
+	APYT P 2 A_CustomMissile ("Nashgore_FlyingBlood", 62, 0, random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_SpawnItemEx ("LongExplosionSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
+	TNT1 A 0 A_PlaySound("FAREXPL", 3)
+	TNT1 AAAAAA 0 A_CustomMissile ("MuchBlood", 50, 0, random (0, 360), 2, random (0, 160))
+	TNT1 AAAA 0 A_CustomMissile ("SpiderPart1", 50, 0, random (0, 360), 2, random (0, 160))
+	TNT1 AAAA 0 A_CustomMissile ("SpiderPart2", 50, 0, random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile ("EEXDEATH2", 50, 0, random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile ("XDEATH2", 50, 0, random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile ("EXDEATH2", 50, 0, random (0, 360), 2, random (0, 160))
+	APYT N -1
+	
+	
+	Death:
+		TNT1 AAAAA 0 A_CustomMissile ("Nashgore_FlyingBlood", 47, 0, random (0, 360), 2, random (30, 150))
+		TNT1 A 0 A_CustomMissile ("SpiderPart1", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("SpiderPart2", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AAAA 0 A_CustomMissile ("EEXDEATH2", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AA 0 A_CustomMissile ("EXDEATH2", 50, 0, random (0, 360), 2, random (0, 160))
+		TNT1 AAA 0 A_CustomMissile ("MuchBlood", 50, 0, random (0, 360), 2, random (0, 160))
+		APYT M 10
+		TNT1 A 0 A_SpawnItem("BrutalizedArachnophyte2")
+	Stop	
+}}
+
+ACTOR BrutalizedArachnophyte2
+{
+	Game Doom
+	Radius 24
+	Height 48
+	Health 50
+	DamageFactor "Blood", 0.0 DamageFactor "BlueBlood", 0.0 DamageFactor "GreenBlood", 0.0
+    DamageFactor "Avoid", 0.0
+	DamageFactor "Shrapnel", 0.0
+	DamageFactor "KillMe", 0.0
+	DamageFactor "Cutless", 0.6
+	DamageFactor "bloodsplasher", 0.0    DamageFactor "tinybloodsplasher", 0.0    DamageFactor "superbloodsplasher", 0.0    DamageFactor "smallbloodsplasher", 0.0
+	bloodtype "NashGore_Blood", "BloodSPlatterReplacer", "NashGore_Blood"
+	DamageFactor "BlueBloodSplasher", 0.0
+    DamageFactor "BlueSuperBloodSplasher", 0.0
+	Mass 0x7FFFFFFF
+	-SOLID
+	+SHOOTABLE
+	+FLOORCLIP
+	+NOPAIN
+	Scale .91
+	States
+	{
+	Spawn:
+	APYT MMMM 20 A_CustomMissile ("NashGore_FlyingBloodTrail8", 40, 0, random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_Fall
+	TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+	TNT1 A 0 A_ChangeFlag("SOLID", 0)
+	APYT M 6
+	APYT O -1
+	Stop
+	Death:
+	TNT1 AAAAA 0 A_CustomMissile ("Nashgore_FlyingBlood", 47, 0, random (0, 360), 2, random (30, 150))
+	TNT1 A 0 A_CustomMissile ("SpiderPart1", 50, 0, random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile ("SpiderPart2", 50, 0, random (0, 360), 2, random (0, 160))
+	TNT1 AAAA 0 A_CustomMissile ("EEXDEATH2", 50, 0, random (0, 360), 2, random (0, 160))
+	TNT1 AA 0 A_CustomMissile ("EXDEATH2", 50, 0, random (0, 360), 2, random (0, 160))
+	TNT1 AAA 0 A_CustomMissile ("MuchBlood", 50, 0, random (0, 360), 2, random (0, 160))
+	APYT NNNNNNNNNN 4 A_CustomMissile ("Nashgore_FlyingBlood", 47, 0, random (0, 360), 2, random (30, 150))
+	APYT N -1
+	Stop	
+}}

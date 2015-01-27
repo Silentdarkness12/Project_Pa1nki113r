@@ -1,0 +1,16 @@
+// Movement detection by Sergeant_Mark_IV
+
+#include "zcommon.acs"
+#library "movement"
+
+Script 5922 (VOID) NET
+{
+	//Sets the player's height to 28
+ SetActorProperty(0, APROP_HEIGHT, 28);
+}
+
+Script 5923 (VOID) NET
+{
+	//Sets the player's height to 58
+ SetActorProperty(0, APROP_HEIGHT, 58);
+}

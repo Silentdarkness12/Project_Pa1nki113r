@@ -1,0 +1,44 @@
+#library "command"
+#include "zcommon.acs"
+
+Script 3756 (VOID) NET
+{
+ GiveInventory("GoWeaponSpecialAbility", 1);
+}
+
+script 391 ENTER
+{
+ int buttons;
+
+ while (TRUE)
+ {
+   buttons = GetPlayerInput(-1, INPUT_BUTTONS);
+   
+if (buttons & BT_ALTATTACK)
+{
+   GiveInventory("FiredSecondary", 1);
+   delay(2);
+}
+   TakeInventory("FiredSecondary", 1);
+   delay(1);
+ }
+}
+
+
+script 392 ENTER
+{
+ int buttons;
+
+ while (TRUE)
+ {
+   buttons = GetPlayerInput(-1, INPUT_BUTTONS);
+   
+if (buttons & BT_ATTACK)
+{
+   GiveInventory("FiredPrimary", 1);
+   delay(2);
+}
+   TakeInventory("FiredPrimary", 1);
+   delay(1);
+ }
+}

@@ -1,0 +1,12 @@
+-CRITICAL: Fix what Silent Darkness just broke, and generally rewrite it to work better within Github repo:
+    *-Compress down DECORATE files. Blood, the Gores, and blueblood have no real reason to be seperate DECORATE files!
+    *-Compress down the standard BD enemy files.
+    *-Move ALL the loose DECORATE files into their own folders
+    *-Hopefully fix all these script errors D:
+-Clean the pk3 up generally(I.E, move all the loose DECORATE files into the DECORATE folder
+- Progression system
+- More robust spawn balancer system
+- Balance changes
+- More deaths, gore, animations, sounds
+- In-game options that allow players to play as over the top or as normal as they like
+- Maybe... Make the sledge hammer a mutator or something. It just feels outclassed by the chainsaw and combat knife

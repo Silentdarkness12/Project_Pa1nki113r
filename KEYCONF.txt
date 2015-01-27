@@ -1,0 +1,56 @@
+clearplayerclasses
+addplayerclass BrutalDoomer
+
+WeaponSection "Brutal_Doom"
+
+SetSlot 1 Sledge Chain_Saw Melee_Attacks 
+SetSlot 2 CompactSMG Revolver BDPistol
+SetSlot 3 AutoShotgun Shot_Gun QUAD_SSG SSG 
+SetSlot 4 NewChain_Gun Mini_Gun Rifle SAssaultRifleX
+SetSlot 5 Super_Grenade_Launcher Grenade_Launcher Rocket_Launcher
+SetSlot 6 Plasma_Gun M2PlasmaRifle 
+SetSlot 7 Rail_Gun FreezerRifle
+SetSlot 8 PlasmaBeam BHGen BIG_FUCKING_GUN 
+SetSlot 9 FlameCannon HellishMissileLauncher Hell_rifle
+SetSlot 0 SecretWeapon_MP40 LandMineLayer  
+
+
+   AddKeySection "Brutal DooM - Actions" BrutalDoomActions
+
+   AddMenuKey "Kick" kickem
+   Alias kickem "puke 301"
+   DefaultBind E kickem
+   AddMenuKey "Reload Weapon" reloader
+   Alias reloader "puke 303"
+   DefaultBind R reloader
+   AddKeySection "Brutal DooM - Interactions" BrutalDoomInteractions
+   AddMenuKey "Offend" brutaltaunt
+   Alias brutaltaunt "puke 302"
+   DefaultBind MOUSE3 brutaltaunt
+   AddMenuKey "Taunt(1)" wave1
+   Alias wave1 "puke 431"
+   DefaultBind Q wave1
+   AddMenuKey "Taunt(2)" wave2
+   Alias wave2 "puke 432"
+   DefaultBind HOME wave2
+   AddMenuKey "Advanced Taunt" advtaunt
+   Alias advtaunt "puke 304"
+   DefaultBind P advtaunt
+   AddMenuKey "One-Liners" oneliner
+   Alias oneliner "puke 305"
+   DefaultBind L oneliner
+   AddKeySection "Brutal DooM - Advanced Moves" BrutalDoomAdvMoves
+   AddMenuKey "Roll Left" roleft
+   Alias roleft "puke 306"
+   DefaultBind Z roleft
+   AddMenuKey "Roll Right" roright
+   Alias roright "puke 307"
+   DefaultBind X roright
+   
+   AddMenuKey "Throw Mine" usemine
+   Alias usemine "puke 3755"
+   DefaultBind H usemine
+   
+   AddMenuKey "Activate Weapon Special" weaponspecial
+   Alias weaponspecial "puke 3756"
+   DefaultBind V weaponspecial

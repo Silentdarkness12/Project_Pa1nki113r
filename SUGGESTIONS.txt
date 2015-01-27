@@ -1,0 +1,28 @@
+UNREVIEWED:
+-Dual Silenced Pistols
+-Dual SMGs with or without silencers
+-CVAR: Permanent berserk mode
+-Certain other features from Brutal Doom Jay20
+-That Realm 667 that looks like a Scrag from Quake, Brutalized
+-Switch throwing animation(if possible?)
+-A more dynamic health regen system, perhaps using regen stages like Wolfenstein: The New Order
+-Build your own Soulsphere! :D
+-Chances for fatalities on bosses, I.E the Cyberdemon and Spider Mastermind
+-And of course, the fatalities to go with them
+-Something badass for the Hell Rifle
+-Smoothen up the kills with the Combat Knife
+-Grenade Fatalities!(If you have at least one grenade in your inventory, chance for a fatality where a monster has a live grenade
+forced upon them, then they get picked up by the player and thrown as a weapon. Of course, if you're too slow, the monster will
+explode violently.
+-Adrenaline mechanic: Doing badass things, such as making kills with a rapid-fire weapon in quick succession, using the chainsaw to
+kill enemies, or performing fatalities, will fill a meter. When it's full, you can either activate it on demand and gain partial
+invulnerability and full health regen for a short time. Optionally, you can let it stay, and if you take a blow that would kill you,
+it will automatically activate, giving you a second wind of sorts.
+ACCEPTED:
+
+REJECTED:
+
+ON HOLD UNTIL FURTHER NOTICE:
+
+IMPLEMENTED:
+

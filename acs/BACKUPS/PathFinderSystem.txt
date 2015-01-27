@@ -1,0 +1,7 @@
+#include "zcommon.acs"
+#library "PATHFINDER"
+
+Script 634 (void)
+{
+	Thing_Hate(98, 0, 0);
+}

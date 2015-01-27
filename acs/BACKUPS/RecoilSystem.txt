@@ -1,0 +1,92 @@
+#include "zcommon.acs"
+#library "newrecoil"
+
+// Thanks to Thell for helping me with this
+
+Script 278 (void) // Rifle Recoil
+{
+SetActorPitch(0, (GetActorPitch(0) - 100)); 
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 50));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 50));
+}
+
+Script 281 (void) // Shotgun Recoil
+{
+SetActorPitch(0, (GetActorPitch(0) - 700)); 
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+}
+
+Script 279 (void) // Minigun Recoil
+{
+int angle;
+    angle = GetActorPitch(0);
+
+  SetActorPitch(0, (angle-0.004));
+  delay (4);
+    angle = GetActorPitch(0);
+  SetActorPitch(0, (angle+0.002));
+}
+
+script 374 (void) // 1-Barreled SSG Shot
+{
+SetActorPitch(0, (GetActorPitch(0) - 700)); 
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+}
+
+Script 375 (void) // 2-Barreled SSG Shot
+{
+SetActorPitch(0, (GetActorPitch(0) - 1200)); 
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100)); 
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+Delay(1);
+SetActorPitch(0, (GetActorPitch(0) + 100));
+
+}

@@ -1,0 +1,63 @@
+// Demon power drops
+
+// Pinky
+Actor BullDemon2: BullDemon Replaces BullDemon
+{DropItem "Demonpickup" 100}
+//Imp
+Actor Imp2: Imp Replaces Imp
+{DropItem "Demonpickup" 775}
+//Spectre
+Actor Spectro2: Spectro replaces Spectro
+{DropItem "Demonpickup" 100}
+//Hellknight
+Actor HellKnight3 : HellKnight2 Replaces HellKnight2
+{DropItem "Demonpickup2" 50
+ DropItem "Demonpickup" 196}
+//Baron
+Actor BaronofHell3 : BaronofHell2 Replaces BaronofHell2
+{DropItem "Demonpickup2" 76
+ DropItem "Demonpickup2" 76}
+//Arach
+ACTOR Arachnotron2: Arachnotron1 replaces Arachnotron1
+{DropItem "Demonpickup2" 255
+ DropItem "Demonpickup" 55}
+//Cacodemon
+ACTOR Cacodemon2 : Cacodemon_ Replaces Cacodemon_
+{DropItem "Demonpickup2" 25
+ DropItem "Demonpickup" 255}
+//Revenant
+ACTOR Revenant2: Revenant1 Replaces Revenant1
+{DropItem "Demonpickup2" 50
+ DropItem "Demonpickup" 255}
+ //Mancubus
+ ACTOR Mancubus2 : Mancubus_ Replaces Mancubus_
+ {DropItem "Demonpickup2" 50
+ DropItem "Demonpickup2" 250}
+ //Good ol Archi
+ ACTOR TehArchvile2: TehArchvile Replaces TehArchvile
+  {DropItem "Demonpickup2" 255
+ DropItem "Demonpickup2" 25}
+ //Cyber
+ ACTOR TheCyberdemon2: TheCyberdemon Replaces TheCyberdemon
+ {DropItem "Demonpickup2" 255
+ DropItem "Demonpickup2" 255
+ DropItem "Demonpickup2" 255
+ DropItem "Demonpickup2" 255
+ DropItem "Demonpickup2" 255}
+ //Mastermind
+ ACTOR TheSpiderMastermind2: TheSpiderMastermind Replaces TheSpiderMastermind
+  {DropItem "Demonpickup2" 255
+ DropItem "Demonpickup2" 255
+  DropItem "Demonpickup2" 255
+   DropItem "Demonpickup2" 255
+ DropItem "Demonpickup2" 255}
+ //LostSoul
+ ACTOR TehLostSoul2: TehLostSoul Replaces TehLostSoul
+ {DropItem "Demonpickup" 10}
+ //Pain Elemental
+  ACTOR PainElemental2: PainElemental1 Replaces PainElemental1
+ {DropItem "Demonpickup" 128}
+ // Afrit
+ ACTOR Afrit2: Afrit replaces Afrit
+ {DropItem "Demonpickup" 255}
+ 

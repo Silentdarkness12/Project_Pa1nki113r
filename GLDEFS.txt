@@ -1,0 +1,4527 @@
+//To the person about to examine this file... I'm sorry...
+
+Pulselight TIMEFREEZESPHERE
+{
+Color 0.8 0.8 0.8
+Size 40
+SecondarySize 42
+Interval 2.0
+Offset 0 16 0
+}
+
+Object TimefreezeSphereST
+{
+Frame TIME { Light TIMEFREEZESPHERE }
+}
+
+//GLDefs for Overlord
+// [MagicWazard] Note: Some of these light definitions are shared with the
+// Hades Elemental. You don't need to copy them all if you're already using the
+// Hades Elemental!
+Pointlight HadesBall1
+{
+Color 0.8 0.0 0.0
+Size 40
+}
+
+Pointlight HadesBall2
+{
+Color 0.9 0.0 0.0
+Size 48
+}
+
+Pointlight HadesBall3
+{
+Color 0.7 0.0 0.0
+Size 56
+}
+
+Pointlight HadesBall4
+{
+Color 0.6 0.0 0.0
+Size 40
+}
+
+Pointlight HadesBall5
+{
+Color 0.5 0.0 0.0
+Size 32
+}
+
+Pointlight HadesBall6
+{
+Color 0.4 0.0 0.0
+Size 24
+}
+
+Pointlight HadesBall7
+{
+Color 0.3 0.0 0.0
+Size 16
+}
+
+Object HadesBall
+{
+Frame HEFXA { Light HadesBall1 }
+Frame HEFXB { Light HadesBall1 }
+Frame HEFXC { Light HadesBall2 }
+Frame HEFXD { Light HadesBall3 }
+Frame HEFXE { Light HadesBall4 }
+Frame HEFXF { Light HadesBall5 }
+Frame HEFXG { Light HadesBall6 }
+Frame HEFXH { Light HadesBall7 }
+}
+
+Object OverBall
+{
+Frame AFX1A { Light HadesBall1 }
+Frame AFX1B { Light HadesBall1 }
+Frame AFX1C { Light HadesBall1 }
+Frame AFX1D { Light HadesBall2 }
+Frame AFX1E { Light HadesBall3 }
+Frame AFX1F { Light HadesBall4 }
+Frame AFX1G { Light HadesBall5 }
+Frame AFX1H { Light HadesBall6 }
+Frame AFX1I { Light HadesBall7 }
+}
+
+
+Flickerlight2 HadeslightningA
+{
+ Color 1.0 0.0 0.0
+ Offset 0 0 0
+ Size 50
+ SecondarySize 100
+ Interval 0.005
+}
+
+Flickerlight2 HadeslightningB
+{
+ Color 1.0 0.0 0.0
+ Offset 0 0 0
+ Size 80
+ SecondarySize 90
+ Interval 0.005
+}
+
+Flickerlight2 HadeslightningC
+{
+ Color 1.0 0.0 0.0
+ Offset 0 0 0
+ Size 98
+ SecondarySize 138
+ Interval 0.005
+}
+
+Flickerlight2 HadeslightningD
+{
+ Color 1.0 0.0 0.0
+ Offset 0 0 0
+ Size 77
+ SecondarySize 157
+ Interval 0.005
+}
+
+Flickerlight2 HadeslightningE
+{
+ Color 1.0 0.0 0.0
+ Offset 0 0 0
+ Size 72
+ SecondarySize 132
+ Interval 0.005
+}
+
+Object StormBolt
+{
+ Frame LFX2F { Light HadeslightningA }
+ Frame LFX2G { Light HadeslightningB }
+ Frame LFX2H { Light HadeslightningC }
+ Frame LFX2I { Light HadeslightningD }
+ Frame LFX2J { Light HadeslightningE }
+}
+
+
+Pointlight StormShot1
+{
+Color 1.0 0.0 0.0
+Size 64
+}
+
+Object StormShot1
+{
+Frame LFX1S { Light StormShot1 }
+Frame LFX1T { Light StormShot1 }
+Frame LFX1U { Light StormShot1 }
+Frame LFX1V { Light StormShot1 }
+Frame LFX1W { Light StormShot1 }
+}
+
+Pointlight StormShot2
+{
+Color 1.0 0.0 0.0
+Size 96
+}
+
+Object StormShot2
+{
+Frame LFX2K { Light StormShot2 }
+Frame LFX2L { Light StormShot2 }
+Frame LFX2M { Light StormShot2 }
+Frame LFX2N { Light StormShot2 }
+Frame LFX2O { Light StormShot2 }
+}
+
+Pointlight StormLite1A
+{
+Color 1.0 0.0 0.0
+Size 30
+}
+
+Object StormLite1
+{
+Frame DLITA { Light StormLite1A }
+Frame DLITB { Light StormLite1A }
+Frame DLITC { Light StormLite1A }
+}
+
+Pointlight StormLite2A
+{
+Color 1.0 0.0 0.0
+Size 48
+}
+
+Object StormLite2
+{
+Frame LFX1X { Light StormLite2A }
+Frame LFX1Y { Light StormLite2A }
+Frame LFX1Z { Light StormLite2A }
+}
+
+
+//GLDefs for Hades Sphere
+PointLight HadesSphere_1
+{
+Color 1.0 0.0 0.0
+Offset 0 4 0
+Size 10
+}
+
+PointLight HadesSphere_2
+{
+Color 1.0 0.0 0.0
+Offset 0 4 0
+Size 20
+}
+
+PointLight HadesSphere_3
+{
+Color 1.0 0.0 0.0
+Offset 0 4 0
+Size 30
+}
+
+PointLight HadesSphere_4
+{
+Color 1.0 0.0 0.0
+Offset 0 4 0
+Size 40
+}
+
+FlickerLight2 HadesSphere
+{
+Color 1.0 0.0 0.0
+Offset 0 8 0
+Size 50
+SecondarySize 70
+Interval 2.0
+}
+
+Object HS
+{
+Frame HADEE { Light HadesSphere_1 }
+Frame HADEF { Light HadesSphere_2 }
+Frame HADEG { Light HadesSphere_3 }
+Frame HADEH { Light HadesSphere_4 }
+Frame HADEA { Light HadesSphere }
+Frame HADEB { Light HadesSphere }
+Frame HADEC { Light HadesSphere }
+Frame HADED { Light HadesSphere }
+Frame HADEG { Light HadesSphere }
+}
+
+PointLight HadesBoom_1
+{
+Color 1.0 0.0 0.0
+Offset 0 14 0
+Size 80
+}
+
+PointLight HadesBoom_2
+{
+Color 0.9 0.0 0.0
+Offset 0 14 0
+Size 92
+}
+
+PointLight HadesBoom_3
+{
+Color 0.78 0.0 0.0
+Offset 0 14 0
+Size 96
+}
+
+PointLight HadesBoom_4
+{
+Color 0.56 0.0 0.0
+Offset 0 14 0
+Size 100
+}
+
+PointLight HadesBoom_5
+{
+Color 0.32 0.0 0.0
+Offset 0 14 0
+Size 110
+}
+
+Object HS
+{
+Frame HADEM { Light HadesBoom_1 }
+Frame HADEN { Light HadesBoom_2 }
+Frame HADEO { Light HadesBoom_3 }
+Frame HADEP { Light HadesBoom_4 }
+Frame HADEQ { Light HadesBoom_5 }
+}
+
+//Explosion
+PulseLight EXPLOSIONFLASH
+{
+    Color 1.0 0.3 0.0
+    Size 100
+    SecondarySize 120
+    Interval 0.1
+    OffSet 0 60 0
+}
+
+//Jihad Guy
+Pointlight SuicideBomberDeath1
+{
+Color 1.0 0.4 0.0
+Size 35
+}
+
+Pointlight SuicideBomberDeath2
+{
+Color 0.6 0.3 0.0
+Size 40
+}
+
+Pointlight SuicideBomberDeath3
+{
+Color 0.3 0.1 0.0
+Size 35
+}
+
+Object SuicideBomber
+{
+Frame BMBEM { Light SuicideBomberDeath1 }
+Frame BMBEN { Light SuicideBomberDeath2 }
+Frame BMBEO { Light SuicideBomberDeath3 }
+}
+
+
+//Brightmaps
+
+BrightMap Sprite BMBEA1
+{
+Map BMBMBEA1
+DisableFullBright
+}
+
+BrightMap Sprite BMBEA2
+{
+Map BMBMBEA2
+DisableFullBright
+}
+
+BrightMap Sprite BMBEA3
+{
+Map BMBMBEA3
+DisableFullBright
+}
+
+BrightMap Sprite BMBEA4
+{
+Map BMBMBEA4
+DisableFullBright
+}
+
+BrightMap Sprite BMBEA5
+{
+Map BMBMBEA5
+DisableFullBright
+}
+
+BrightMap Sprite BMBEA6
+{
+Map BMBMBEA6
+DisableFullBright
+}
+
+BrightMap Sprite BMBEA7
+{
+Map BMBMBEA7
+DisableFullBright
+}
+
+BrightMap Sprite BMBEA8
+{
+Map BMBMBEA8
+DisableFullBright
+}
+
+BrightMap Sprite BMBEB1
+{
+Map BMBMBEB1
+DisableFullBright
+}
+
+BrightMap Sprite BMBEB2
+{
+Map BMBMBEB2
+DisableFullBright
+}
+
+BrightMap Sprite BMBEB3
+{
+Map BMBMBEB3
+DisableFullBright
+}
+
+BrightMap Sprite BMBEB4
+{
+Map BMBMBEB4
+DisableFullBright
+}
+
+BrightMap Sprite BMBEB5
+{
+Map BMBMBEB5
+DisableFullBright
+}
+
+BrightMap Sprite BMBEB6
+{
+Map BMBMBEB6
+DisableFullBright
+}
+
+BrightMap Sprite BMBEB7
+{
+Map BMBMBEB7
+DisableFullBright
+}
+
+BrightMap Sprite BMBEB8
+{
+Map BMBMBEB8
+DisableFullBright
+}
+
+BrightMap Sprite BMBEC1
+{
+Map BMBMBEC1
+DisableFullBright
+}
+
+BrightMap Sprite BMBEC2
+{
+Map BMBMBEC2
+DisableFullBright
+}
+
+BrightMap Sprite BMBEC3
+{
+Map BMBMBEC3
+DisableFullBright
+}
+
+BrightMap Sprite BMBEC4
+{
+Map BMBMBEC4
+DisableFullBright
+}
+
+BrightMap Sprite BMBEC5
+{
+Map BMBMBEC5
+DisableFullBright
+}
+
+BrightMap Sprite BMBEC6
+{
+Map BMBMBEC6
+DisableFullBright
+}
+
+BrightMap Sprite BMBEC7
+{
+Map BMBMBEC7
+DisableFullBright
+}
+
+BrightMap Sprite BMBEC8
+{
+Map BMBMBEC8
+DisableFullBright
+}
+
+BrightMap Sprite BMBED1
+{
+Map BMBMBED1
+DisableFullBright
+}
+
+BrightMap Sprite BMBED2
+{
+Map BMBMBED2
+DisableFullBright
+}
+
+BrightMap Sprite BMBED3
+{
+Map BMBMBED3
+DisableFullBright
+}
+
+BrightMap Sprite BMBED4
+{
+Map BMBMBED4
+DisableFullBright
+}
+
+BrightMap Sprite BMBED5
+{
+Map BMBMBED5
+DisableFullBright
+}
+
+BrightMap Sprite BMBED6
+{
+Map BMBMBED6
+DisableFullBright
+}
+
+BrightMap Sprite BMBED7
+{
+Map BMBMBED7
+DisableFullBright
+}
+
+BrightMap Sprite BMBED8
+{
+Map BMBMBED8
+DisableFullBright
+}
+
+// Shield Sphere
+pulselight SHIELD
+{
+    color 1.0 0.5 0.0
+    size 40
+    secondarySize 42
+    interval 2.0
+    offset 0 16 0
+}
+
+object SentryGun
+{
+    frame SENTB { light ZOMBIEATK }
+}
+
+object ShieldSphere
+{
+    frame SPOT { light SHIELD }
+}
+
+PulseLight RAGESPHERE
+{
+Color 1.0 0.0 0.0
+Size 40
+SecondarySize 42
+interval 2.0
+Offset 0 16 0
+}
+
+Object RageSphere
+{
+Frame BLDS { Light RAGESPHERE }
+}
+
+pulselight DOUBLER
+{
+    color 1.0 0.0 0.0
+    size 40
+    secondarySize 42
+    interval 2.0
+    offset 0 16 0
+}
+
+object DoubleSphere
+{
+    frame DDMG { light DOUBLER }
+}
+
+
+Object SuperBFGBall
+{
+    Frame BFS1A { Light BFGBALL }
+    Frame BFS1B { Light BFGBALL }
+
+    Frame BFE1A { Light BFGBALL_X1 }
+    Frame BFE1B { Light BFGBALL_X2 }
+    Frame BFE1C { Light BFGBALL_X3 }
+    Frame BFE1D { Light BFGBALL_X1 }
+    Frame BFE1E { Light BFGBALL_X4 }
+    Frame BFE1F { Light BFGBALL_X5 }
+
+    Frame BFE2A { Light BFGBALL    }
+    Frame BFE2B { Light BFGBALL_X1 }
+    Frame BFE2C { Light BFGBALL_X4 }
+    Frame BFE2D { Light BFGBALL_X5 }
+}
+
+Object Candelabra1
+{
+    Frame CBRA { Light BIGREDTORCH }
+}
+
+Object BurningZombie
+{
+    Frame BDT1 { Light BIGREDTORCH }
+	Frame BDT2 { Light BIGREDTORCH }
+	Frame BDT3 { Light BIGREDTORCH }
+}
+
+pointlight RedMine
+{
+color 1.0 0.0 0.0
+size 56
+}
+
+object MineBase
+{
+frame LMINB { light RedMine }
+frame MISLB { light ROCKET_X1 }
+frame MISLC { light ROCKET_X2 }
+frame MISLD { light ROCKET_X3 }
+}
+object Mine
+{
+frame LMINB { light RedMine }
+}
+object Mine2
+{
+frame LMINB { light RedMine }
+}
+
+Object Candlestick1
+{
+Frame CAND { Light SMALLREDTORCH }
+}
+
+PulseLight FSKULL
+{
+Color 1.0 1.0 0.0
+Size 32
+SecondarySize 25
+Interval 3
+}
+
+Pointlight FleshWizardBall1
+{
+Color 0.4 0.0 0.0
+Size 48
+}
+
+Pointlight FleshWizardBall2
+{
+Color 0.7 0.0 0.0
+Size 64
+}
+
+Pointlight FleshWizardBall3
+{
+Color 0.6 0.0 0.0
+Size 56
+}
+
+Pointlight FleshWizardBall4
+{
+Color 0.4 0.0 0.0
+Size 32
+}
+
+
+Object WizardBall
+{
+Frame LMBWA { Light FleshWizardBall1 }
+Frame LMBWB { Light FleshWizardBall1 }
+Frame LMBWC { Light FleshWizardBall2 }
+Frame LMBWD { Light FleshWizardBall3 }
+Frame LMBWE { Light FleshWizardBall4 }
+}
+
+
+// ------------------
+// -- Doom Weapons --
+// ------------------
+
+// Bullet puff
+FlickerLight BPUFF1
+{
+    Color 0.5 0.5 0.0
+    Size 6
+    SecondarySize 8
+    chance 0.8
+}
+
+FlickerLight BPUFF2
+{
+    Color 0.5 0.5 0.0
+    Size 3
+    SecondarySize 4
+    chance 0.8
+}
+
+Object HitPuff
+{
+    Frame PUFFA { Light BPUFF1 }
+    Frame PUFFB { Light BPUFF2 }
+}
+
+Object MachinegunBulletPuff
+{
+    Frame PUFFA { Light BPUFF1 }
+    Frame PUFFB { Light BPUFF2 }
+}
+
+// Rocket
+PointLight ROCKET
+{
+    Color 1.0 0.7 0.0
+    Size 56
+}
+
+FlickerLight ROCKET_X1
+{
+    Color 1.0 0.7 0.0
+    Size 64
+    SecondarySize 72
+    chance 0.3
+}
+
+FlickerLight ROCKET_X2
+{
+    Color 0.5 0.1 0.0
+    Size 80
+    SecondarySize 88
+    chance 0.3
+}
+
+FlickerLight ROCKET_X3
+{
+    Color 0.3 0.0 0.0
+    Size 96
+    SecondarySize 104
+    chance 0.3
+}
+
+// Plasma
+PointLight PLASMABALL
+{
+    Color 0.0 0.1 1.0
+    Size 128
+}
+
+PointLight PLASMABALLSMALL
+{
+    Color 0.0 0.1 1.0
+    Size 64
+}
+
+Object PlasmaPuff
+{
+    Frame PLSE { Light PLASMABALL }
+}
+
+// ----------------------
+// -- Doom Decorations --
+// ----------------------
+
+// Barrel
+
+Object ExplosiveBarrel1
+{
+    Frame BAR1  { Light 1SHADOW    }
+    Frame BAR1  { Light GREENGOOZ    }
+
+    Frame BEXPC { Light ROCKET_X1 }
+    Frame BEXPD { Light ROCKET_X1 }
+    Frame BEXPE { Light ROCKET_X1 }
+    Frame BEXPF { Light ROCKET_X1 }
+    Frame BEXPG { Light ROCKET_X2 }
+    Frame BEXPH { Light ROCKET_X2 }
+    Frame BEXPI { Light ROCKET_X2 }
+    Frame BEXPJ { Light ROCKET_X2 }
+    Frame BEXPK { Light ROCKET_X2 }
+    Frame BEXPL { Light ROCKET_X3 }
+    Frame BEXPM { Light ROCKET_X3 }
+    Frame BEXPN { Light ROCKET_X3 }
+    Frame BEXPO { Light ROCKET_X3 }
+    Frame BEXPP { Light ROCKET_X3 }
+}
+
+// Floor lamp
+PointLight LAMP
+{
+    Color 1.0 1.0 1.0
+    Size 56
+    OffSet 0 44 0
+}
+
+PointLight YELLOWLAMP
+{
+    Color 1.0 1.0 0.0
+    Size 56
+    OffSet 0 44 0
+}
+
+Object Column1
+{
+    Frame COLUA { Light YELLOWLAMP }
+}
+
+// Short tech lamp
+PulseLight SMALLLAMP
+{
+    Color 0.8 0.8 1.0
+    Size 56
+    SecondarySize 58
+    Interval 0.4
+    OffSet 0 44 0
+}
+
+Object TechLamp21
+{
+    Frame TLP2A { Light SMALLLAMP }
+    Frame TLP2B { Light SMALLLAMP }
+    Frame TLP2C { Light SMALLLAMP }
+    Frame TLP2D { Light SMALLLAMP }
+}
+
+// Tall tech lamp
+PulseLight BIGLAMP
+{
+    Color 0.8 0.8 1.0
+    Size 64
+    SecondarySize 66
+    Interval 0.4
+    OffSet 0 72 0
+}
+
+Object TechLamp1
+{
+    Frame TLMPA { Light BIGLAMP }
+    Frame TLMPB { Light BIGLAMP }
+    Frame TLMPC { Light BIGLAMP }
+    Frame TLMPD { Light BIGLAMP }
+}
+
+// Tall red torch
+PulseLight BIGREDTORCH
+{
+    Color 1.0 0.3 0.0
+    Size 58
+    SecondarySize 64
+    Interval 0.1
+    OffSet 0 60 0
+}
+
+Object TallTorch_Red
+{
+    Frame TTRB { Light BIGREDTORCH }
+}
+
+// Tall green torch
+PulseLight BIGGREENTORCH
+{
+    Color 0.0 1.0 0.0
+    Size 58
+    SecondarySize 64
+    Interval 0.1
+    OffSet 0 60 0
+}
+
+Object TallTorch_Green
+{
+    Frame TTRB { Light BIGGREENTORCH }
+}
+
+// Tall blue torch
+PulseLight BIGBLUETORCH
+{
+    Color 0.0 0.0 1.0
+    Size 58
+    SecondarySize 64
+    Interval 0.1
+    OffSet 0 60 0
+}
+
+Object TallTorch_Blue
+{
+    Frame TTRB { Light BIGBLUETORCH }
+}
+
+Object Plasma_Ball
+{
+    Frame TNT1 { Light PLASMABALL }
+    Frame PBAL { Light PLASMABALLSMALL }
+}
+
+Object EnemyPlasmaBall
+{
+    Frame TNT1 { Light PLASMABALL }
+    Frame PBAL { Light PLASMABALLSMALL }
+}
+
+// Small red torch
+PulseLight SMALLREDTORCH
+{
+    Color 1.0 0.3 0.0
+    Size 48
+    SecondarySize 54
+    Interval 0.1
+    OffSet 0 35 0
+}
+
+Object ShortTorch_Red
+{
+    Frame STRB { Light SMALLREDTORCH }
+}
+
+Object SmallFireFocus24
+{
+    Frame FLME { Light SMALLREDTORCH }
+	Frame F1RE { Light SMALLREDTORCH }
+}
+
+// Small green torch
+PulseLight SMALLGREENTORCH
+{
+    Color 0.0 1.0 0.0
+    Size 48
+    SecondarySize 54
+    Interval 0.1
+    OffSet 0 35 0
+}
+
+Object ShortTorch_Green
+{
+    Frame STRB { Light SMALLGREENTORCH }
+}
+
+// Small blue torch
+PulseLight SMALLBLUETORCH
+{
+    Color 0.0 0.0 1.0
+    Size 48
+    SecondarySize 54
+    Interval 0.1
+    OffSet 0 35 0
+}
+
+Object ShortTorch_Blue
+{
+    Frame STRB { Light SMALLBLUETORCH }
+}
+
+// Burning barrel
+PulseLight FIREBARREL
+{
+    Color 1.0 0.9 0.0
+    Size 58
+    SecondarySize 64
+    Interval 0.1
+    OffSet 0 32 0
+}
+
+Object BurningBarrel1
+{
+    Frame BURB { Light FIREBARREL }
+}
+
+Object BigTreeInFlames
+{
+    Frame TRE2 { Light FIREBARREL }
+}
+
+Object TorchTreeInFlames
+{
+    Frame TRE1 { Light FIREBARREL }
+}
+
+// Skulls w/candles
+PulseLight SKULLCANDLES
+{
+    Color 1.0 1.0 0.0
+    Size 32
+    SecondarySize 44
+    Interval 0.1
+    OffSet 0 24 0
+}
+
+Object HeadCandles
+{
+    Frame POL3 { Light SKULLCANDLES }
+}
+
+PointLight HUEHUE
+{
+    Color 0.5 0.4 0
+    Size 48
+}
+
+Object RicoChet
+{
+    Frame IPF2 { Light HUEHUE }
+}
+
+Object YellowFlareSmallB
+{
+    Frame LENY { Light HUEHUE }
+}
+
+// ----------------
+// -- Doom Items --
+// ----------------
+
+// Soul Sphere
+PulseLight SOULSPHERE
+{
+    Color 0.0 0.0 1.0
+    Size 40
+    SecondarySize 42
+    Interval 2.0
+    OffSet 0 16 0
+}
+
+Object LifeSphere
+{
+    Frame SOUL { Light SOULSPHERE }
+}
+
+// Invulnerability Sphere
+PulseLight INVULN
+{
+    Color 0.0 1.0 0.0
+    Size 40
+    SecondarySize 42
+    Interval 2.0
+    OffSet 0 16 0
+}
+
+PulseLight HEALTHPOTION
+{
+    Color 0.0 0.0 0.6
+    Size 16
+    SecondarySize 18
+    Interval 2.0
+}
+
+Object HealthBonus
+{
+    Frame BON1 { Light BLUEITEM }
+}
+
+// Armour Helmet
+PulseLight ARMORBONUS
+{
+    Color 0.0 0.6 0.0
+    Size 14
+    SecondarySize 16
+    Interval 1.0
+}
+
+// Yellow Keys
+PulseLight YELLOWKEY
+{
+    Color 0.6 0.6 0.0
+    Size 16
+    SecondarySize 18
+    Interval 2.0
+}
+
+// Red Keys
+PulseLight REDKEY
+{
+    Color 0.6 0.0 0.0
+    Size 16
+    SecondarySize 18
+    Interval 2.0
+}
+
+// Green armour
+PointLight GREENARMOR1
+{
+    Color 0.0 0.6 0.0
+    Size 48
+}
+
+PointLight GREENARMOR2
+{
+    Color 0.0 0.6 0.0
+    Size 32
+}
+
+// Blue armour
+PointLight BLUEARMOR1
+{
+    Color 0.0 0.0 0.6
+    Size 48
+}
+
+PointLight BLUEARMOR2
+{
+    Color 0.0 0.0 0.6
+    Size 32
+}
+
+// ------------------
+// -- Doom Enemies --
+// ------------------
+
+// Zombies
+FlickerLight2 ZOMBIEATK
+{
+    Color 1.0 0.8 0.2
+    Size 48
+    SecondarySize 56
+    Interval 1
+    OffSet 0 40 0
+}
+
+Object Zombie_Man
+{
+    Frame POSSF { Light ZOMBIEATK }
+}
+
+Object ShotgunGuy1
+{
+    Frame SPOSF { Light ZOMBIEATK }
+}
+
+Object ChaingunGuy1
+{
+    Frame CPOSE { Light ZOMBIEATK }
+    Frame CPOSF { Light ZOMBIEATK }
+}
+
+// Doom Imp Fireball
+PointLight IMPBALL
+{
+    Color 1.0 0.5 0.0
+    Size 64
+}
+
+// Doom imp fireball explosion
+FlickerLight IMPBALL_X1
+{
+    Color 0.7 0.2 0.0
+    Size 80
+    SecondarySize 88
+    chance 0.25
+}
+
+FlickerLight IMPBALL_X2
+{
+    Color 0.4 0.0 0.0
+    Size 96
+    SecondarySize 104
+    chance 0.25
+}
+
+FlickerLight IMPBALL_X3
+{
+    Color 0.2 0.0 0.0
+    Size 112
+    SecondarySize 120
+    chance 0.25
+}
+
+Object FireBall_
+{
+    Frame FR7X { Light IMPBALL    }
+    Frame FRFXA { Light IMPBALL    }
+    Frame FRFXB { Light IMPBALL    }
+    Frame FRFXC { Light IMPBALL    }
+    Frame FRFXD { Light IMPBALL    }
+    Frame FRFXE { Light IMPBALL_X2    }
+    Frame FRFXF { Light IMPBALL_X2    }
+    Frame FRFXG { Light IMPBALL_X2    }
+    Frame FRFXH { Light IMPBALL_X3    }
+    Frame FRFXI { Light IMPBALL_X3    }
+
+}
+
+// Cacodemon fireball
+FlickerLight CACOBALL
+{
+    Color 0.1 0.1 1.0 
+    Size 56
+    SecondarySize 64
+    chance 0.5
+}
+
+FlickerLight CACOBALL_X1
+{
+    Color 0.1 0.4 0.9
+    Size 72
+    SecondarySize 80
+    chance 0.25
+}
+
+FlickerLight CACOBALL_X2
+{
+    Color 0.0 0.1 0.6
+    Size 88
+    SecondarySize 96
+    chance 0.25
+}
+
+FlickerLight CACOBALL_X3
+{
+    Color 0.0 0.0 0.3
+    Size 104
+    SecondarySize 112
+    chance 0.25
+}
+
+Object CacodemonBall_
+{
+    Frame BAL2A { Light CACOBALL }
+    Frame BAL2B { Light CACOBALL }
+
+    Frame BAL2C { Light CACOBALL_X1 }
+    Frame BAL2D { Light CACOBALL_X2 }
+	Frame BAL2E { Light CACOBALL_X2 }
+    Frame BAL2F { Light CACOBALL_X3 }
+}
+
+// Baron / Hell Knight fireball
+PointLight BARONBALL
+{
+    Color 0.0 1.0 0.0
+    Size 64
+}
+
+FlickerLight BARONBALL_X1
+{
+    Color 0.0 0.7 0.0
+    Size 80
+    SecondarySize 88
+    chance 0.25
+}
+
+FlickerLight BARONBALL_X2
+{
+    Color 0.0 0.4 0.0
+    Size 96
+    SecondarySize 104
+    chance 0.25
+}
+
+FlickerLight BARONBALL_X3
+{
+    Color 0.0 0.2 0.0
+    Size 112
+    SecondarySize 120
+    chance 0.25
+}
+
+Object GreenPlasmaBall
+{
+    Frame FRPGJ { Light BARONBALL    }
+    Frame FRPGK { Light BARONBALL    }
+
+    Frame FRPGC { Light BARONBALL_X1 }
+    Frame FRPGD { Light BARONBALL_X1 }
+    Frame FRPGE { Light BARONBALL_X2 }
+    Frame FRPGF { Light BARONBALL_X2 }
+    Frame FRPGG { Light BARONBALL_X3 }
+    Frame FRPGH { Light BARONBALL_X3 }
+}
+
+// Lost Soul
+FlickerLight LOSTSOUL
+{
+    Color 1.0 0.3 0.0
+    Size 56
+    SecondarySize 64
+    chance 0.5
+}
+
+
+FlickerLight LOSTSOUL_X1
+{
+    Color 0.8 0.3 0.0
+    Size 72
+    SecondarySize 80
+    chance 0.25
+}
+
+FlickerLight LOSTSOUL_X2
+{
+    Color 0.6 0.2 0.0
+    Size 88
+    SecondarySize 96
+    chance 0.25
+}
+
+FlickerLight LOSTSOUL_X3
+{
+    Color 0.4 0.1 0.0
+    Size 104
+    SecondarySize 112
+    chance 0.25
+}
+
+FlickerLight LOSTSOUL_X4
+{
+    Color 0.2 0.0 0.0
+    Size 112
+    SecondarySize 120
+    chance 0.25
+}
+
+Object TehLostSoul
+{
+    Frame SKULA { Light LOSTSOUL_X1 }
+    Frame SKULB { Light LOSTSOUL_X1 }
+    Frame SKULC { Light LOSTSOUL_X1 }
+    Frame SKULD { Light LOSTSOUL_X1 }
+    Frame SKULE { Light LOSTSOUL_X1 }
+    Frame SKULF { Light LOSTSOUL_X1 }
+    Frame SKULG { Light LOSTSOUL_X1 }
+    Frame SKULH { Light LOSTSOUL_X1 }
+    Frame SKULI { Light LOSTSOUL_X2 }
+    Frame SKULJ { Light LOSTSOUL_X3 }
+    Frame SKULK { Light LOSTSOUL_X4 }
+}
+
+// Mancubus Fireball
+Object BigFireBall
+{
+    Frame MANFA { Light IMPBALL   }
+    Frame MANFB { Light IMPBALL   }
+	Frame FLME { Light IMPBALL   }
+	Frame F1RE { Light IMPBALL   }
+	Frame F2RE { Light IMPBALL   }
+	Frame FRFX { Light ROCKETLight }
+
+    Frame MISLB { Light ROCKET_X1 }
+    Frame MISLC { Light ROCKET_X2 }
+    Frame MISLD { Light ROCKET_X3 }
+}
+
+// Arachnotron Fireball
+PointLight ARACHPLAS
+{
+    Color 0.6 1.0 0.0
+    Size 56
+}
+
+FlickerLight ARACHPLAS_X1
+{
+    Color 0.4 0.8 0.0
+    Size 72
+    SecondarySize 80
+    chance 0.3
+}
+
+FlickerLight ARACHPLAS_X2
+{
+    Color 0.6 0.6 0.0
+    Size 88
+    SecondarySize 96
+    chance 0.3
+}
+
+FlickerLight ARACHPLAS_X3
+{
+    Color 0.4 0.4 0.0
+    Size 48
+    SecondarySize 32
+    chance 0.3
+}
+
+FlickerLight ARACHPLAS_X4
+{
+    Color 0.2 0.2 0.0
+    Size 24
+    SecondarySize 16
+    chance 0.3
+}
+
+// Revenant tracer
+PointLight TRACER
+{
+    Color 1.0 0.3 0.0
+    Size 48
+}
+
+FlickerLight TRACER_X1
+{
+    Color 1.0 0.2 0.0
+    Size 64
+    SecondarySize 72
+    chance 0.25
+}
+
+FlickerLight TRACER_X2
+{
+    Color 0.6 0.0 0.0
+    Size 80
+    SecondarySize 88
+    chance 0.25
+}
+
+FlickerLight TRACER_X3
+{
+    Color 0.3 0.0 0.0
+    Size 96
+    SecondarySize 104
+    chance 0.25
+}
+
+// Shadows
+
+PointLight GUNSHADOW
+{
+    Color 0.2 0.2 0.2
+    Size 10
+    subtractive 1
+    DontLightSelf 1
+
+}
+
+PointLight 2SHADOW
+{
+    Color 0.4 0.4 0.4
+    Size 6
+    subtractive 1
+    DontLightSelf 1
+
+}
+
+PointLight 1SHADOW
+{
+    Color 0.5 0.5 0.5
+    Size 6
+    subtractive 1
+    DontLightSelf 1
+
+}
+
+PointLight 24SHADOW
+{
+    Color 0.3 0.3 0.3
+    Size 14
+    subtractive 1
+    DontLightSelf 1
+
+}
+
+PointLight 32SHADOW
+{
+    Color 0.3 0.3 0.3
+    Size 20
+    subtractive 1
+    DontLightSelf 1
+
+}
+
+PointLight 64SHADOW
+{
+    Color 0.3 0.3 0.3
+    Size 35
+    subtractive 1
+    DontLightSelf 1
+
+}
+
+PointLight FATSHADOW
+{
+    Color 0.3 0.3 0.3
+    Size 45
+    subtractive 1
+    DontLightSelf 1
+
+}
+
+PointLight CYBERSHADOW
+{
+    Color 0.3 0.3 0.3
+    Size 50
+    subtractive 1
+    DontLightSelf 1
+
+}
+
+PointLight SPIDERSHADOW
+{
+    Color 0.3 0.3 0.3
+    Size 70
+    subtractive 1
+    DontLightSelf 1
+
+}
+
+Object Doomer
+{
+    Frame PLAYA { Light 24SHADOW  }
+	Frame PLAYB { Light 24SHADOW  }
+	Frame PLAYC { Light 24SHADOW  }
+	Frame PLAYD { Light 24SHADOW  }
+	Frame PLAYE { Light 24SHADOW  }
+	Frame PLAYF { Light 24SHADOW  }
+	Frame PLAYG { Light 24SHADOW  }
+	Frame MARJ { Light 24SHADOW  }
+    Frame PKIK { Light 24SHADOW  }
+    Frame PLAI { Light 24SHADOW  }
+    Frame PLAYG { Light 24SHADOW  }
+    Frame MARN { Light 24SHADOW  }
+    Frame WOUN { Light 24SHADOW  }
+	Frame PBAR { Light 24SHADOW  }
+	Frame PLA1 { Light 24SHADOW  }
+	Frame MWAV { Light 24SHADOW  }
+	Frame MAR1 { Light 24SHADOW  }
+	Frame MAR2 { Light 24SHADOW  }
+	Frame MAR3 { Light 24SHADOW  }
+	Frame MAR4 { Light 24SHADOW  }
+	Frame MAR5 { Light 24SHADOW  }
+	Frame MAR6 { Light 24SHADOW  }
+	Frame MAR7 { Light 24SHADOW  }
+	Frame MSSG { Light 24SHADOW  }
+	Frame MAR2 { Light 24SHADOW  }
+	Frame MRGL { Light 24SHADOW  }
+	Frame MRRG { Light 24SHADOW  }
+	Frame M10K { Light 24SHADOW  }
+	Frame MMFC { Light 24SHADOW  }
+	Frame MHML { Light 24SHADOW  }
+	Frame MAR2 { Light 24SHADOW  }
+	Frame MRMP { Light 24SHADOW  }
+}
+
+Object Zombie_Man
+{
+    Frame POSSA { Light 24SHADOW  }
+    Frame POSSB { Light 24SHADOW  }
+    Frame POSSC { Light 24SHADOW  }
+    Frame POSSD { Light 24SHADOW  }
+    Frame POSSE { Light 24SHADOW  }
+    Frame POSSF { Light 24SHADOW  }
+    Frame POSSG { Light 24SHADOW  }
+    Frame POSSH { Light 24SHADOW  }
+    Frame POSSZ { Light 24SHADOW  }
+    Frame ID11 { Light 24SHADOW  }
+	Frame ID12 { Light 24SHADOW  }
+}
+
+Object Shotgunguy1
+{
+    Frame SPOSA { Light 24SHADOW  }
+    Frame SPOSB { Light 24SHADOW  }
+    Frame SPOSC { Light 24SHADOW  }
+    Frame SPOSD { Light 24SHADOW  }
+    Frame SPOSE { Light 24SHADOW  }
+    Frame SPOSF { Light 24SHADOW  }
+    Frame SPOSG { Light 24SHADOW  }
+    Frame SPOSH { Light 24SHADOW  }
+    Frame SPSS { Light 24SHADOW  }
+    Frame SPSRA { Light 24SHADOW  }
+    Frame SPSRB { Light 24SHADOW  }
+    Frame ID11 { Light 24SHADOW  }
+	Frame ID12 { Light 24SHADOW  }
+}
+
+Object Chaingunguy1
+{
+    Frame CPOSA { Light 24SHADOW  }
+    Frame CPOSB { Light 24SHADOW  }
+    Frame CPOSC { Light 24SHADOW  }
+    Frame CPOSD { Light 24SHADOW  }
+    Frame CPOSE { Light 24SHADOW  }
+    Frame CPOSF { Light 24SHADOW  }
+    Frame CPOSG { Light 24SHADOW  }
+    Frame CPOSH { Light 24SHADOW  }
+    Frame CPOSZ { Light 24SHADOW  }
+	Frame CPBK { Light 24SHADOW  }
+}
+
+Object Imp
+{
+    Frame TROOA { Light 24SHADOW  }
+    Frame TROOB { Light 24SHADOW  }
+    Frame TROOC { Light 24SHADOW  }
+    Frame TROOD { Light 24SHADOW  }
+    Frame TROOE { Light 24SHADOW  }
+    Frame TROOF { Light 24SHADOW  }
+    Frame TROOG { Light 24SHADOW  }
+    Frame TROOH { Light 24SHADOW  }
+    Frame TROOZ { Light 24SHADOW  }
+    Frame TROSB { Light 24SHADOW  }
+    Frame WOUI { Light 24SHADOW  }
+    Frame ID11 { Light 24SHADOW  }
+}
+
+Object BullDemon
+{
+    Frame SARGA { Light 32SHADOW  }
+    Frame SARGB { Light 32SHADOW  }
+    Frame SARGC { Light 32SHADOW  }
+    Frame SARGD { Light 32SHADOW  }
+    Frame SARGE { Light 32SHADOW  }
+    Frame SARGF { Light 32SHADOW  }
+    Frame SARGG { Light 32SHADOW  }
+    Frame SARGH { Light 32SHADOW  }
+    Frame SARGZ { Light 32SHADOW  }
+    Frame SARW { Light 32SHADOW  }
+}
+
+Object HellKnight2
+{
+    Frame BOS2A { Light 32SHADOW  }
+    Frame BOS2B { Light 32SHADOW  }
+    Frame BOS2C { Light 32SHADOW  }
+    Frame BOS2D { Light 32SHADOW  }
+    Frame BOS2E { Light 32SHADOW  }
+    Frame BOS2F { Light 32SHADOW  }
+    Frame BOS2G { Light 32SHADOW  }
+    Frame BOS2H { Light 32SHADOW  }
+    Frame BOS2Z { Light 32SHADOW  }
+	Frame KNRJ { Light 32SHADOW  }
+	Frame BTS2 { Light 32SHADOW  }
+	Frame BTS3 { Light 32SHADOW  }
+}
+
+Object BaronOfHell2
+{
+    Frame BOSSA { Light 32SHADOW  }
+    Frame BOSSB { Light 32SHADOW  }
+    Frame BOSSC { Light 32SHADOW  }
+    Frame BOSSD { Light 32SHADOW  }
+    Frame BOSSE { Light 32SHADOW  }
+    Frame BOSSF { Light 32SHADOW  }
+    Frame BOSSG { Light 32SHADOW  }
+    Frame BOSSH { Light 32SHADOW  }
+    Frame BOSSZ { Light 32SHADOW  }
+	Frame BNRJ { Light 32SHADOW  }
+}
+
+Object Arachnotron1
+{
+    Frame BSPIA { Light FATSHADOW  }
+    Frame BSPIB { Light FATSHADOW  }
+    Frame BSPIC { Light FATSHADOW  }
+    Frame BSPID { Light FATSHADOW  }
+    Frame BSPIE { Light FATSHADOW  }
+    Frame BSPIF { Light FATSHADOW  }
+    Frame BSPIG { Light FATSHADOW  }
+    Frame BSPIH { Light FATSHADOW  }
+    Frame BSPII { Light FATSHADOW  }
+    Frame BSPIZ { Light FATSHADOW  }
+}
+
+Object Mancubus
+{
+    Frame FATTA { Light FATSHADOW  }
+    Frame FATTB { Light FATSHADOW  }
+    Frame FATTC { Light FATSHADOW  }
+    Frame FATTD { Light FATSHADOW  }
+    Frame FATTE { Light FATSHADOW  }
+    Frame FATTF { Light FATSHADOW  }
+    Frame FATTG { Light FATSHADOW  }
+    Frame FATTH { Light FATSHADOW  }
+    Frame FATTI { Light FATSHADOW  }
+    Frame FATTJ { Light FATSHADOW  }
+    Frame FATTZ { Light FATSHADOW  }
+	Frame FATR { Light FATSHADOW  }
+}
+
+Object Revenant1
+{
+    Frame SKELA { Light 32SHADOW  }
+    Frame SKELB { Light 32SHADOW  }
+    Frame SKELC { Light 32SHADOW  }
+    Frame SKELD { Light 32SHADOW  }
+    Frame SKELE { Light 32SHADOW  }
+    Frame SKELF { Light 32SHADOW  }
+    Frame SKELG { Light 32SHADOW  }
+    Frame SKELH { Light 32SHADOW  }
+	Frame SKELJ { Light 32SHADOW  }
+	Frame SKELK { Light 32SHADOW  }
+    Frame SKELI { Light 32SHADOW  }
+	Frame SKELL { Light 32SHADOW  }
+	Frame SKELM { Light 32SHADOW  }
+    Frame SKELZ { Light 32SHADOW  }
+}
+
+Object TehArchvile
+{
+    Frame DIAB { Light 32SHADOW  }
+}
+
+Object TheCyberdemon
+{
+    Frame CYBR { Light CYBERSHADOW  }
+	Frame CYMA { Light CYBERSHADOW  }
+	Frame CYBT { Light CYBERSHADOW  }
+}
+
+Object Juggernaut
+{
+    Frame BS1W { Light CYBERSHADOW  }
+	Frame BS1W { Light CYBERSHADOW  }
+}
+
+Object TheSpiderMastermind
+{
+    Frame SPID { Light SPIDERSHADOW  }
+    Frame DEMO { Light SPIDERSHADOW  }
+}
+
+Object Nightvision
+{
+    Frame PVIS { Light 2SHADOW  }
+}
+
+Object HealthPlus
+{
+    Frame BON1 { Light BLUEITEM  }
+}
+
+Object ArmorShard
+{
+    Frame BON2 { Light GREENITEM  }
+}
+
+Object LightArmor
+{
+    Frame ARM1 { Light GUNSHADOW  }
+}
+
+Object HeavyArmor
+{
+    Frame ARM2 { Light GUNSHADOW  }
+}
+
+Object Rifle
+{
+    Frame RIFL { Light GUNSHADOW  }
+}
+
+Object Shot_Gun
+{
+    Frame SHTC { Light GUNSHADOW  }
+}
+
+Object Rail_Gun
+{
+    Frame SRCG { Light GUNSHADOW  }
+}
+
+Object Grenade_Launcher
+{
+    Frame GRNW { Light GUNSHADOW  }
+}
+
+Object Grenade_Launcher
+{
+    Frame GRNW { Light GUNSHADOW  }
+}
+
+Object BIG_FUCKING_GUN
+{
+    Frame BFUG { Light GUNSHADOW  }
+}
+
+Object Plasma_Gun
+{
+    Frame PLAS { Light GUNSHADOW  }
+}
+
+Object Rocket_Launcher
+{
+    Frame LAUN { Light GUNSHADOW  }
+}
+
+Object Mini_Gun
+{
+    Frame MNGN { Light GUNSHADOW  }
+}
+
+Object SSG
+{
+    Frame SGN2 { Light GUNSHADOW  }
+}
+
+Object Chain_Saw
+{
+    Frame CSAW { Light GUNSHADOW  }
+}
+
+Object Stimpack2
+{
+    Frame STIM { Light 1SHADOW  }
+}
+
+Object Medikit2
+{
+    Frame MEDI { Light GUNSHADOW  }
+}
+
+Object Clip
+{
+    Frame CLIP { Light 2SHADOW  }
+}
+
+Object RocketAmmo
+{
+    Frame ROCK { Light 2SHADOW  }
+}
+
+Object Cell
+{
+    Frame CELL { Light 2SHADOW  }
+}
+
+Object Shell
+{
+    Frame SHEL { Light 1SHADOW  }
+}
+
+Object AmmoSuply
+{
+    Frame BPAK { Light 1SHADOW  }
+}
+
+Object Big_Tree
+{
+    Frame TREE { Light FATSHADOW  }
+}
+
+Object ShellBox
+{
+    Frame SBOX { Light 1SHADOW  }
+}
+
+Object CellPack
+{
+    Frame CELP { Light 1SHADOW  }
+}
+
+Object RocketBox
+{
+    Frame BROK { Light 1SHADOW  }
+}
+
+Object ClipBox
+{
+    Frame AMMO { Light 1SHADOW  }
+}
+
+Object Column
+{
+    Frame COLU { Light 24SHADOW  }
+}
+
+Object TallGreenColumn
+{
+    Frame COL1 { Light 24SHADOW  }
+}
+
+Object ShortGreenColumn
+{
+    Frame COL2 { Light 24SHADOW  }
+}
+
+Object TallRedColumn
+{
+    Frame COL3 { Light 24SHADOW  }
+}
+
+Object ShortRedColumn
+{
+    Frame COL4 { Light 24SHADOW  }
+}
+
+Object SkullColumn
+{
+    Frame COL6 { Light 24SHADOW  }
+}
+
+Object HeartColumn
+{
+    Frame COL5 { Light 24SHADOW  }
+}
+
+Object TorchTree2
+{
+    Frame TRE1 { Light 32SHADOW  }
+}
+
+Object BigTree2
+{
+    Frame TRE2 { Light 64SHADOW  }
+}
+
+Object BurningImp
+{
+ Frame IZD4 { Light BIGREDTORCH }
+}
+
+Object GenericBurningGuy
+{
+ Frame BUR2 { Light BIGREDTORCH }
+ Frame BURNF0 { Light BIGREDTORCH }
+ Frame BURNG0 { Light BIGREDTORCH }
+ Frame BURNH0 { Light BIGREDTORCH }
+ Frame BURNI0 { Light BIGREDTORCH }
+ Frame BURNJ0 { Light BIGREDTORCH }
+ Frame BURNK0 { Light BIGREDTORCH }
+ Frame BURNL0 { Light BIGREDTORCH }
+ Frame BURNM0 { Light BIGREDTORCH }
+ Frame BURNN0 { Light BIGREDTORCH }
+ Frame BURNO0 { Light BIGREDTORCH }
+ Frame BURNP0 { Light BIGREDTORCH }
+ Frame BURNQ0 { Light BIGREDTORCH }
+ Frame BURNR0 { Light BIGREDTORCH }
+ Frame BURNS0 { Light BIGREDTORCH }
+ Frame BURNT0 { Light SMALLREDTORCH }
+ Frame BURNU0 { Light SMALLREDTORCH }
+}
+
+Object Marine
+{
+    Frame PLAY { Light 24SHADOW  }
+	Frame MARN { Light 24SHADOW  }
+	Frame MR7S { Light 24SHADOW  }
+}
+
+Object Marine_Shotgun
+{
+    Frame PLAY { Light 24SHADOW  }
+}
+
+Object Marine_Minigun
+{
+    Frame PLAY { Light 24SHADOW  }
+}
+
+Object Marine_SSG
+{
+    Frame PLAY { Light 24SHADOW  }
+}
+
+Object Marine_Rocket
+{
+    Frame PLAY { Light 24SHADOW  }
+}
+
+Object Marine_Plasma
+{
+    Frame PLAY { Light 24SHADOW  }
+}
+
+Object Marine_BFG
+{
+    Frame PLAY { Light 24SHADOW  }
+}
+
+PulseLight ROCKETLight
+{
+    Color 1.0 0.3 0.0
+    Size 48
+    SecondarySize 54
+    Interval 0.1
+    OffSet 0 0 0
+}
+
+Object ExplosionFlareSpawner
+{
+    Frame L2NR { Light EXPLOSIONFLASH }
+}
+
+Object ROCKET2
+{
+    Frame MISL { Light ROCKETLight }
+}
+
+Object CyberBalls
+{
+    Frame WIVB { Light ROCKETLight }
+}
+
+Object BigFireBallWithGravity
+{
+    Frame MANFA { Light IMPBALL   }
+    Frame MANFB { Light IMPBALL   }
+	Frame FLME { Light IMPBALL   }
+	Frame F1RE { Light IMPBALL   }
+	Frame F2RE { Light IMPBALL   }
+	Frame FRFX { Light ROCKETLight }
+}
+
+Object RevenantSeeker
+{
+    Frame FATB { Light ROCKETLight }
+}
+
+Glow
+{
+	Flats
+	{
+	    BLOOD1
+		BLOOD2
+		BLOOD3
+		BLOOD4
+
+		FLAT17
+		FLAT2
+		FLAT22
+		FLOOR1_7
+		RROCK01
+		RROCK02
+
+		RROCK05
+		RROCK06
+		RROCK07
+		RROCK08
+
+		tlite6_1
+		tlite6_4
+		grnlite1
+		ceil3_4
+		ceil3_4
+		ceil3_3
+		floor1_7
+		gate4
+		gate1
+		gate3
+		TLITE6_6
+
+		NUKAGE1
+		NUKAGE2
+		NUKAGE3
+		LAVA1
+		LAVA2
+		LAVA3
+		LAVA4
+		DOORBLU
+		DOORBLU2
+		DOORRED
+		DOORRED2
+		DOORYEL
+		DOORYEL2
+		SLIME09
+		SLIME10
+		SLIME11
+		SLIME12
+		}
+}
+
+PointLight SpecialLightz
+{
+    Color 0.6 0.6 0.6
+    Size 24
+	OffSet 0 32 0
+	DontLightSelf 1
+}
+
+PulseLight GREENGOOZ
+{
+    Color 0.3 1.0 0.0
+    Size 32
+    SecondarySize 34
+    Interval 0.1
+    OffSet 0 40 0
+	DontLightSelf 1
+}
+
+PulseLight GREENITEM
+{
+    Color 0.3 1.0 0.0
+    Size 14
+    SecondarySize 16
+    Interval 0.1
+    OffSet 0 5 0
+}
+
+PulseLight BLUEITEM
+{
+    Color 0.1 0.1 1.0
+    Size 14
+    SecondarySize 16
+    Interval 0.1
+    OffSet 0 5 0
+}
+
+Object FlyingBurningFuel
+{
+    Frame F1RE{ Light SMALLREDTORCH }
+	 Frame F2RE{ Light SMALLREDTORCH }
+}
+
+Object FlyingBurningFuelSmall
+{
+    Frame F1RE{ Light SMALLREDTORCH }
+	 Frame F2RE{ Light SMALLREDTORCH }
+}
+
+Object FlyingBurningFuelTiny
+{
+    Frame F1RE{ Light SMALLREDTORCH }
+	 Frame F2RE{ Light SMALLREDTORCH }
+}
+
+// Monster brightmaps
+//#include CUSTOMGL/ARCHONGL
+
+// Demon power
+pulselight DEMONORB
+{
+    color 1.0 0.0 0.0
+    size 10
+    secondarySize 20
+    interval 1.0
+}
+object Demonpower
+{ frame MSP2 { light DEMONORB }}
+
+object LargeDemonpower
+{ frame MSP1 { light DEMONORB }}
+
+object Demonpickup2
+{ frame MSP1 { light DEMONORB }}
+
+object Demonpickup
+{ frame MSP2 { light DEMONORB }}
+
+//GREEN KEYS
+pulselight GREENKEY
+{
+    color 0.0 1.0 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object GreenCard
+{
+    frame GKEY { light GREENKEY }
+}
+
+object GreenSkull
+{
+    frame GSKU { light GREENKEY }
+}
+
+//ORANGE KEYS
+pulselight ORANGEKEY
+{
+    color 1.0 0.65 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object OrangeCard
+{
+    frame OKEY { light ORANGEKEY }
+}
+
+object OrangeSkull
+{
+    frame OSKU { light ORANGEKEY }
+}
+
+//SILVER KEYS
+pulselight SILVERKEY
+{
+    color 1.0 1.0 1.0 
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object SilverCard
+{
+    frame SKEY { light SILVERKEY }
+}
+
+object SilverSkull
+{
+    frame SSKU { light SILVERKEY }
+}
+
+//PINK KEYS
+pulselight PINKKEY
+{
+    color 1.0 0.0 0.5
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object PinkCard
+{
+    frame PKEY { light PINKKEY }
+}
+
+object PinkSkull
+{
+    frame PSKU { light PINKKEY }
+}
+
+//BROWN KEYS
+pulselight BROWNKEY
+{
+    color 0.6 0.3 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object BrownCard
+{
+    frame BRKY { light BROWNKEY }
+}
+
+object BrownSkull
+{
+    frame BRSK { light BROWNKEY }
+}
+
+//BLACK KEYS
+pulselight BLACKKEY
+{
+    color 1.0 1.0 1.0
+    size 16
+    secondarySize 18
+    interval 2.0
+	Subtractive 1
+	dontlightself 1
+}
+
+object BlackCard
+{
+    frame BKKY { light BLACKKEY }
+}
+
+object BlackSkull
+{
+    frame BKSK { light BLACKKEY }
+}
+// Defs for the placeable skull lights (r-b-y)
+//RGB!
+pulselight BLUEKEY
+{
+    color 0.0 0.0 1.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+pulselight YELLOWKEY
+{
+    color 1.0 1.0 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+pulselight REDKEY
+{
+    color 1.0 0.0 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+///////////////////////////////////////////
+PulseLight BIGLANTERN
+{
+    color 1.0 1.0 0.8
+    size 64
+    secondarySize 66
+    interval 0.4
+    offset 0 10 0
+}
+
+PulseLight SMALLLANTERN
+{
+    color 1.0 1.0 0.8
+    size 56
+    secondarySize 58
+    interval 0.4
+    offset 0 7 0
+}
+
+PointLight BLACKCHANDELIER
+{
+    color 0.9 0.9 0.3
+    size 48
+    offset 0 14 0
+}
+Object TechLanternBig
+{
+  Frame HLMPA { Light BIGLANTERN }
+  Frame HLMPB { Light BIGLANTERN }
+  Frame HLMPC { Light BIGLANTERN }
+  Frame HLMPD { Light BIGLANTERN }
+}
+
+Object TechLanternSmall
+{
+  Frame HLMPE { Light SMALLLANTERN }
+  Frame HLMPF { Light SMALLLANTERN }
+  Frame HLMPG { Light SMALLLANTERN }
+  Frame HLMPH { Light SMALLLANTERN }
+}
+
+Object BlackCandleChandelier
+{
+  Frame HLMPI { Light BLACKCHANDELIER }
+}
+
+////////////////////////////
+/////// LIGHT SPOTS ////////
+////////////////////////////
+
+PulseLight FAKELIGHT // White Pulse
+{
+    color 1.0 1.0 0.8
+    size 64
+    secondarySize 58
+    interval 0.4
+    offset 0 7 0
+}
+Object FakeLightSpot // Pulse
+{  Frame TNT1 { Light FAKELIGHT }}
+
+PointLight FAKELIGHTWHT // White Point
+{    color 1.0 1.0 1.0
+    size 64
+    offset 0 7 0 }
+
+Object FakeLightSpotWHITE // Point White
+{  Frame TNT1 { Light FAKELIGHTWHT }}
+
+
+PointLight FAKELIGHTBLU // Blue Point
+{   color 0.0 0.0 1.0
+    size 64
+    offset 0 7 0 }
+// Point Blue
+Object FakeLightSpotBLUE
+{  Frame TNT1 { Light FAKELIGHTBLU }}
+
+
+
+PointLight FAKELIGHTRED // Red Point
+{    color 1.0 0.0 0.0
+    size 64
+    offset 0 7 0 }
+// Point Red
+Object FakeLightSpotRED
+{  Frame TNT1 { Light FAKELIGHTRED }}
+
+
+PointLight FAKELIGHTGRN // Green Point
+{    color 0.0 1.0 0.0
+    size 64
+    offset 0 7 0 }
+	// Point Green
+Object FakeLightSpotGREEN
+{  Frame TNT1 { Light FAKELIGHTGRN }}
+	
+
+PointLight FAKELIGHTYEL // Yellow Point
+{    color 1.0 1.0 0.0
+    size 64
+    offset 0 7 0 }
+// Point Yellow
+Object FakeLightSpotYELLOW
+{  Frame TNT1 { Light FAKELIGHTYEL }}
+
+
+PointLight FAKELIGHTORA // Orange Point
+{   color 9.0 0.4 0.0
+    size 64
+    offset 0 7 0 }
+object FakeLightSpotORANGE
+{    frame TNT1 { light FAKELIGHTORA }}
+
+
+PointLight FAKELIGHTPINK // Pink Point
+{    color 1.0 0.0 0.5
+    size 64
+   offset 0 7 0 }
+object FakeLightSpotPINK
+{    frame TNT1 { light FAKELIGHTPINK }}
+
+
+PointLight FAKELIGHTBRN
+{   color 0.6 0.3 0.0
+    size 64
+    offset 0 7 0 }
+object FakeLightSpotBROWN
+{    frame TNT1 { light FAKELIGHTBRN }}
+
+//////////////////////////
+//// TINY LIGTH SPOTS ////
+//////////////////////////
+
+PointLight TINYLIGHTWHT // White Point
+{    color 1.0 1.0 1.0
+    size 24
+    offset 0 7 0 }
+// Point White
+Object TinySpotWHITE // Point
+{  Frame TNT1 { Light TINYLIGHTWHT }}
+
+
+PointLight TINYLIGHTBLU // Blue Point
+{   color 0.0 0.0 1.0
+    size 24
+    offset 0 7 0 }
+// Point Blue
+Object TinySpotBLUE
+{  Frame TNT1 { Light TINYLIGHTBLU }}
+
+
+
+PointLight TINYLIGHTRED // Red Point
+{    color 1.0 0.0 0.0
+    size 24
+    offset 0 7 0 }
+// Point Red
+Object TinySpotRED
+{  Frame TNT1 { Light TINYLIGHTRED }}
+
+
+PointLight TINYLIGHTGRN // Green Point
+{    color 0.0 1.0 0.0
+    size 24
+    offset 0 7 0 }
+	// Point Green
+Object TinySpotGREEN
+{  Frame TNT1 { Light TINYLIGHTGRN }}
+
+PointLight TINYLIGHTYEL // Yellow Point
+{    color 1.0 1.0 0.0
+    size 24
+    offset 0 7 0 }
+// Point Yellow
+Object TinySpotYELLOW
+{  Frame TNT1 { Light TINYLIGHTYEL }}
+
+
+PointLight TINYLIGHTORA // Orange Point
+{   color 9.0 0.4 0.0
+    size 24
+    offset 0 7 0 }
+object TinySpotORANGE
+{    frame TNT1 { light TINYLIGHTORA }}
+
+
+PointLight TINYLIGHTPINK // Pink Point
+{    color 1.0 0.0 0.5
+    size 24
+   offset 0 7 0 }
+object TinySpotPINK
+{    frame TNT1 { light TINYLIGHTPINK }}
+
+
+PointLight TINYLIGHTBRN
+{   color 0.6 0.3 0.0
+    size 24
+    offset 0 7 0 }
+object TinySpotBROWN
+{    frame TNT1 { light TINYLIGHTBRN }}
+
+// Placeable Skulls
+object SkullPink
+{frame PSPK { light PINKKEY }}
+
+object SkullBlack
+{frame PSBK { light BLACKKEY }}
+
+object SkullGreen
+{frame PSGR { light GREENKEY }}
+
+object SkullOrange
+{frame PSOR { light ORANGEKEY }}
+
+object SkullSilver
+{frame PSSV { light SILVERKEY }}
+
+object SkullBrown
+{frame PSBR { light BROWNKEY }}
+
+object SkullBlue
+{frame PSBL { light BLUEKEY }}
+
+object SkullYellow
+{frame PSYL { light YELLOWKEY }}
+
+object SkullRed
+{frame PSRD { light REDKEY }}
+
+
+
+
+
+flickerlight SOUL
+{
+    color 0.1 0.0 0.0
+    size 64
+    secondarySize 72
+    chance 0.5
+}
+
+object Homingsoul
+{
+    frame FX15 { light SOUL }
+}
+
+
+// Alert Spot Red
+pulselight REDALERT
+{
+    color 1.0 0.0 0.0
+    size 4
+    secondarySize 80
+    interval 0.8
+}
+object AlertSpotRED
+{ frame TNT1 { light REDALERT }}
+
+object HeavyPlasmaBall
+{
+    frame TNT1 { light PLASMABALL }
+    frame PBAL { light PLASMABALLSMALL }
+}
+
+// AFRIT //////////////////////////////
+/*
+//Brightmaps
+BrightMap Sprite FRITA1
+{    Map BMFRITA1
+	DisableFullBright}
+BrightMap Sprite FRITA2A8
+{    Map BMFRITA2
+	DisableFullBright}
+BrightMap Sprite FRITA3A7
+{    Map BMFRITA3
+	DisableFullBright}
+BrightMap Sprite FRITA4A6
+{    Map BMFRITA4
+	DisableFullBright}
+BrightMap Sprite FRITA5
+{    Map BMFRITA5
+	DisableFullBright}
+BrightMap Sprite FRITB1
+{    Map BMFRITB1
+	DisableFullBright}
+BrightMap Sprite FRITB2B8
+{    Map BMFRITB2
+	DisableFullBright}
+BrightMap Sprite FRITB3B7
+{    Map BMFRITB3
+	DisableFullBright}
+BrightMap Sprite FRITB4B6
+{    Map BMFRITB4
+	DisableFullBright}
+BrightMap Sprite FRITB5
+{    Map BMFRITB5
+	DisableFullBright}
+BrightMap Sprite FRITC1
+{    Map BMFRITC1
+	DisableFullBright}
+BrightMap Sprite FRITC2C8
+{    Map BMFRITC2
+	DisableFullBright}
+
+BrightMap Sprite FRITC3C7
+{    Map BMFRITC3
+	DisableFullBright}
+BrightMap Sprite FRITC4C6
+{    Map BMFRITC4
+	DisableFullBright}
+BrightMap Sprite FRITC5
+{    Map BMFRITC5
+	DisableFullBright}
+BrightMap Sprite FRITD1
+{    Map BMFRITD1
+	DisableFullBright}
+BrightMap Sprite FRITD2D8
+{    Map BMFRITD2
+	DisableFullBright}
+BrightMap Sprite FRITD3D7
+{    Map BMFRITD3
+	DisableFullBright}
+BrightMap Sprite FRITD4D6
+{    Map BMFRITD4
+	DisableFullBright}
+BrightMap Sprite FRITD5
+{    Map BMFRITD5
+	DisableFullBright}
+BrightMap Sprite FRITE1
+{    Map BMFRITE1
+	DisableFullBright}
+BrightMap Sprite FRITE2E8
+{    Map BMFRITE2
+	DisableFullBright}
+BrightMap Sprite FRITE3E7
+{    Map BMFRITE3
+	DisableFullBright}
+BrightMap Sprite FRITE4E6
+{    Map BMFRITE4
+	DisableFullBright}
+BrightMap Sprite FRITE5
+{    Map BMFRITE5
+	DisableFullBright}
+BrightMap Sprite FRITF1
+{    Map BMFRITF1
+	DisableFullBright}
+BrightMap Sprite FRITF2F8
+{    Map BMFRITF2
+	DisableFullBright}
+BrightMap Sprite FRITF3F7
+{    Map BMFRITF3
+	DisableFullBright}
+BrightMap Sprite FRITF4F6
+{    Map BMFRITF4
+	DisableFullBright}
+BrightMap Sprite FRITF5
+{    Map BMFRITF5
+	DisableFullBright}
+BrightMap Sprite FRITG1
+{    Map BMFRITG1
+	DisableFullBright}
+BrightMap Sprite FRITG2G8
+{    Map BMFRITG2
+	DisableFullBright}
+BrightMap Sprite FRITG3G7
+{    Map BMFRITG3
+	DisableFullBright}
+BrightMap Sprite FRITG4G6
+{    Map BMFRITG4
+	DisableFullBright}
+BrightMap Sprite FRITG5
+{    Map BMFRITG5
+	DisableFullBright}
+BrightMap Sprite FRITH1
+{    Map BMFRITH1
+	DisableFullBright}
+BrightMap Sprite FRITH2
+{    Map BMFRITH2
+	DisableFullBright}
+BrightMap Sprite FRITH3
+{    Map BMFRITH3
+	DisableFullBright}
+BrightMap Sprite FRITH4
+{    Map BMFRITH4
+	DisableFullBright}
+BrightMap Sprite FRITH5
+{    Map BMFRITH5
+	DisableFullBright}
+BrightMap Sprite FRITH6
+{    Map BMFRITH6
+	DisableFullBright}
+BrightMap Sprite FRITH7
+{    Map BMFRITH7
+	DisableFullBright}
+BrightMap Sprite FRITH8
+{    Map BMFRITH8
+	DisableFullBright}
+BrightMap Sprite FRITI0
+{    Map BMFRITI0
+	DisableFullBright}
+BrightMap Sprite FRITJ0
+{    Map BMFRITJ0
+	DisableFullBright}
+BrightMap Sprite FRITK0
+{    Map BMFRITK0
+	DisableFullBright}
+BrightMap Sprite FRITL0
+{    Map BMFRITL0
+	DisableFullBright}
+BrightMap Sprite FRITM0
+{    Map BMFRITM0
+	DisableFullBright}
+BrightMap Sprite FRITN0
+{    Map BMFRITN0
+	DisableFullBright}
+BrightMap Sprite FRITO0
+{    Map BMFRITO0
+	DisableFullBright}
+BrightMap Sprite FRITP0
+{    Map BMFRITP0
+	DisableFullBright}
+BrightMap Sprite FRITQ0
+{    Map BMFRITQ0
+	DisableFullBright}
+BrightMap Sprite FRITR0
+{    Map BMFRITR0
+	DisableFullBright}
+BrightMap Sprite FRITS1
+{    Map BMFRITS1
+	DisableFullBright}
+BrightMap Sprite FRITS2
+{    Map BMFRITS2
+	DisableFullBright}
+BrightMap Sprite FRITS3
+{    Map BMFRITS3
+	DisableFullBright}
+BrightMap Sprite FRITS4
+{    Map BMFRITS4
+	DisableFullBright}
+BrightMap Sprite FRITS5
+{    Map BMFRITS5
+	DisableFullBright}
+BrightMap Sprite FRITS6
+{    Map BMFRITS6
+	DisableFullBright}
+BrightMap Sprite FRITS7
+{    Map BMFRITS7
+	DisableFullBright}
+BrightMap Sprite FRITS8
+{    Map BMFRITS8
+	DisableFullBright}
+BrightMap Sprite FRITT1
+{    Map BMFRITT1
+	DisableFullBright}
+BrightMap Sprite FRITT2
+{    Map BMFRITT2
+	DisableFullBright}
+BrightMap Sprite FRITT3
+{    Map BMFRITT3
+	DisableFullBright}
+BrightMap Sprite FRITT4
+{
+    Map BMFRITT4
+	DisableFullBright
+}
+
+BrightMap Sprite FRITT5
+{
+    Map BMFRITT5
+	DisableFullBright
+}
+
+BrightMap Sprite FRITT6
+{
+    Map BMFRITT6
+	DisableFullBright
+}
+
+BrightMap Sprite FRITT7
+{
+    Map BMFRITT7
+	DisableFullBright
+}
+
+BrightMap Sprite FRITT8
+{
+    Map BMFRITT8
+	DisableFullBright
+}
+
+BrightMap Sprite FRITU1
+{
+    Map BMFRITU1
+	DisableFullBright
+}
+
+BrightMap Sprite FRITU2
+{
+    Map BMFRITU2
+	DisableFullBright
+}
+
+BrightMap Sprite FRITU3
+{
+    Map BMFRITU3
+	DisableFullBright
+}
+
+BrightMap Sprite FRITU4
+{
+    Map BMFRITU4
+	DisableFullBright
+}
+
+BrightMap Sprite FRITU5
+{
+    Map BMFRITU5
+	DisableFullBright
+}
+
+BrightMap Sprite FRITU6
+{
+    Map BMFRITU6
+	DisableFullBright
+}
+
+BrightMap Sprite FRITU7
+{
+    Map BMFRITU7
+	DisableFullBright
+}
+
+BrightMap Sprite FRITU8
+{
+    Map BMFRITU8
+	DisableFullBright
+}
+
+BrightMap Sprite FRTBA0
+{
+    Map BMFRTBA0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTBB0
+{
+    Map BMFRTBB0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTBC0
+{
+    Map BMFRTBC0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTBD0
+{
+    Map BMFRTBD0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTBE0
+{
+    Map BMFRTBE0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTBF0
+{
+    Map BMFRTBF0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTBG0
+{
+    Map BMFRTBG0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTBH0
+{
+    Map BMFRTBH0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTBI0
+{
+    Map BMFRTBI0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFA0
+{
+    Map BMFRTFA0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFB0
+{
+    Map BMFRTFB0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFC0
+{
+    Map BMFRTFC0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFD0
+{
+    Map BMFRTFD0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFE0
+{
+    Map BMFRTFE0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFF0
+{
+    Map BMFRTFF0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFG0
+{
+    Map BMFRTFG0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFH0
+{
+    Map BMFRTFH0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFI0
+{
+    Map BMFRTFI0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFJ0
+{
+    Map BMFRTFJ0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFK0
+{
+    Map BMFRTFK0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFL0
+{
+    Map BMFRTFL0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFM0
+{
+    Map BMFRTFM0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFN0
+{
+    Map BMFRTFN0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTFO0
+{
+    Map BMFRTFO0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTMA1A5
+{
+    Map BMFRTMA1
+	DisableFullBright
+}
+
+BrightMap Sprite FRTMA2A8
+{
+    Map BMFRTMA2
+	DisableFullBright
+}
+
+BrightMap Sprite FRTMA3A7
+{
+    Map BMFRTMA3
+	DisableFullBright
+}
+
+BrightMap Sprite FRTMA4A6
+{
+    Map BMFRTMA4
+	DisableFullBright
+}
+
+BrightMap Sprite FRTMB1B5
+{
+    Map BMFRTMB1
+	DisableFullBright
+}
+
+BrightMap Sprite FRTMB2B8
+{
+    Map BMFRTMB2
+	DisableFullBright
+}
+
+BrightMap Sprite FRTMB3B7
+{
+    Map BMFRTMB3
+	DisableFullBright
+}
+
+BrightMap Sprite FRTMB4B6
+{
+    Map BMFRTMB4
+	DisableFullBright
+}
+
+BrightMap Sprite FRTMC0
+{
+    Map BMFRTMC0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTMD0
+{
+    Map BMFRTMD0
+	DisableFullBright
+}
+
+BrightMap Sprite FRTME0
+{
+    Map BMFRTME0
+	DisableFullBright
+}
+
+BrightMap Sprite COMTA0
+{
+    Map BMCOMTA0
+	DisableFullBright
+}
+
+BrightMap Sprite COMTB0
+{
+    Map BMCOMTB0
+	DisableFullBright
+}
+
+BrightMap Sprite COMTC0
+{
+    Map BMCOMTC0
+	DisableFullBright
+}
+
+BrightMap Sprite COMTD0
+{
+    Map BMCOMTD0
+	DisableFullBright
+}
+
+BrightMap Sprite COMTE0
+{
+    Map BMCOMTE0
+	DisableFullBright
+}
+
+BrightMap Sprite COMTF0
+{
+    Map BMCOMTF0
+	DisableFullBright
+}
+
+BrightMap Sprite COMTG0
+{
+    Map BMCOMTG0
+	DisableFullBright
+}
+
+BrightMap Sprite COMTH0
+{
+    Map BMCOMTH0
+	DisableFullBright
+}
+
+BrightMap Sprite COMTI0
+{
+    Map BMCOMTI0
+	DisableFullBright
+}
+*/
+//Dynamic Lights
+
+FlickerLight2 Afrit1
+{
+Color 0.7 0.4 0.0
+Size 96
+SecondarySize 128
+Interval 0.9
+Offset 0 24 0
+}
+
+PointLight Afrit2
+{
+Color 1.0 0.8 0.0
+Offset 0 32 0
+Size 96
+}
+
+PointLight Afrit3
+{
+Color 1.0 0.8 0.0
+Offset 0 32 0
+Size 72
+}
+
+PointLight Afrit4
+{
+Color 0.8 0.7 0.0
+Offset 0 36 0
+Size 64
+}
+
+PointLight Afrit5
+{
+Color 0.7 0.7 0.0
+Offset 0 40 0
+Size 56
+}
+
+PointLight Afrit6
+{
+Color 0.7 0.7 0.0
+Offset 0 42 0
+Size 48
+}
+
+PointLight Afrit7
+{
+Color 0.7 0.7 0.0
+Offset 0 44 0
+Size 40
+}
+
+PointLight Afrit8
+{
+Color 0.6 0.6 0.0
+Offset 0 48 0
+Size 36
+}
+
+PointLight Afrit9
+{
+Color 0.5 0.5 0.0
+Offset 0 52 0
+Size 32
+}
+
+PointLight Afrit10
+{
+Color 0.4 0.4 0.0
+Offset 0 58 0
+Size 24
+}
+
+PointLight Afrit11
+{
+Color 0.3 0.3 0.0
+Offset 0 64 0
+Size 16
+}
+
+Object Afrit
+{
+Frame FRITA { Light Afrit1 }
+Frame FRITB { Light Afrit1 }
+Frame FRITC { Light Afrit1 }
+Frame FRITD { Light Afrit1 }
+Frame FRITE { Light Afrit1 }
+Frame FRITF { Light Afrit1 }
+Frame FRITG { Light Afrit1 }
+Frame FRITH { Light Afrit1 }
+Frame FRITI { Light Afrit2 }
+Frame FRITJ { Light Afrit3 }
+Frame FRITK { Light Afrit4 }
+Frame FRITL { Light Afrit5 }
+Frame FRITM { Light Afrit6 }
+Frame FRITN { Light Afrit7 }
+Frame FRITO { Light Afrit8 }
+Frame FRITP { Light Afrit9 }
+Frame FRITQ { Light Afrit10 }
+Frame FRITR { Light Afrit11 }
+Frame FRITS { Light Afrit1 }
+Frame FRITT { Light Afrit1 }
+Frame FRITU { Light Afrit1 }
+}
+
+Pointlight AfritBall1
+{
+Color 0.8 0.3 0.05
+Size 48
+}
+
+Pointlight AfritBall2
+{
+Color 1.0 0.5 0.1
+Size 64
+}
+
+Pointlight AfritBall3
+{
+Color 0.6 0.2 0.0
+Size 56
+}
+
+Pointlight AfritBall4
+{
+Color 0.4 0.05 0.0
+Size 32
+}
+
+
+Object AfritBall
+{
+Frame FRTMA { Light AfritBall1 }
+Frame FRTMB { Light AfritBall1 }
+Frame FRTMC { Light AfritBall2 }
+Frame FRTMD { Light AfritBall3 }
+Frame FRTME { Light AfritBall4 }
+}
+
+Pointlight Comet1
+{
+Color 0.6 0.4 0.0
+Size 64
+}
+
+Pointlight Comet2
+{
+Color 0.8 0.6 0.0
+Size 72
+}
+
+Pointlight Comet3
+{
+Color 1.0 0.8 0.4
+Size 80
+}
+
+Pointlight Comet4
+{
+Color 0.8 0.7 0.0
+Size 72
+}
+
+Pointlight Comet5
+{
+Color 0.6 0.4 0.0
+Size 64
+}
+
+Pointlight Comet6
+{
+Color 0.4 0.2 0.0
+Size 56
+}
+
+Pointlight Comet7
+{
+Color 0.4 0.0 0.0
+Size 40
+}
+
+Object Comet
+{
+Frame COMTA { Light Comet1 }
+Frame COMTB { Light Comet1 }
+Frame COMTC { Light Comet1 }
+Frame COMTD { Light Comet2 }
+Frame COMTE { Light Comet3 }
+Frame COMTF { Light Comet4 }
+}
+
+Object CometDeath
+{
+Frame COMTG { Light Comet5 }
+Frame COMTH { Light Comet6 }
+Frame COMTI { Light Comet7 }
+}
+
+Pointlight HellFire
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 5
+}
+
+Pointlight HellFire_2
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 15
+}
+
+Pointlight HellFire_3
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 35
+}
+
+Pointlight HellFire_4
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 34
+}
+
+Pointlight HellFire_5
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 32
+}
+
+Pointlight HellFire_6
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 30
+}
+
+Pointlight HellFire_7
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 25
+}
+
+Pointlight HellFire_8
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 20
+}
+
+Pointlight HellFire_9
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 15
+}
+
+Pointlight HellFire_10
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 5
+}
+
+Pointlight HellFire_11
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 4
+}
+
+Pointlight HellFire_12
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 3
+}
+
+Pointlight HellFire_13
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 2
+}
+
+Pointlight HellFire_14
+{
+Color 1.0 0.5 0.0
+Offset 0 0 0
+Size 1
+}
+
+Object HellFire2
+{
+Frame FRTFA { Light HellFire }
+Frame FRTFB { Light HellFire_2 }
+Frame FRTFC { Light HellFire_3 }
+Frame FRTFD { Light HellFire_4 }
+Frame FRTFE { Light HellFire_5 }
+Frame FRTFF { Light HellFire_6 }
+Frame FRTFG { Light HellFire_7 }
+Frame FRTFH { Light HellFire_8 }
+Frame FRTFI { Light HellFire_9 }
+Frame FRTFJ { Light HellFire_10 }
+Frame FRTFK { Light HellFire_11 }
+Frame FRTFL { Light HellFire_12 }
+Frame FRTFM { Light HellFire_13 }
+Frame FRTFN { Light HellFire_14 }
+}
+
+Object OrbitComet
+{
+Frame COMT { Light AfritBall1 }
+}
+
+Object OrbitComet2
+{
+Frame COMT { Light AfritBall1 }
+}
+
+//Black Hole Gun
+FlickerLight DMBALL_1
+{
+Color 0.4 0.2 0.7
+Size 50
+SecondarySize 48
+Chance 0.8
+}
+
+PointLight DMBALL_2
+{
+Color 0.5 0.3 0.7
+Size 65
+}
+
+PointLight DMBALL_3
+{
+Color 0.5 0.4 0.7
+Size 78
+}
+
+PointLight DMBALL_4
+{
+Color 0.4 0.3 0.6
+Size 45
+}
+
+PointLight DMBALL_5
+{
+Color 0.4 0.4 0.5
+Size 30
+}
+
+PulseLight BHOLE_1
+{
+Color 0.6 0.5 0.7
+Size 140
+SecondarySize 136
+Interval 0.2
+Subtractive 1
+}
+
+PointLight BHOLE_2
+{
+Color 0.6 0.5 0.7
+Size 125
+Subtractive 1
+}
+
+PointLight BHOLE_3
+{
+Color 0.6 0.5 0.7
+Size 110
+Subtractive 1
+}
+
+PointLight BHOLE_4
+{
+Color 0.6 0.5 0.7
+Size 95
+Subtractive 1
+}
+
+PointLight BHOLE_5
+{
+Color 0.6 0.5 0.7
+Size 80
+Subtractive 1
+}
+
+PointLight BHOLE_6
+{
+Color 0.6 0.5 0.7
+Size 65
+Subtractive 1
+}
+
+PointLight BHOLE_7
+{
+Color 0.6 0.5 0.7
+Size 50
+Subtractive 1
+}
+
+PointLight BHOLE_8
+{
+Color 0.6 0.5 0.7
+Size 35
+Subtractive 1
+}
+
+PointLight BHOLE_9
+{
+Color 0.6 0.5 0.7
+Size 20
+Subtractive 1
+}
+
+PointLight BHOLE_10
+{
+Color 0.6 0.5 0.7
+Size 5
+Subtractive 1
+}
+
+PointLight BHEXP_1
+{
+Color 0.6 0.4 1.0
+Size 50
+}
+
+PointLight BHEXP_2
+{
+Color 0.6 0.4 0.9
+Size 65
+}
+
+PointLight BHEXP_3
+{
+Color 0.6 0.4 0.8
+Size 80
+}
+
+PointLight BHEXP_4
+{
+Color 0.5 0.4 0.7
+Size 95
+}
+
+PointLight BHEXP_5
+{
+Color 0.5 0.4 0.6
+Size 110
+}
+
+PointLight BHEXP_6
+{
+Color 0.4 0.3 0.5
+Size 125
+}
+
+PointLight BHEXP_7
+{
+Color 0.3 0.3 0.4
+Size 140
+}
+
+Object DMBall
+{
+Frame VOIP { Light DMBALL_1 }
+Frame VORXA { Light DMBALL_1 }
+Frame VORXB { Light DMBALL_2 }
+Frame VORXC { Light DMBALL_3 }
+Frame VORXD { Light DMBALL_2 }
+Frame VORXE { Light DMBALL_4 }
+Frame VORXF { Light DMBALL_5 }
+}
+
+//Rifle Commando
+FlickerLight2 RifleCommandoAttack
+{
+color 1.0 0.8 0.2
+size 48
+secondarySize 56
+interval 1
+offset 0 40 0
+}
+
+Object RifleCommando
+{
+Frame ACPSF { Light RifleCommandoAttack }
+}
+
+
+//Brightmaps
+
+BrightMap Sprite ACPSE1
+{
+Map ACPFTRE1
+DisableFullBright
+}
+
+BrightMap Sprite ACPSE2E8
+{
+Map ACPFTRE2
+DisableFullBright
+}
+
+BrightMap Sprite ACPSE3E7
+{
+Map ACPFTRE3
+DisableFullBright
+}
+
+BrightMap Sprite ACPSE4E6
+{
+Map BMBLACK
+DisableFullBright
+}
+
+BrightMap Sprite ACPSE5
+{
+Map BMBLACK
+DisableFullBright
+}
+
+BrightMap Sprite ACPSF1
+{
+Map ACPFTRF1
+DisableFullBright
+}
+
+BrightMap Sprite ACPSF2F8
+{
+Map ACPFTRF2
+DisableFullBright
+}
+
+BrightMap Sprite ACPSF3F7
+{
+Map ACPFTRF3
+DisableFullBright
+}
+
+BrightMap Sprite ACPSF4F6
+{
+Map ACPFTRF4
+DisableFullBright
+}
+
+BrightMap Sprite ACPSF5
+{
+Map ACPFTRF5
+DisableFullBright
+}
+
+//Dark Imp (Nami Fuckers)
+Pointlight DarkBallSeeker1
+{
+Color 0.5 0.2 0.8
+Size 48
+}
+
+Pointlight DarkBallSeeker2
+{
+Color 0.4 0.2 0.8
+Size 64
+}
+
+Pointlight DarkBallSeeker3
+{
+Color 0.2 0.2 0.8
+Size 56
+}
+
+Pointlight DarkBallSeeker4
+{
+Color 0.0 0.0 0.5
+Size 32
+}
+
+
+Object DarkSeeker
+{
+Frame DKB1A { Light DarkBallSeeker1 }
+Frame DKB1B { Light DarkBallSeeker1 }
+Frame DKB1C { Light DarkBallSeeker2 }
+Frame DKB1D { Light DarkBallSeeker3 }
+Frame DKB1E { Light DarkBallSeeker4 }
+}
+
+Flickerlight2 NamiDarkImpFire
+{
+Color 0.5 0.2 0.8
+Size 48
+SecondarySize 56
+Interval 0.8
+Offset 0 28 0
+}
+
+Object NamiDarkImp
+{
+Frame DRKIE { Light NamiDarkImpFire }
+Frame DRKIF { Light NamiDarkImpFire }
+Frame DRKIG { Light NamiDarkImpFire }
+}
+
+BrightMap Sprite DRKIA1
+{
+Map BMDRKIA1
+DisableFullBright
+}
+
+BrightMap Sprite DRKIA2A8
+{
+Map BMDRKIA2
+DisableFullBright
+}
+
+BrightMap Sprite DRKIA3A7
+{
+Map BMDRKIA3
+DisableFullBright
+}
+
+BrightMap Sprite DRKIB1
+{
+Map BMDRKIB1
+DisableFullBright
+}
+
+BrightMap Sprite DRKIB2B8
+{
+Map BMDRKIB2
+DisableFullBright
+}
+
+BrightMap Sprite DRKIB3B7
+{
+Map BMDRKIB3
+DisableFullBright
+}
+
+BrightMap Sprite DRKIC1
+{
+Map BMDRKIC1
+DisableFullBright
+}
+
+BrightMap Sprite DRKIC2C8
+{
+Map BMDRKIC2
+DisableFullBright
+}
+
+BrightMap Sprite DRKIC3C7
+{
+Map BMDRKIC3
+DisableFullBright
+}
+
+BrightMap Sprite DRKID1
+{
+Map BMDRKID1
+DisableFullBright
+}
+
+BrightMap Sprite DRKID2D8
+{
+Map BMDRKID2
+DisableFullBright
+}
+
+BrightMap Sprite DRKID3D7
+{
+Map BMDRKID3
+DisableFullBright
+}
+
+BrightMap Sprite DRKIE1
+{
+Map BMDRKIE1
+DisableFullBright
+}
+
+BrightMap Sprite DRKIE2E8
+{
+Map BMDRKIE2
+DisableFullBright
+}
+
+BrightMap Sprite DRKIE3E7
+{
+Map BMDRKIE3
+DisableFullBright
+}
+
+BrightMap Sprite DRKIE4E6
+{
+Map BMDRKIE4
+DisableFullBright
+}
+
+BrightMap Sprite DRKIE5
+{
+Map BMDRKIE5
+DisableFullBright
+}
+
+BrightMap Sprite DRKIF1
+{
+Map BMDRKIF1
+DisableFullBright
+}
+
+BrightMap Sprite DRKIF2F8
+{
+Map BMDRKIF2
+DisableFullBright
+}
+
+BrightMap Sprite DRKIF3F7
+{
+Map BMDRKIF3
+DisableFullBright
+}
+
+BrightMap Sprite DRKIF4F6
+{
+Map BMDRKIF4
+DisableFullBright
+}
+
+BrightMap Sprite DRKIF5
+{
+Map BMDRKIF5
+DisableFullBright
+}
+
+BrightMap Sprite DRKIG1
+{
+Map BMDRKIG1
+DisableFullBright
+}
+
+BrightMap Sprite DRKIG2G8
+{
+Map BMDRKIG2
+DisableFullBright
+}
+
+BrightMap Sprite DRKIG3G7
+{
+Map BMDRKIG3
+DisableFullBright
+}
+
+BrightMap Sprite DRKIG4G6
+{
+Map BMDRKIG4
+DisableFullBright
+}
+
+BrightMap Sprite DRKIG5
+{
+Map BMDRKIG5
+DisableFullBright
+}
+
+BrightMap Sprite DRKIH1
+{
+Map BMDRKIH1
+DisableFullBright
+}
+
+BrightMap Sprite DRKIH2H8
+{
+Map BMDRKIH2
+DisableFullBright
+}
+
+BrightMap Sprite DRKIH3H7
+{
+Map BMDRKIH3
+DisableFullBright
+}
+
+//Dark Imp Nether
+Pointlight InfernoBall
+{
+Color 0.0 0.8 0.0
+Size 24
+}
+
+Pointlight InfernoBall2
+{
+Color 0.0 0.8 0.0
+Size 32
+}
+
+Pointlight InfernoBall3
+{
+Color 0.0 0.8 0.0
+Size 28
+}
+
+Pointlight InfernoBall4
+{
+Color 0.0 0.8 0.0
+Size 16
+}
+
+
+Object InfernoBall
+{
+Frame IBALA { Light InfernoBall }
+Frame IBALB { Light InfernoBall }
+Frame IBALC { Light InfernoBall2 }
+Frame IBALD { Light InfernoBall3 }
+Frame IBALE { Light InfernoBall4 }
+}
+
+Object InfernoBallTrail
+{
+Frame ITRLA { Light InfernoBall }
+Frame ITRLB { Light InfernoBall3 }
+Frame ITRLC { Light InfernoBall2 }
+Frame ITRLD { Light InfernoBall2 }
+Frame ITRLE { Light InfernoBall2 }
+Frame ITRLF { Light InfernoBall2 }
+Frame ITRLG { Light InfernoBall2 }
+Frame ITRLH { Light InfernoBall2 }
+Frame ITRLI { Light InfernoBall2 }
+Frame ITRLJ { Light InfernoBall2 }
+Frame ITRLK { Light InfernoBall2 }
+Frame ITRLL { Light InfernoBall }
+Frame ITRLM { Light InfernoBall3 }
+Frame ITRLN { Light InfernoBall4 }
+}
+
+Pointlight NetherLightning
+{
+Color 0.8 0.8 0.0
+Size 20
+}
+
+Object NetherLightning
+{
+Frame NLITA { Light NetherLightning }
+}
+
+//Dark Imp Skulltag
+
+Pointlight DarkBallFast1
+{
+Color 0.5 0.2 0.8
+Size 48
+}
+
+Pointlight DarkBallFast2
+{
+Color 0.4 0.2 0.8
+Size 64
+}
+
+Pointlight DarkBallFast3
+{
+Color 0.2 0.2 0.8
+Size 56
+}
+
+Pointlight DarkBallFast4
+{
+Color 0.0 0.0 0.5
+Size 32
+}
+
+
+Object DarkFast
+{
+Frame DKB1A { Light DarkBallFast1 }
+Frame DKB1B { Light DarkBallFast1 }
+Frame DKB1C { Light DarkBallFast2 }
+Frame DKB1D { Light DarkBallFast3 }
+Frame DKB1E { Light DarkBallFast4 }
+}
+
+Flickerlight2 STDarkImpFire
+{
+Color 0.5 0.2 0.8
+Size 48
+SecondarySize 56
+Interval 0.8
+Offset 0 28 0
+}
+
+Object STDarkImp
+{
+Frame DRKSE { Light STDarkImpFire }
+Frame DRKSF { Light STDarkImpFire }
+Frame DRKSG { Light STDarkImpFire }
+}
+
+BrightMap Sprite DRKSA1
+{
+Map BMDRKSA1
+DisableFullBright
+}
+
+BrightMap Sprite DRKSA2A8
+{
+Map BMDRKSA2
+DisableFullBright
+}
+
+BrightMap Sprite DRKSA3A7
+{
+Map BMDRKSA3
+DisableFullBright
+}
+
+BrightMap Sprite DRKSB1
+{
+Map BMDRKSB1
+DisableFullBright
+}
+
+BrightMap Sprite DRKSB2B8
+{
+Map BMDRKSB2
+DisableFullBright
+}
+
+BrightMap Sprite DRKSB3B7
+{
+Map BMDRKSB3
+DisableFullBright
+}
+
+BrightMap Sprite DRKSC1
+{
+Map BMDRKSC1
+DisableFullBright
+}
+
+BrightMap Sprite DRKSC2C8
+{
+Map BMDRKSC2
+DisableFullBright
+}
+
+BrightMap Sprite DRKSC3C7
+{
+Map BMDRKSC3
+DisableFullBright
+}
+
+BrightMap Sprite DRKSD1
+{
+Map BMDRKSD1
+DisableFullBright
+}
+
+BrightMap Sprite DRKSD2D8
+{
+Map BMDRKSD2
+DisableFullBright
+}
+
+BrightMap Sprite DRKSD3D7
+{
+Map BMDRKSD3
+DisableFullBright
+}
+
+BrightMap Sprite DRKSE1
+{
+Map BMDRKSE1
+DisableFullBright
+}
+
+BrightMap Sprite DRKSE2E8
+{
+Map BMDRKSE2
+DisableFullBright
+}
+
+BrightMap Sprite DRKSE3E7
+{
+Map BMDRKSE3
+DisableFullBright
+}
+
+BrightMap Sprite DRKSE4E6
+{
+Map BMDRKSE4
+DisableFullBright
+}
+
+BrightMap Sprite DRKSE5
+{
+Map BMDRKSE5
+DisableFullBright
+}
+
+BrightMap Sprite DRKSF1
+{
+Map BMDRKSF1
+DisableFullBright
+}
+
+BrightMap Sprite DRKSF2F8
+{
+Map BMDRKSF2
+DisableFullBright
+}
+
+BrightMap Sprite DRKSF3F7
+{
+Map BMDRKSF3
+DisableFullBright
+}
+
+BrightMap Sprite DRKSF4F6
+{
+Map BMDRKSF4
+DisableFullBright
+}
+
+BrightMap Sprite DRKSF5
+{
+Map BMDRKSF5
+DisableFullBright
+}
+
+BrightMap Sprite DRKSG1
+{
+Map BMDRKSG1
+DisableFullBright
+}
+
+BrightMap Sprite DRKSG2G8
+{
+Map BMDRKSG2
+DisableFullBright
+}
+
+BrightMap Sprite DRKSG3G7
+{
+Map BMDRKSG3
+DisableFullBright
+}
+
+BrightMap Sprite DRKSG4G6
+{
+Map BMDRKSG4
+DisableFullBright
+}
+
+BrightMap Sprite DRKSG5
+{
+Map BMDRKSG5
+DisableFullBright
+}
+
+BrightMap Sprite DRKSH1
+{
+Map BMDRKSH1
+DisableFullBright
+}
+
+BrightMap Sprite DRKSH2H8
+{
+Map BMDRKSH2
+DisableFullBright
+}
+
+BrightMap Sprite DRKSH3H7
+{
+Map BMDRKSH3
+DisableFullBright
+}
+
+//Dark Imp Void
+
+Pointlight VoidBallNormal
+{
+Color 0.5 0.2 0.8
+Size 48
+}
+
+Pointlight VoidBallNormal2
+{
+Color 0.4 0.2 0.8
+Size 64
+}
+
+Pointlight VoidBallNormal3
+{
+Color 0.2 0.2 0.8
+Size 56
+}
+
+Pointlight VoidBallNormal4
+{
+Color 0.0 0.0 0.5
+Size 32
+}
+
+
+Object DarkNormal
+{
+Frame DKB1A { Light VoidBallNormal }
+Frame DKB1B { Light VoidBallNormal }
+Frame DKB1C { Light VoidBallNormal2 }
+Frame DKB1D { Light VoidBallNormal3 }
+Frame DKB1E { Light VoidBallNormal4 }
+}
+
+Pointlight VoidBallStrong
+{
+Color 0.8 0.2 0.8
+Size 48
+}
+
+Pointlight VoidBallStrong2
+{
+Color 0.6 0.1 0.6
+Size 64
+}
+
+Pointlight VoidBallStrong3
+{
+Color 0.5 0.0 0.2
+Size 56
+}
+
+Pointlight VoidBallStrong4
+{
+Color 0.3 0.0 0.0
+Size 32
+}
+
+Object DarkStrong
+{
+Frame DKB2A { Light VoidBallStrong }
+Frame DKB2B { Light VoidBallStrong }
+Frame DKB2C { Light VoidBallStrong2 }
+Frame DKB2D { Light VoidBallStrong3 }
+Frame DKB2E { Light VoidBallStrong4 }
+}
+
+Flickerlight2 VoidDarkImpFire1
+{
+Color 0.5 0.2 0.8
+Size 48
+SecondarySize 56
+Interval 0.8
+Offset 0 28 0
+}
+
+Flickerlight2 VoidDarkImpFire2
+{
+Color 0.8 0.2 0.8
+Size 56
+SecondarySize 64
+Interval 0.8
+Offset 0 28 0
+}
+
+Object VoidDarkImp
+{
+Frame DRKVE { Light VoidDarkImpFire1 }
+Frame DRKVF { Light VoidDarkImpFire1 }
+Frame DRKVG { Light VoidDarkImpFire1 }
+Frame DRKVI { Light VoidDarkImpFire2 }
+Frame DRKVJ { Light VoidDarkImpFire2 }
+Frame DRKVK { Light VoidDarkImpFire2 }
+}
+
+BrightMap Sprite DRKVA1
+{
+Map BMDRKVA1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVA2A8
+{
+Map BMDRKVA2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVA3A7
+{
+Map BMDRKVA3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVB1
+{
+Map BMDRKVB1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVB2B8
+{
+Map BMDRKVB2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVB3B7
+{
+Map BMDRKVB3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVC1
+{
+Map BMDRKVC1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVC2C8
+{
+Map BMDRKVC2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVC3C7
+{
+Map BMDRKVC3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVD1
+{
+Map BMDRKVD1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVD2D8
+{
+Map BMDRKVD2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVD3D7
+{
+Map BMDRKVD3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVE1
+{
+Map BMDRKVE1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVE2E8
+{
+Map BMDRKVE2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVE3E7
+{
+Map BMDRKVE3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVE4E6
+{
+Map BMDRKVE4
+DisableFullBright
+}
+
+BrightMap Sprite DRKVE5
+{
+Map BMDRKVE5
+DisableFullBright
+}
+
+BrightMap Sprite DRKVF1
+{
+Map BMDRKVF1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVF2F8
+{
+Map BMDRKVF2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVF3F7
+{
+Map BMDRKVF3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVF4F6
+{
+Map BMDRKVF4
+DisableFullBright
+}
+
+BrightMap Sprite DRKVF5
+{
+Map BMDRKVF5
+DisableFullBright
+}
+
+BrightMap Sprite DRKVG1
+{
+Map BMDRKVG1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVG2G8
+{
+Map BMDRKVG2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVG3G7
+{
+Map BMDRKVG3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVG4G6
+{
+Map BMDRKVG4
+DisableFullBright
+}
+
+BrightMap Sprite DRKVG5
+{
+Map BMDRKVG5
+DisableFullBright
+}
+
+BrightMap Sprite DRKVH1
+{
+Map BMDRKVH1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVH2H8
+{
+Map BMDRKVH2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVH3H7
+{
+Map BMDRKVH3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVI1
+{
+Map BMDRKVI1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVI2I8
+{
+Map BMDRKVI2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVI3I7
+{
+Map BMDRKVI3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVI4I6
+{
+Map BMDRKVI4
+DisableFullBright
+}
+
+BrightMap Sprite DRKVI5
+{
+Map BMDRKVI5
+DisableFullBright
+}
+
+BrightMap Sprite DRKVJ1
+{
+Map BMDRKVJ1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVJ2J8
+{
+Map BMDRKVJ2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVJ3J7
+{
+Map BMDRKVJ3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVJ4J6
+{
+Map BMDRKVJ4
+DisableFullBright
+}
+
+BrightMap Sprite DRKVJ5
+{
+Map BMDRKVJ5
+DisableFullBright
+}
+
+BrightMap Sprite DRKVK1
+{
+Map BMDRKVK1
+DisableFullBright
+}
+
+BrightMap Sprite DRKVK2K8
+{
+Map BMDRKVK2
+DisableFullBright
+}
+
+BrightMap Sprite DRKVK3K7
+{
+Map BMDRKVK3
+DisableFullBright
+}
+
+BrightMap Sprite DRKVK4K6
+{
+Map BMDRKVK4
+DisableFullBright
+}
+
+BrightMap Sprite DRKVK5
+{
+Map BMDRKVK5
+DisableFullBright
+}
+
+BrightMap Sprite DRKVL0
+{
+Map BMDRKVL0
+DisableFullBright
+}
+
+
+

@@ -1,0 +1,7 @@
+#library "command"
+#include "zcommon.acs"
+
+Script 3755 (VOID) NET
+{
+ GiveInventory("DoMine", 1);
+}

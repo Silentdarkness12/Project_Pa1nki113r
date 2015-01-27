@@ -1,0 +1,16 @@
+// Fix by Stiegi.
+
+#library "screenblood.acs"
+#include "zcommon.acs"
+
+Script "SCREENBLOOD" ENTER
+{
+  While(TRUE)
+  {
+    // Store player's current health
+    int bloodyhealth = GetActorProperty(0, APROP_Health);
+    If(bloodyhealth <= 8) GiveInventory("Bloodydamage", 1);
+    Else If(bloodyhealth > 8) GiveInventory("NoBloodyDamage", 1);
+    Delay(1);
+  }
+}

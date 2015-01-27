@@ -1,0 +1,164 @@
+//definition for the Phantasm, based off the Phantom (Tier 1 Lost Soul) from Doom RPG
+actor Phantasm//add your own Doom Ed number here
+{
+  Game Doom
+  //$Category Monsters
+  //$Title "Phantasm"
+  Health 95
+  Radius 16
+  Height 56
+  Mass 50
+  Speed 10
+  Damage 3
+  PainChance 256
+  PainChance "Kick", 255
+	PainChance "Avoid", 255
+  Monster
+  Damagetype GreenFire
+  +FLOAT
+  +NOGRAVITY
+  +DONTFALL
+  +NOICEDEATH
+  //-TELESTOMP
+	-NOTELEFRAG
+	+NOTELESTOMP
+	+TELESTOMP
+DamageFactor "Blood", 0.0 DamageFactor "BlueBlood", 0.0 DamageFactor "GreenBlood", 0.0
+	DamageFactor "BlueBloodSplasher", 0.0
+    DamageFactor "BlueSuperBloodSplasher", 0.0
+DamageFactor "bloodsplasher", 0.0    DamageFactor "tinybloodsplasher", 0.0    DamageFactor "superbloodsplasher", 0.0    DamageFactor "smallbloodsplasher", 0.0
+    DamageFactor "Fatality", 5.0
+    DamageFactor "Shrapnel", 0.4
+  AttackSound "phantasm/attack"
+  PainSound "skull/pain"
+	DeathSound "LSOD"
+  ActiveSound "demon/active"
+  RenderStyle add
+  BloodColor "LostSoulBlood"
+  Bloodtype "none"
+  Obituary "%o was smoked by a Phantasm."
+  DropItem "TimeSphere" 1
+  States
+  {
+  Spawn:
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	
+    
+	
+    PHNT A 1 BRIGHT A_Look
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	PHNT A 1 BRIGHT A_Look
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	PHNT A 1 BRIGHT A_Look
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	PHNT A 1 BRIGHT A_Look
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	
+	
+	
+	
+	PHNT B 4 BRIGHT A_Look
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	
+	
+	
+	
+    Loop
+  See:
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	PHNT A 3 BRIGHT A_Chase
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+
+	PHNT A 3 BRIGHT A_Chase 
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	
+	
+	
+	PHNT B 3 BRIGHT A_Chase 
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	
+	
+	
+	
+	PHNT B 3 BRIGHT A_Chase 
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	
+	
+	
+	
+    Loop
+  Missile:
+  TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	
+	
+	
+	
+    PHNT C 10 BRIGHT A_FaceTarget
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	
+	
+	
+	
+    PHNT D 4 BRIGHT A_SkullAttack
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	
+	
+	
+	
+    PHNT C 4 BRIGHT
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	PHNT D 4
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+	Goto Missile +2
+  Pain:
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+    PHNT E 3 BRIGHT
+	TNT1 A 0 A_CustomMissile ("GreenFlareSmall", 24, 0, random (0, 360), 2, random (0, 160))
+    PHNT E 3 BRIGHT A_Pain
+    Goto See
+	
+  Death.Fatality:
+	    TNT1 A 0 A_Pain
+	    TNT1 A 0 A_JumpIfIntargetInventory("FistsSelected", 1, 1)
+		Goto Death
+        TNT1 A 0 A_GiveToTarget("PhantasmFatality", 1)
+        TNT1 A 1
+        TNT1 A 0
+		Stop
+	
+  Death:
+    PHNT F 4 BRIGHT
+    PHNT F 3 BRIGHT A_Scream
+	PHNT FFF 3 BRIGHT A_SpawnItemEx("PhantasmPuff", random(-15,15), random(-15,15), random(12, 24), 0, 0, 1)
+	TNT1 AAAA 0 A_CustomMissile ("SmallLSPart1", 0, 0, random (0, 360), 2, random (0, 360))
+		TNT1 AAAA 0 A_CustomMissile ("SmallLSPart3", 0, 0, random (0, 360), 2, random (0, 360))
+        TNT1 AAA 0 A_CustomMissile ("CoolAndNewFlameTrailsLong", 12, 0, random (0, 360), 2, random (0, 160))
+	TNT1 A 0 A_SpawnItemEx("PlasmaParticleSpawner", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 AAAA 0 BRIGHT  A_SpawnItem("GreenFlare",0,0)
+		 EXPL AA 0 A_SpawnItem("ExplosionParticleSpawner")
+	  TNT1 A 0 A_SpawnItemEx ("ExplosionFlareSpawner",0,0,32,0,0,0,0,SXF_NOCHECKPOSITION,0)
+	    EXPL AAAAA 0 A_CustomMissile ("FireBallExplosionFlamesMedium", 32, 0, random (0, 360), 2, random (0, 360))
+		TNT1 AAAA 0 A_CustomMissile ("PlasmaSmoke", 32, 0, random (0, 360), 2, random (0, 360))
+		TNT1 A 0 A_CustomMissile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160))
+    PHNT G 2 BRIGHT A_SpawnItem("GreenFlare",0,0)
+	TNT1 A 0 A_Explode(4, 128, XF_HURTSOURCE | XF_NOTMISSILE, false, 32)
+	 TNT1 AAA 0 A_CustomMissile ("LSpart1", 42, 0, random (0, 360), 2, random (0, 160))
+    TNT1 A 0 A_CustomMissile ("LSpart3", 42, 0, random (0, 360), 2, random (0, 160))
+    TNT1 AA 0 A_CustomMissile ("LSpart2", 42, 0, random (0, 360), 2, random (0, 160))
+	PHNT H 3 BRIGHT A_PlaySound("phantasm/explode")
+	TNT1 A 0 A_StopSound(6)
+	   TNT1 AAA 0 A_SpawnItemEx("PlasmaParticleSpawner", 0, 0, 0, 0, 0, 0, 0, 128)
+	   TNT1 A 0 A_SpawnItemEx ("BFGAltExplosion",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
+	   TNT1 A 0 A_SpawnItem("BFGAltShockWave",0,0)
+	   EXPG ABCDEFG 2 A_SpawnItem("GreenFlare",0,0)
+    PHNT I 3 BRIGHT A_NoBlocking
+    PHNT J 3
+    PHNT K 3
+    Stop
+  }
+}
+
+actor PhantasmPuff : BulletPuff
+{
+  Translation "160:167=112:127", "48:79=112:127"
+}

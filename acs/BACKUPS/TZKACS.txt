@@ -1,0 +1,86 @@
+/*
+Credits to TZK: The Zombie Killer
+And modified by me (Quaker540)
+ACS Scripts
+*/
+
+#library "tzkacs"
+#include "zcommon.acs"
+
+// Defines
+#define DROPCOUNT 15
+str dropItems[DROPCOUNT] = {
+	"Chain_Saw",
+	"BDPistol",
+	"Rifle",
+	"Shot_Gun",
+	"SSG",
+	"NewChain_Gun",
+	"Mini_Gun",
+	"Grenade_Launcher",
+	"Rocket_Launcher",
+	"Rail_Gun",
+	"Plasma_Gun",
+	"BIG_FUCKING_GUN",
+	"HellishMissileLauncher",
+	"FlameCannon",
+	"SecretWeapon_MP40"
+};
+
+str checkItem[DROPCOUNT] = {
+	"Chain_Saw",
+	"BDPistol",
+	"Rifle",
+	"Shot_Gun",
+	"SSG",
+	"NewChain_Gun",
+	"Mini_Gun",
+	"Grenade_Launcher",
+	"Rocket_Launcher",
+	"Rail_Gun",
+	"Plasma_Gun",
+	"BIG_FUCKING_GUN",
+	"HellishMissileLauncher",
+	"FlameCannon",
+	"SecretWeapon_MP40"
+};
+
+// Scripts
+Script "DropItems" DEATH NET
+{
+	int svDropItems = GetCVar("sv_dropitems");
+	if (svDropItems)
+	{
+		TakeInventory("ImpShield", 1);
+		TakeInventory("ZManShield", 1);
+		TakeInventory("SGuyShield", 1);
+		for (int i = 0; i < DROPCOUNT; i++)
+		{
+			if (CheckInventory(checkItem[i]))
+			{
+				TakeInventory(checkItem[i], CheckInventory(checkItem[i]));
+				DropItem(0, dropItems[i], CheckInventory(checkItem[i]), 256);
+			}
+		}
+	}
+}
+
+Script "Regen" ENTER NET
+{
+	int health;
+	While(1)
+	{
+		if (GetCVar("cl_regen"))
+		{
+			health = GetActorProperty(0, APROP_Health);
+			if(health < GetCVar("cl_regenamount"))
+			{
+				if (!GetCVar("sv_forceregen"))
+					HealThing(1);
+				else
+					SetActorProperty(0, APROP_Health, health+1);
+			}
+		}
+		Delay(35);
+	}
+}

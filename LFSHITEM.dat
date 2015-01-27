@@ -1,0 +1,26 @@
+#library "lfshitem.acs"
+#include "zcommon.acs"
+
+Script "Lifeshield Sphere - Main" (int cons_rate, int cons_amount)
+{
+  If(cons_rate <= 0) cons_rate = 1; // We don't want a runaway script on out hand
+  If(cons_amount <= 0) cons_amount = 1; // There is no point of 0 consumption amount
+
+  Do
+  {
+    Delay(cons_rate);
+    TakeInventory("BasicArmor", cons_amount);
+  }
+
+  // Take the powerup away once there isn't enough armor to keep it going
+  While(CheckInventory("BasicArmor") >= cons_amount);
+
+  TakeInventory("PowerLifeshield", 1);
+}
+
+Script "Lifeshield Sphere - Activation check" (int cons_amount)
+{
+  If(cons_amount <= 0) cons_amount = 1; // There is no point of 0 consumption amount
+
+  SetResultValue(CheckInventory("BasicArmor")); // Return the armor amount the player has
+}

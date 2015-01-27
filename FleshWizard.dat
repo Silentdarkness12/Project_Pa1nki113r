@@ -1,0 +1,361 @@
+actor XWizard 7801
+{
+spawnid 171
+obituary "%o was burned by FleshWizard."
+health 925
+radius 20
+height 80
+meleeDamage 3
+mass 100
+speed 30
+painchance 89
+damagetype "desintegrate"
+SEESOUND "wizard/sight"
+painsound "wizard/pain"
+deathsound "wizard/death"
+activesound "wizard/active"
+missiletype WizardBall
+MONSTER
+//-TELESTOMP
+	-NOTELEFRAG
+	+NOTELESTOMP
+	+TELESTOMP
++FLOORCLIP
++STEALTH
+-SOLID
+states
+  {
+	Spawn:
+	LMWZ E 10 A_Look
+	loop
+	See:
+	LMWZ EEFFEEFF 1 A_Fastchase
+	loop
+	Missile:
+	LMWZ E 0 A_SetShootable
+	LMWZ EFG 10 A_FaceTarget
+	LMWZ H 20 A_CustomMissile("WizardBall",65,0)
+	LMWZ G 5
+        LMWZ E 5 A_UnSetShootable
+        LMWZ E 1 A_PlaySound ("wizard/tele")
+	Goto See
+	Pain:
+	LMWZ I 3
+	LMWZ I 5 A_Pain
+        LMWZ I 0 A_PlaySound ("wizard/tele")
+	Goto See
+	Death:
+	LMWZ J 6 A_Scream
+	LMWZ K 6 A_NoBlocking
+	LMWZ LMNO 6
+	LMWZ P -1
+	Stop
+  }
+}
+
+actor FleshWizard
+{
+spawnid 170
+Scale 1.02
+obituary "%o was raped by a Flesh Wizard."
+health 925
+radius 20
+height 80
+meleeDamage 3
+mass 100
+speed 90
+painchance 83
+MaxTargetRange 896
+damagetype "desintegrate"
+SEESOUND "wizard/sight"
+painsound "wizard/pain"
+deathsound "wizard/death"
+activesound "wizard/active"
+DropItem "DemonStrengthRune" 7
+	DropItem "RageSphere" 7
+	DropItem "DoubleSphere" 7
+	DropItem "ShieldSphere" 6
+	DropItem "TimeSphere" 20
+missiletype WizardBall
+//-TELESTOMP
+	-NOTELEFRAG
+	+NOTELESTOMP
+	+TELESTOMP
+MONSTER
++FLOORCLIP
++STEALTH
+-SOLID
+states
+  {
+	Spawn:
+	LMWZ E 10 A_Look
+	loop
+	See:
+	LMWZ EEFFEEFF 1 A_Fastchase
+	loop
+	Missile:
+	TNT1 A 0 A_Jump(42,"ArchvileAttack")
+	LMWZ E 0 A_Jump (144, 10, 20, 30, 40, 50, 60, 70)
+	LMWZ E 50
+	LMWZ E 0 A_SetShootable
+	LMWZ EFG 10 A_FaceTarget
+	LMWZ H 20 A_CustomMissile("WizardBall",65,0)
+	LMWZ G 5
+        LMWZ E 5 A_UnSetShootable
+        LMWZ E 0 A_PlaySound ("wizard/tele")
+	goto See
+	LMWZ E 60
+	LMWZ E 0 A_SetShootable
+	LMWZ EFG 10 A_FaceTarget
+	LMWZ H 20 A_CustomMissile("WizardBall",63,0)
+	LMWZ G 5
+        LMWZ E 5 A_UnSetShootable
+        LMWZ E 0 A_PlaySound ("wizard/tele")
+	goto See
+	LMWZ E 70
+	LMWZ E 0 A_SetShootable
+	LMWZ EFG 10 A_FaceTarget
+	LMWZ H 20 A_CustomMissile("WizardBall",63,0)
+	LMWZ G 5
+        LMWZ E 5 A_UnSetShootable
+        LMWZ E 0 A_PlaySound ("wizard/tele")
+	goto See
+	LMWZ E 80
+	LMWZ E 0 A_SetShootable
+	LMWZ EFG 10 A_FaceTarget
+	LMWZ H 20 A_CustomMissile("WizardBall",63,0)
+	LMWZ G 5
+        LMWZ E 5 A_UnSetShootable
+        LMWZ E 0 A_PlaySound ("wizard/tele")
+	goto See
+	LMWZ E 90
+	LMWZ E 0 A_SetShootable
+	LMWZ EFG 10 A_FaceTarget
+	LMWZ H 20 A_CustomMissile("WizardBall",63,0)
+	LMWZ G 5
+        LMWZ E 5 A_UnSetShootable
+        LMWZ E 0 A_PlaySound ("wizard/tele")
+	goto See
+	LMWZ E 100
+	LMWZ E 0 A_SetShootable
+	LMWZ EFG 10 A_FaceTarget
+	LMWZ H 20 A_CustomMissile("WizardBall",63,0)
+	LMWZ G 5
+        LMWZ E 5 A_UnSetShootable
+        LMWZ E 0 A_PlaySound ("wizard/tele")
+	goto See
+	LMWZ E 110
+	LMWZ E 0 A_SetShootable
+	LMWZ EFG 10 A_FaceTarget
+	LMWZ H 20 A_CustomMissile("WizardBall",63,0)
+	LMWZ G 5
+        LMWZ E 5 A_UnSetShootable
+        LMWZ E 0 A_PlaySound ("wizard/tele")
+	goto See
+	LMWZ E 120
+	LMWZ E 0 A_SetShootable
+	LMWZ EFG 10 A_FaceTarget
+	LMWZ H 20 A_CustomMissile("WizardBall",63,0)
+	LMWZ G 5
+        LMWZ E 5 A_UnSetShootable
+        LMWZ E 0 A_PlaySound ("wizard/tele")
+	goto See
+	Pain:
+	LMWZ I 3
+	LMWZ I 5 A_Pain
+        LMWZ I 0 A_PlaySound ("wizard/tele")
+	Goto See
+	
+	Death:
+	LMWZ J 6 A_Scream
+	LMWZ K 6 A_NoBlocking
+	TNT1 AAAAAA 0 A_CustomMissile ("SuperWallRedBlood", 46, 0, random (170, 190), 2, random (0, 40))
+	TNT1 AAAA 0 A_CustomMissile ("XDeath1", 32, 0, random (170, 190), 2, random (0, 40))
+	TNT1 A 0 A_CustomMissile ("XDeath2", 32, 0, random (170, 190), 2, random (0, 40))
+	TNT1 AAAAAA 0 A_CustomMissile ("SuperWallRedBlood", 46, 0, random (170, 190), 2, random (0, 40))
+	TNT1 A 0 A_CustomMissile ("XDeath3", 32, 0, random (170, 190), 2, random (0, 40))
+	TNT1 A 0 A_CustomMissile ("LivingHeart", 32, 0, random (170, 190), 2, random (0, 40))
+		TNT1 AAAAAAA 0 A_CustomMissile ("Nashgore_FlyingBlood", 32, 0, random (170, 190), 2, random (0, 40))
+		TNT1 AAAAAA 0 A_CustomMissile ("Instestin", 32, 0, random (150, 210), 2, random (0, 40))
+		TNT1 AAAA 0 A_CustomMissile ("Nashgore_FlyingBloodFaster", 32, 0, random (170, 190), 2, random (0, 40))
+		TNT1 AAAAA 0 A_CustomMissile ("Nashgore_FlyingBloodMuchFaster", 32, 0, random (170, 190), 2, random (0, 40))
+		TNT1 AAAAAAAAAA 0 A_CustomMissile ("SuperWallRedBlood", 32, 0, random (170, 190), 2, random (0, 40))
+		TNT1 AAAAAA 0 A_CustomMissile ("SuperWallRedBlood", 46, 0, random (170, 190), 2, random (0, 40))
+	LMWZ LMNO 6 A_SpawnItem ("MuchBlood", 40)
+	LMWZ P -1
+	Stop
+	
+	Death.SuperPlasma:
+	Death.Plasma: Death.Plasma2:
+        TNT1 A 0
+        TNT1 A 0 A_XScream
+        TNT1 A 0 A_NoBlocking
+        TNT1 AAA 0 A_CustomMissile ("Nashgore_FlyingBlood", 50, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat3", 32, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat2", 32, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat", 32, 0, random (0, 360), 2, random (0, 160))
+		EXPL AAAAAA 0 A_CustomMissile ("ExplosionSmoke", 32, 0, random (0, 360), 2, random (0, 360))
+        CARB MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM 10 A_CustomMissile ("SmallSmoke", 1, 0, random (0, 360), 2, random (0, 160))
+        CARB M -1
+        Stop
+		
+	    Death.Fire:
+        TNT1 A 0
+        TNT1 A 0 A_Scream
+        TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_Playsound("props/redfire")
+        TNT1 AAA 0 A_CustomMissile ("Nashgore_FlyingBlood", 50, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat3", 32, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat2", 32, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat", 32, 0, random (0, 360), 2, random (0, 160))
+		CARB MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM 2 A_CustomMissile ("FlameTrails", 15, 0, random (0, 360), 2, random (70, 130))
+        CARB MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM 10 A_CustomMissile ("SmallSmoke", 15, 0, random (0, 360), 2, random (70, 130))
+        CARB M -1
+        Stop
+	
+	Death.GreenFire:
+        TNT1 A 0
+        TNT1 A 0 A_XScream
+        TNT1 A 0 A_NoBlocking
+        TNT1 AAAA 0 A_CustomMissile ("Nashgore_Blood", 30, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedSkull", 32, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat", 32, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat2", 32, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat3", 32, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat", 32, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat2", 32, 0, random (0, 360), 2, random (0, 160))
+	    TNT1 A 0 A_CustomMissile ("XDeathBurnedMeat3", 32, 0, random (0, 360), 2, random (0, 160))
+		
+		EXPL AAAAAAAAAAAAAAAAAAAAAAAA 0 A_CustomMissile ("GreenFlameTrails", 50, 0, random (0, 360), 2, random (0, 360))
+		XBRN AAAA 2 BRIGHT A_SpawnItem("GreenFlare",0,43)
+        Stop
+		
+		XDeath:
+		Death.QuadBlast:
+		Death.BlackHole:
+       
+		 TNT1 AAA 0 A_CustomMissile ("XDeath1", 32, 0, random (0, 360), 2, random (0, 160))
+		 TNT1 AA 0 A_CustomMissile ("XDeath2", 32, 0, random (0, 360), 2, random (0, 160))
+		 TNT1 AAA 0 A_CustomMissile ("XDeath3", 32, 0, random (0, 360), 2, random (0, 160))
+		 TNT1 AA 0 A_CustomMissile ("XDeath4", 32, 0, random (0, 360), 2, random (0, 160))
+		 TNT1 AAAAAAAA 0 A_CustomMissile ("Instestin", 32, 0, random (0, 360), 2, random (0, 160))
+		VIGI C 3 A_Scream
+		VIGI D 3 
+		VIGI E 3 A_NoBlocking
+		VIGI FGHIJ 3 A_CustomMissile ("MuchBlood", 32, 0, random (0, 360), 2, random (0, 160))
+		TNT1 A 0 A_SpawnItem ("GrowingBloodPool")
+		VIGI J -1
+		Stop
+		
+	Death.Fatality:
+		TNT1 A 0 A_GiveToTarget("GoFatality", 1)
+        TNT1 A 0 A_GiveToTarget("FleshWizardFatality", 1)
+        TNT1 A 1 A_BossDeath
+        TNT1 A 0 
+		stop
+	
+	ArchvileAttack:
+		LMWZ E 0 A_VileStart
+		LMWZ E 0 A_SetShootable
+		LMWZ E 10 A_FaceTarget
+		LMWZ E 1 A_VileTarget ("SmallFleshTrails")
+		LMWZ E 7 A_VileTarget ("SmallFleshTrails")
+
+
+		LMWZ E 1 A_VileTarget ("SmallFleshTrails")
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, 35, random (0, 40), 2, random (0, 160))
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, -35, random (0, 40), 2, random (0, 160))
+        LMWZ E 3 A_FaceTarget
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, 35, random (0, 40), 2, random (0, 160))
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, -35, random (0, 40), 2, random (0, 160))
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        LMWZ F 3 A_FaceTarget
+
+		LMWZ F 3 A_FaceTarget
+		LMWZ E 1 A_VileTarget ("SmallFleshTrails")
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, 35, random (0, 40), 2, random (0, 160))
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, -35, random (0, 40), 2, random (0, 160))
+        LMWZ E 3 A_FaceTarget
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, 35, random (0, 40), 2, random (0, 160))
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, -35, random (0, 40), 2, random (0, 160))
+        LMWZ F 3 A_FaceTarget
+		LMWZ E 1 A_VileTarget ("SmallFleshTrails")
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, 35, random (0, 40), 2, random (0, 160))
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, -35, random (0, 40), 2, random (0, 160))
+        LMWZ E 3 A_FaceTarget
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, 35, random (0, 40), 2, random (0, 160))
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, -35, random (0, 40), 2, random (0, 160))
+        LMWZ F 3 A_FaceTarget
+		LMWZ E 1 A_VileTarget ("SmallFleshTrails")
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, 35, random (0, 40), 2, random (0, 160))
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, -35, random (0, 40), 2, random (0, 160))
+        LMWZ E 3 A_FaceTarget
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, 35, random (0, 40), 2, random (0, 160))
+		TNT1 A 0 A_PlaySound ("DamnedSoul/Moan", 8)
+        TNT1 A 0 A_CustomMissile ("SmallFleshTrails", 85, -35, random (0, 40), 2, random (0, 160))
+        LMWZ F 3 A_FaceTarget
+
+		LMWZ EF 3 BRIGHT A_FaceTarget 
+		LMWZ G 3 BRIGHT A_VileAttack ("misc/xdeath4", 15, 40, 45, 1.0, "desintegrate")
+		LMWZ H 3 BRIGHT A_UnSetShootable
+		Goto See
+  }
+}
+
+actor WizardBall
+{
+  Scale 1.2
+  spawnid 177
+  radius 6
+  height 8
+  speed 27
+  damage 6
+  renderstyle Add
+  Damagetype "Burn"
+  seesound "baron/attack"
+  deathsound "eltimp/explode"
+  PROJECTILE
+  +NOGRAVITY
+  +RANDOMIZE
+  Decal BaronScorch
+  states
+  {
+  Spawn:
+	TNT1 A 0 A_PlaySound("fireball/loop",6,1,1)
+    LMBW AB 4 bright A_SpawnItem("RedFlare",0,0)
+    loop
+  Death:
+    LMBW CDE 4 bright A_SpawnItem("RedFlare",0,0)
+	EXPL A 0 A_SpawnItem("ExplosionParticleSpawner")
+		TNT1 A 0 A_SpawnItemEx ("SmallUnderwaterExplosion",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
+	    EXPL AAAAAA 0 A_CustomMissile ("FireBallExplosionFlames", 1, 0, random (0, 360), 2, random (0, 360))
+	TNT1 AAAAA 0 A_CustomMissile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160))
+    stop
+  }
+}
+
+actor FatalizedFleshWizard
+{
+	States
+		{
+		Spawn:
+			VIGI J -1
+			stop
+		}
+}
+
+
