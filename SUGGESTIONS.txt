@@ -18,6 +18,10 @@ explode violently.
 kill enemies, or performing fatalities, will fill a meter. When it's full, you can either activate it on demand and gain partial
 invulnerability and full health regen for a short time. Optionally, you can let it stay, and if you take a blow that would kill you,
 it will automatically activate, giving you a second wind of sorts.
+-Grenade Fatalities: Force a live grenade on an enemy and turn him into a mutually assured meat fountain!
+-Gotta make a bestiary, I suppose....
+-Kickable Grenades!
+-Rifle Commando can throw grenades if you're behind cover.
 ACCEPTED:
 
 REJECTED:
